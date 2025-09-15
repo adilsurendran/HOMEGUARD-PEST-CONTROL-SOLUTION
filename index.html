@@ -21,14 +21,14 @@
 <body>
 
 <!-- ===== NAVBAR (Bootstrap collapse + logo + dropdown) ===== -->
-<nav class="navbar navbar-expand-md navbar-light bg-white border-bottom shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light bg-white border-bottom shadow-sm nav-height">
   <div class="container">
     <!-- Logo + Title -->
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="images/HomeGuard-Logo.jpg" alt="Home Guard Logo" width="35"  class="me-2 rounded-circle logoround">
+      <img src="images/HOMEGUARD-LOGO-ORG.png" alt="Home Guard Logo" width="30"  class="me-2 rounded-circle logoround">
       <div>
         <span class="fw-bold text-success fs-6">HOME GUARD</span><br>
-        <small class="text-muted fs-6">PEST CONTROL</small>
+        <small class="text-muted fs-6 pest-nav">PEST CONTROL</small>
       </div>
     </a>
 
@@ -51,7 +51,7 @@
             data-bs-toggle="dropdown" aria-expanded="false">
             Services
           </a>
-          <ul class="dropdown-menu" aria-labelledby="servicesDropdown" data-bs-auto-close="false">
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
             <li><a class="dropdown-item" href="#pest-services">Pest Control Service</a></li>
             <li><a class="dropdown-item" href="services.html">Building Cleaning Service</a></li>
           </ul>
@@ -68,12 +68,12 @@
 
 
   <!-- ===== HERO / COMPANY OVERVIEW ===== -->
-  <header class="hero-section text-white text-center" style="background-image:url('images/hero-bg.jpg'); background-position: center; background-size: 100% 100%;">
+  <header class="hero-section text-white text-center" style="background-image:url('images/cntrl-1.png'); background-position: center; background-size: 100% 100%;">
     <div class="overlay"></div>
     <div class="container position-relative py-6">
       <!-- Company tagline and short overview -->
       <h1 class="display-5 fw-bold">Protect Your Home, Protect Your Family</h1>
-      <p class="lead mb-4">Safe, eco-friendly and reliable pest control services across GCC. Serving homes and businesses since <strong>2010</strong>.</p>
+      <p class="lead mb-4">Safe, eco-friendly and reliable pest control services across <strong>UAE,Dubai.</strong> Serving homes and businesses since <strong>2012</strong>.</p>
       <!-- CTA button to building cleaning services page -->
       <a class="btn btn-success btn-lg" href="#" data-bs-toggle="modal" data-bs-target="#bookingModal"> Book your service now</a>
     </div>
@@ -108,86 +108,104 @@
 
 
     <!-- ===== SECTION: Pest Control Services + Carousel (second section) ===== -->
-    <section id="pest-services" class="bg-light py-5">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col text-center">
-            <h2 class="fw-bold">Pest Control Services</h2>
-            <p class="text-muted">Comprehensive treatments for termites, cockroaches, rodents and more. Learn about common pests and our approach.</p>
-          </div>
-        </div>
-
-        <div class="row g-4 align-items-center">
-          <!-- Carousel column -->
-          <div class="col-lg-7">
-            <!-- Bootstrap carousel: slides show pests (images lazy loaded via data-src) -->
-            <div id="pestCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel" data-bs-interval="4500">
-              <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                  <!-- Use data-src so the custom JS lazy-loads when needed -->
-                <img src="images/pest2.jpg" class="d-block w-100 rounded" alt="Termite infestation" loading="lazy">
-                  <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded px-3 py-2">
-                    <h5>Termites</h5>
-                    <p>We provide termite inspections and advanced treatments to protect your building structure.</p>
-                  </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                  <img data-src="images/pest-1.jpg" class="d-block w-100 rounded" alt="Cockroach infestation" loading="lazy">
-                  <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded px-3 py-2">
-                    <h5>Cockroaches</h5>
-                    <p>Targeted, safe treatments that eliminate roaches and prevent their return.</p>
-                  </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                  <img data-src="images/pest3.jpg" class="d-block w-100 rounded" alt="Rodent problem" loading="lazy">
-                  <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded px-3 py-2">
-                    <h5>Rodent Control</h5>
-                    <p>Long-lasting rodent control and sealing solutions to keep mice & rats away.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Carousel controls -->
-              <button class="carousel-control-prev" type="button" data-bs-target="#pestCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#pestCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Services details column -->
-          <div class="col-lg-5">
-            <div class="card border-0 shadow-sm">
-              <div class="card-body">
-                <h4 class="card-title">Our Approach</h4>
-                <p class="text-muted">We inspect first, propose a tailored treatment plan, and use eco-friendly products to keep occupants safe. Click any service below to learn more.</p>
-
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">• Termite Inspection & Treatment</li>
-                  <li class="list-group-item">• Cockroach & Ant Control</li>
-                  <li class="list-group-item">• Rodent Management</li>
-                  <li class="list-group-item">• Preventive Maintenance Plans</li>
-                </ul>
-
-                <!-- CTA to building cleaning services page -->
-                <a href="services.html" class="btn btn-success mt-3">Explore Building Cleaning Services</a>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
+<!-- Pest Services Card Carousel -->
+<section id="pest-services-cards" class="py-5 bg-white">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col text-center">
+        <h2 class="fw-bold">Pest Control Services</h2>
+        <p class="text-muted">Learn more about our specialized treatments for different pests.</p>
       </div>
-    </section>
+    </div>
+
+    <!-- Carousel Wrapper -->
+    <div class="carousel-container">
+      <div class="carousel-track">
+
+        <!-- Card 1 -->
+        <div class="service-card">
+          <img src="images/black-ants.jpg" alt="Ants">
+          <h5>Ants Control</h5>
+          <p>Treatments like gel, spray and bait stations are effective against ants.</p>
+          <a href="pest-control.html#ants" class="btn btn-success view-btn">View More</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card">
+          <img src="images/files.jpg" alt="Flies">
+          <h5>Flies Control</h5>
+          <p>Integrated pest management includes sprays and granule treatments.</p>
+          <a href="pest-control.html#files" class="btn btn-success view-btn">View More</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card">
+          <img src="images/mosquitoes-2.jpg" alt="Mosquito">
+          <h5>Mosquito Control</h5>
+          <p>Customized treatments like thermal fogging & misting for effective control.</p>
+          <a href="pest-control.html#mosquitoes" class="btn btn-success view-btn">View More</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card">
+          <img src="images/cockroaches.webp" alt="Cockroach">
+          <h5>Cockroach Control</h5>
+          <p>Gel-baiting system and odorless chemical spray to control cockroaches.</p>
+          <a href="pest-control.html#cockroaches" class="btn btn-success view-btn">View More</a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card">
+          <img src="images/rodent.jpg" alt="Rodents">
+          <h5>Rodent Control</h5>
+          <p>Long-lasting solutions to prevent mice & rat infestations in buildings.</p>
+          <a href="pest-control.html#rodents" class="btn btn-success view-btn">View More</a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card">
+          <img src="images/rock-pigeon.jpg" alt="Birds">
+          <h5>Bird Control</h5>
+          <p>Humane netting, spikes, and repellents to prevent bird nuisance.</p>
+          <a href="pest-control.html#birds" class="btn btn-success view-btn">View More</a>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="service-card">
+          <img src="images/snakes.webp" alt="Snakes">
+          <h5>Snake Control</h5>
+          <p>Snake-safe services provide protection around buildings & farms.</p>
+          <a href="pest-control.html#snakes" class="btn btn-success view-btn">View More</a>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="service-card">
+          <img src="images/terminates-1.webp" alt="Termites">
+          <h5>Termite Control</h5>
+          <p>Inspections and advanced treatments to protect wooden structures.</p>
+          <a href="pest-control.html#Termites" class="btn btn-success view-btn">View More</a>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="service-card">
+          <img src="images/spider.jpg" alt="Spiders">
+          <h5>Spider Control</h5>
+          <p>Targeted sprays and preventive methods to keep spiders away indoors.</p>
+          <a href="pest-control.html#spider" class="btn btn-success view-btn">View More</a>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="service-card">
+          <img src="images/bed-bugs-in-mattress.jpg" alt="Bed Bugs">
+          <h5>Bed Bug Control</h5>
+          <p>Specialized heat and chemical treatments to eliminate bed bugs.</p>
+          <a href="pest-control.html#bedbugs" class="btn btn-success view-btn">View More</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
     <!-- ===== END Pest Control Services ===== -->
 
 

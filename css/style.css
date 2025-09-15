@@ -15,17 +15,28 @@ body{
 .navbar-brand .text-success{ color: var(--brand-green) !important; }
 .navbar-light .navbar-toggler-icon{ filter: invert(35%); }
 
+/* .nav-height{
+  height: 60px;
+} */
+
 /* HERO: background image with dark overlay for text readability */
 .hero-section{
   background-size:cover;
   background-position:center;
-  min-height:380px;
+  min-height:480px;
+  /* max-height: 500px; */
+  
   position:relative;
   display:flex;
   align-items:center;
 }
+@media (max-width: 767px) {
+  .hero-section{
+    min-height: 350px;
+  }
+}
 .hero-section .overlay{
-  position:absolute; inset:0; background:rgba(0,0,0,0.45); border-radius:0;
+  position:absolute; inset:0; background:rgba(0, 0, 0, 0.65); border-radius:0;
 }
 .hero-section .container{ position:relative; z-index:2; }
 
@@ -73,15 +84,107 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
 #pestCarousel img {
   /* height: 100%; */
   max-height: 380px;
-  object-fit: 100%; /* makes image fit nicely */
+  min-height: 380px;
+  object-fit: cover ; /* makes image fit nicely */
+  object-position: top;
 }
 
 .logoround{
     height: 60px;
     width: 60px;
+    background-color: black;
 }
 .deep-cleaning-img{
     max-height: 400px;
     width: 100%;
     object-fit: 100%;
+}
+.carousel-img {
+  height: 380px;                 /* same as card height */
+  background-size: cover;      /* shows full image (less zoomed) */
+  background-position: top;      /* align to top */
+  background-repeat: no-repeat;
+  background-color: #000;        /* fallback if gaps appear */
+  border-radius: .5rem;          /* keep rounded corners */
+}
+
+
+/* for style of pest-control.html  */
+body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .pest-section {
+      padding: 80px 0;
+    }
+    .pest-section:nth-child(even) {
+      background: #f8f9fa; /* white/light bg */
+      color: #212529;
+    }
+    .pest-section:nth-child(odd) {
+      background: #212529; /* dark bg */
+      color: #f8f9fa;
+    }
+    .pest-section img {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .section-title {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    
+
+
+
+    .carousel-container {
+  overflow: hidden;              /* hide scrollbars */
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;              /* required for drag + scroll */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; /* snap scrolling */
+  -ms-overflow-style: none;      /* hide scrollbar IE/Edge */
+  scrollbar-width: none;         /* hide scrollbar Firefox */
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;                 /* hide scrollbar Chrome/Safari */
+}
+
+.service-card {
+  flex: 0 0 calc(20% - 20px); /* Show 5 cards per row */
+  background: #00ff15;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+  transition: all 0.3s ease;
+  scroll-snap-align: start;     /* snap each card into view */
+  margin-top: 6px;
+}
+
+.service-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+}
+
+.service-card .view-btn {
+  display: none;
+  margin-top: 10px;
+}
+
+.service-card:hover .view-btn {
+  display: inline-block;
 }

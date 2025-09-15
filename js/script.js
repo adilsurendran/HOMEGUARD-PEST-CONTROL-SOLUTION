@@ -1,32 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // 1) Close navbar on link click (mobile)
-  const navCollapse = document.querySelector('.navbar-collapse');
-  const navLinks = document.querySelectorAll('.navbar-collapse .nav-link');
-  navLinks.forEach(link => link.addEventListener('click', () => {
-    // if the collapse is shown and toggle button is visible (mobile), hide it
-    const bsCollapse = bootstrap && bootstrap.Collapse ? bootstrap.Collapse.getInstance(navCollapse) : null;
-    if (bsCollapse && window.getComputedStyle(document.querySelector('.navbar-toggler')).display !== 'none') {
-      bsCollapse.hide();
-    }
-  }));
-  // Enable hover dropdowns on desktop
-document.addEventListener("DOMContentLoaded", function () {
-  if (window.innerWidth > 768) { // desktop only
-    document.querySelectorAll('.navbar .dropdown').forEach(function (dropdown) {
-      dropdown.addEventListener('mouseenter', function () {
-        let menu = this.querySelector('.dropdown-menu');
-        menu.classList.add('show');
-      });
-      dropdown.addEventListener('mouseleave', function () {
-        let menu = this.querySelector('.dropdown-menu');
-        menu.classList.remove('show');
-      });
+  // -------------------------
+  // 1) Navbar dropdown behavior
+  // -------------------------
+  document.querySelectorAll('.dropdown-toggle').forEach(dropdown => {
+    dropdown.addEventListener('click', function (e) {
+      if (window.innerWidth < 768) e.stopPropagation();
     });
-  }
-});
+  });
 
+  document.querySelectorAll('.dropdown-link').forEach(item => {
+    item.addEventListener('click', () => {
+      const navbar = document.querySelector('.navbar-collapse');
+      if (navbar) {
+        const bsCollapse = new bootstrap.Collapse(navbar, { toggle: false });
+        bsCollapse.hide();
+      }
+    });
+  });
 
+  // -------------------------
   // 2) Lazy-loading images
+  // -------------------------
   const lazyImages = document.querySelectorAll('img[data-src]');
   if ('IntersectionObserver' in window && lazyImages.length) {
     const imgObserver = new IntersectionObserver((entries, observer) => {
@@ -43,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     lazyImages.forEach(img => imgObserver.observe(img));
   } else {
-    // Fallback: load images immediately
     lazyImages.forEach(img => {
       img.src = img.dataset.src;
       img.removeAttribute('data-src');
@@ -51,7 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 3) Ensure carousel active slide image is loaded (if data-src used inside carousel)
+  // -------------------------
+  // 3) Ensure carousel active slide image loads
+  // -------------------------
   const pestCarousel = document.querySelector('#pestCarousel');
   if (pestCarousel) {
     pestCarousel.addEventListener('slid.bs.carousel', function () {
@@ -62,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
         activeImg.classList.remove('lazy-img');
       }
     });
-    // load the initial active image immediately if present
     const firstImg = pestCarousel.querySelector('.carousel-item.active img[data-src]');
     if (firstImg) {
       firstImg.src = firstImg.dataset.src;
@@ -71,11 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Additional micro-UX: keyboard support for dropdown hover menus (for desktop users)
-  const dropdowns = document.querySelectorAll('.dropdown');
-  dropdowns.forEach(drop => {
+  // -------------------------
+  // 4) Keyboard UX for dropdowns
+  // -------------------------
+  document.querySelectorAll('.dropdown').forEach(drop => {
     drop.addEventListener('keydown', (e) => {
-      // close dropdown on Escape
       if (e.key === 'Escape') {
         const toggle = drop.querySelector('[data-bs-toggle="dropdown"]');
         if (toggle) toggle.focus();
@@ -83,44 +77,147 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // new booking js
+  // -------------------------
+  // 5) Booking Modal UX
+  // -------------------------
+  const cancelBtn = document.getElementById("cancelBooking");
+  if (cancelBtn) {
+    cancelBtn.addEventListener("click", function () {
+      const bookingModal = bootstrap.Modal.getInstance(document.getElementById("bookingModal"));
+      bookingModal.hide();
+    });
+  }
 
-   // Cancel button → just close the form
-  document.getElementById("cancelBooking").addEventListener("click", function () {
-    const bookingModal = bootstrap.Modal.getInstance(document.getElementById("bookingModal"));
-    bookingModal.hide();
-  });
-  document.getElementById("bookingForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+  const bookingForm = document.getElementById("bookingForm");
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const bookingModal = bootstrap.Modal.getInstance(document.getElementById("bookingModal"));
+      bookingModal.hide();
 
-    // Close booking modal
-    const bookingModal = bootstrap.Modal.getInstance(document.getElementById("bookingModal"));
-    bookingModal.hide();
+      const successModal = new bootstrap.Modal(document.getElementById("successModal"));
+      successModal.show();
+      setTimeout(() => successModal.hide(), 3000);
+    });
+  }
 
-    // Show success modal
-    const successModal = new bootstrap.Modal(document.getElementById("successModal"));
-    successModal.show();
+  // -------------------------
+  // 6) Bootstrap Carousel (swipe + auto)
+  // -------------------------
+  if (pestCarousel) {
+    new bootstrap.Carousel(pestCarousel, {
+      interval: 1500,
+      pause: 'hover'
+    });
+  }
 
-    // Auto-hide after 2 seconds
-    setTimeout(() => successModal.hide(), 3000);
-  });
+  // -------------------------
+  // 7) Custom Card Carousel (infinite loop + drag/swipe + autoplay + clickable buttons)
+  // -------------------------
+  const track = document.querySelector('.carousel-track');
+  if (track) {
+    function getGap() {
+      const gapStr = getComputedStyle(track).gap || getComputedStyle(track).columnGap || '';
+      return parseFloat(gapStr) || 20;
+    }
+
+    let originals = Array.from(track.children);
+    if (!originals.length) return;
+
+    const card = track.querySelector('.service-card');
+    const step = card.getBoundingClientRect().width + getGap();
+
+    // Clone cards for infinite loop
+    const repeatCount = 3;
+    for (let i = 0; i < repeatCount; i++) {
+      originals.forEach(node => {
+        track.appendChild(node.cloneNode(true));
+      });
+    }
+
+    const singleBlockWidth = originals.length * step;
+    track.scrollLeft = singleBlockWidth; // start in middle
+
+    // Infinite correction
+    track.addEventListener('scroll', () => {
+      if (track.scrollLeft <= 0) {
+        track.scrollLeft += singleBlockWidth;
+      } else if (track.scrollLeft >= singleBlockWidth * 2) {
+        track.scrollLeft -= singleBlockWidth;
+      }
+    });
+
+    // Pointer drag/swipe
+    let isDown = false, startX = 0, startScroll = 0, pointerId = null;
+
+    function onPointerDown(e) {
+      if (e.target.closest('a, button')) return; // ✅ Ignore buttons/links
+      isDown = true;
+      pointerId = e.pointerId;
+      track.setPointerCapture(pointerId);
+      startX = e.clientX;
+      startScroll = track.scrollLeft;
+      stopAutoScroll();
+    }
+
+    function onPointerMove(e) {
+      if (!isDown) return;
+      const walk = (e.clientX - startX) * 1.5;
+      track.scrollLeft = startScroll - walk;
+    }
+
+    function onPointerUp() {
+      if (!isDown) return;
+      isDown = false;
+      try { track.releasePointerCapture(pointerId); } catch {}
+      pointerId = null;
+      startAutoScroll();
+    }
+
+    track.addEventListener('pointerdown', onPointerDown, { passive: true });
+    track.addEventListener('pointermove', onPointerMove, { passive: true });
+    track.addEventListener('pointerup', onPointerUp);
+    track.addEventListener('pointercancel', onPointerUp);
+    track.addEventListener('pointerleave', onPointerUp);
+
+    // Ensure buttons are clickable
+    document.querySelectorAll('.service-card .view-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation(); // prevent carousel drag interference
+      });
+    });
+
+    // Autoplay
+    let autoScrollInterval = null;
+    function startAutoScroll() {
+      if (autoScrollInterval) return;
+      autoScrollInterval = setInterval(() => {
+        track.scrollBy({ left: step, behavior: 'smooth' });
+      }, 2000);
+    }
+
+    function stopAutoScroll() {
+      clearInterval(autoScrollInterval);
+      autoScrollInterval = null;
+    }
+    startAutoScroll();
+
+    // Pause on hover
+    track.addEventListener('mouseenter', stopAutoScroll);
+    track.addEventListener('mouseleave', startAutoScroll);
+
+    // Keyboard support
+    window.addEventListener('keydown', (e) => {
+      if (['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)) return;
+      if (e.key === 'ArrowRight') {
+        stopAutoScroll();
+        track.scrollBy({ left: step, behavior: 'smooth' });
+        startAutoScroll();
+      } else if (e.key === 'ArrowLeft') {
+        stopAutoScroll();
+        track.scrollBy({ left: -step, behavior: 'smooth' });
+        startAutoScroll();
+      }
+    });
+  }
 });
-
-// new carousel with swipe in desktop
-
-
-  const carousel = document.querySelector('#pestCarousel');
-  const bsCarousel = new bootstrap.Carousel(carousel, {
-    interval: 1500,   // normal auto-slide interval
-    pause: 'hover'    // pause when hovering (Bootstrap default)
-  });
-
-
-
-
- 
-
-  // Book Now (form submit) → show success popup
-
-
-
