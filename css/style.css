@@ -155,8 +155,10 @@ body {
   display: none;                 /* hide scrollbar Chrome/Safari */
 }
 
+
 .service-card {
-  flex: 0 0 calc(20% - 20px); /* Show 5 cards per row */
+  flex: 0 0 calc(50% - 20px);
+  font-size: x-small;
   background: #00ff15;
   border-radius: 12px;
   padding: 15px;
@@ -166,6 +168,30 @@ body {
   transition: all 0.3s ease;
   scroll-snap-align: start;     /* snap each card into view */
   margin-top: 6px;
+}
+/* Medium mobiles (425px–767px): 3 cards */
+@media (min-width:425px) {
+  .service-card {
+    flex: 0 0 calc(33.33% - 20px);
+    font-size: small;
+
+  }
+}
+
+/* Tablets (768px–1024px): 4 cards */
+@media (min-width:768px) {
+  .service-card {
+    flex: 0 0 calc(25% - 20px);
+    font-size: medium;
+  }
+}
+
+/* Large screens (1025px+): 5 cards */
+@media (min-width:1025px) {
+  .service-card {
+    flex: 0 0 calc(20% - 20px);
+    font-size: large;
+  }
 }
 
 .service-card img {
@@ -187,4 +213,377 @@ body {
 
 .service-card:hover .view-btn {
   display: inline-block;
+}
+
+
+/* building cleaning styles -------------------------------------- */
+/* Cleaning Services Page Styles */
+/* .service-section {
+  padding: 60px 20px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #198754; 
+  margin-bottom: 15px;
+}
+
+.divider {
+  height: 3px;
+  width: 80px;
+  background: #198754;
+  margin: 20px 0;
+  border-radius: 2px;
+}
+
+.highlight-points {
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.highlight-points li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.highlight-points li::before {
+  content: "✔";
+  color: #198754;
+  font-weight: bold;
+  margin-right: 10px;
+} */
+
+.cleaning-services .service-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #198754;
+}
+
+.cleaning-services .service-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.service-img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.service-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.highlight-points {
+  margin-top: 20px;
+}
+
+.point-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.point-card i {
+  font-size: 24px;
+  color: #198754;
+  margin-bottom: 10px;
+}
+.point-card h6 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+}
+.point-card:hover {
+  transform: translateY(-5px);
+  background: #f8f9fa;
+}
+
+
+/* <!-- ------------------------------------------------chatgpt response try ----------------------------------------------- --> */
+
+.service-areas h4 {
+  font-size: 1.8rem;
+  border-left: 5px solid #198754; /* Bootstrap green */
+  padding-left: 12px;
+}
+
+.service-card-area {
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s ease;
+  border: 1px solid #eaeaea;
+}
+
+.service-card-area:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(25, 135, 84, 0.25);
+  border-color: #198754;
+}
+
+.service-card-area .img-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.service-card-area img {
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-card-area:hover img {
+  transform: scale(1.08);
+}
+
+.service-card-area .card-body {
+  padding: 20px;
+}
+
+.service-card-area .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #198754;
+  margin-bottom: 10px;
+}
+
+.service-card-area .card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+/* -------------------------------------deepseek---------------------- */
+:root {
+    --primary-green: #2ecc71;
+    --dark-green: #27ae60;
+    --light-green: #d5f5e3;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --text-dark: #333;
+    --text-light: #666;
+}
+
+.service-areas {
+    background-color: var(--white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.service-header {
+    color: var(--text-dark);
+    position: relative;
+    padding-bottom: 15px;
+    text-align: center;
+    margin-bottom: 1rem !important;
+    font-weight: 700;
+}
+
+.service-header:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary-green);
+}
+
+.service-subtitle {
+    color: var(--text-light);
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.service-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+    background: var(--white);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(46, 204, 113, 0.15);
+}
+
+.card-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.service-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(46, 204, 113, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.card-body {
+    padding: 1.8rem;
+    background: var(--white);
+    position: relative;
+}
+
+.card-content {
+    position: relative;
+}
+
+.card-title {
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+.card-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-green);
+    transition: width 0.3s ease;
+}
+
+.service-card:hover .card-title:after {
+    width: 100%;
+}
+
+.card-text {
+    color: var(--text-light);
+    margin-bottom: 1.8rem;
+    line-height: 1.6;
+}
+
+.service-icon {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-green);
+    /* background-image: url("/images/HomeGuard-Logo.jpg");
+    background-size: cover;
+    background-position: top; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: var(--dark-green);
+}
+
+.btn-service {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 22px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-service:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+.btn-service i {
+    transition: transform 0.3s ease;
+}
+
+.btn-service:hover i {
+    transform: translateX(4px);
+}
+
+.lazy-img {
+    filter: blur(2px);
+    transition: filter 0.5s ease;
+}
+
+.lazy-img.loaded {
+    filter: blur(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .service-card {
+        margin-bottom: 2rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-header {
+        font-size: 1.8rem;
+    }
+    
+    .service-subtitle {
+        font-size: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
 }
