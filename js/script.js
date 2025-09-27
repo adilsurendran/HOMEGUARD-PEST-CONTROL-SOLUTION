@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-            // navbar new js=============================================================================
+// ========================================================navbar new js=============================================================================
             const navLinks = document.querySelectorAll('.nav-link');
             
             // Set active class based on current page
@@ -383,6 +383,48 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 });
             });
+            
+
+            // hero section new scripts -----------------------------------------------------------
+
+             // Add scroll-triggered animation for elements if needed
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements that should animate on scroll
+            const elementsToAnimate = document.querySelectorAll('.hero-title, .hero-subtitle, .highlight-box, .cta-buttons');
+            elementsToAnimate.forEach(el => observer.observe(el));
+
+
+//  ----------------------------------------------  FAQ section scripts  -----------------------------------------------------------
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
 
         });
 
@@ -393,3 +435,46 @@ document.addEventListener('DOMContentLoaded', function () {
                         el.style.animationPlayState = 'paused';
                     });
                 }
+
+                document.querySelectorAll('.highlight-box').forEach(box => {
+            box.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                this.style.setProperty('--mouse-x', `${x}px`);
+                this.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+         // Scroll detection for navbar transparency and button visibility--------------------------------------------
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const scrollButtons = document.querySelector('.scroll-buttons');
+            const scrollPosition = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            const triggerPoint = viewportHeight * 0.8; // 80vh
+            
+            // Toggle navbar transparency
+            if (scrollPosition > triggerPoint) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Toggle scroll buttons visibility
+            if (scrollPosition > triggerPoint) {
+                scrollButtons.classList.add('visible');
+            } else {
+                scrollButtons.classList.remove('visible');
+            }
+        });
+        
+        // Back to top functionality
+        document.querySelector('.back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
