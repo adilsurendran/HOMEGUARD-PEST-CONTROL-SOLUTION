@@ -11,8 +11,9 @@
   <!-- Bootstrap 5 CSS (CDN). You can replace with a local copy if desired. -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 
 
   <!-- Custom stylesheet -->
@@ -178,10 +179,10 @@
                         </div>
                         
                         <div class="cta-buttons">
-                            <a href="#" class="btn btn-outline-custom">
+                            <a href="#" class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">
                                 <i class="fas fa-calendar-check me-2"></i> Register your Free Inspection
                             </a>
-                            <a class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                            <a class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#serviceBookingModal">
                                 <i class="fas fa-calendar-check me-2"></i> Book Service Now
                             </a>
                         </div>
@@ -628,6 +629,220 @@
     </section>
     <!-- ===== END Building cleaning Section ===== -->
 
+<!-- =============================================new pricing card session ================================================================= -->
+<!-- <section class="pricing-section-custom py-5">
+  <div class="container">
+
+    <div class="text-center mb-5" data-aos="fade-down">
+      <h2 class="fw-bold">Our Pest Control Plans</h2>
+      <p class="text-muted">Choose the plan that best suits your needs</p>
+    </div>
+
+    <div class="row justify-content-center align-items-end g-4">
+
+      <div class="col-md-3" data-aos="fade-right">
+        <div class="pricing-card-custom basic-card-custom h-100 text-center">
+          <h4 class="plan-title-custom">Basic Plan</h4>
+          <h2 class="plan-price-custom">149 AED</h2>
+          <ul class="plan-features-custom list-unstyled">
+            <li><i class="fa fa-check-circle"></i> General inspection</li>
+            <li><i class="fa fa-check-circle"></i> Cockroaches & ants treatment</li>
+            <li><i class="fa fa-check-circle"></i> Eco-friendly treatments</li>
+            <li><i class="fa fa-check-circle"></i> Single visit / one-time</li>
+          </ul>
+          <button class="btn btn-primary-custom">Book Now</button>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="pricing-card-custom premium-card-custom h-100 text-center">
+          <h4 class="plan-title-custom">Premium Plan</h4>
+          <h2 class="plan-price-custom">399 AED</h2>
+          <ul class="plan-features-custom list-unstyled">
+            <li><i class="fa fa-check-circle"></i> Full property inspection</li>
+            <li><i class="fa fa-check-circle"></i> Bed bugs control</li>
+            <li><i class="fa fa-check-circle"></i> Cockroach control</li>
+            <li><i class="fa fa-check-circle"></i> Rodent control</li>
+            <li><i class="fa fa-check-circle"></i> Priority scheduling</li>
+            <li><i class="fa fa-check-circle"></i> 1 year contract</li>
+            <li><i class="fa fa-check-circle"></i> Quarterly maintenance</li>
+          </ul>
+          <button class="btn btn-secondary-custom">Book Now</button>
+        </div>
+      </div>
+
+      <div class="col-md-3" data-aos="fade-left">
+        <div class="pricing-card-custom standard-card-custom h-100 text-center">
+          <h4 class="plan-title-custom">Standard Plan</h4>
+          <h2 class="plan-price-custom">199 AED</h2>
+          <ul class="plan-features-custom list-unstyled">
+            <li><i class="fa fa-check-circle"></i> Inspection</li>
+            <li><i class="fa fa-check-circle"></i> Ants & cockroach treatment</li>
+            <li><i class="fa fa-check-circle"></i> 6 month warranty</li>
+            <li><i class="fa fa-check-circle"></i> Eco-friendly treatments</li>
+            <li><i class="fa fa-check-circle"></i> Company follow-up</li>
+          </ul>
+          <button class="btn btn-primary-custom">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-5" data-aos="fade-up">
+      <div class="combo-card-custom text-center p-4">
+        <h3 class="fw-bold">Combo Plan</h3>
+        <h2 class="combo-price-custom">449 AED</h2>
+        <p class="mb-3">Deep Cleaning + Pest Control</p>
+        <button class="btn btn-secondary-custom">Book Now</button>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+ <!-- <section class="pricing-section-custom py-5">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-down">
+        <h2 class="fw-bold section-title-custom">Our Pest Control Plans</h2>
+        <p class="text-muted fs-5">Choose the plan that best suits your needs</p>
+      </div>
+
+      <div class="row justify-content-center align-items-end g-4">
+        <div class="col-md-3 mobile-order-1" data-aos="fade-right">
+          <div class="pricing-card-custom basic-card-custom h-100 text-center">
+            <h4 class="plan-title-custom">Basic Plan</h4>
+            <h2 class="plan-price-custom">149 AED</h2>
+            <ul class="plan-features-custom list-unstyled">
+              <li><i class="fas fa-check-circle text-success"></i> General inspection</li>
+              <li><i class="fas fa-check-circle text-success"></i> Cockroaches treatment</li>
+              <li><i class="fas fa-check-circle text-success"></i> Ants treatment</li>
+              <li><i class="fas fa-check-circle text-success"></i> Eco-friendly treatments</li>
+              <li><i class="fas fa-check-circle text-success"></i> Single visit / one-time</li>
+            </ul>
+            <button class="btn btn-primary-custom mt-3">Book Now</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 mobile-order-3" data-aos="zoom-in">
+          <div class="pricing-card-custom premium-card-custom h-100 text-center">
+            <h4 class="plan-title-custom">Premium Plan</h4>
+            <h2 class="plan-price-custom">399 AED</h2>
+            <ul class="plan-features-custom list-unstyled">
+              <li><i class="fas fa-check-circle text-warning"></i> Full property inspection</li>
+              <li><i class="fas fa-check-circle text-warning"></i> Bed bugs control</li>
+              <li><i class="fas fa-check-circle text-warning"></i> Cockroach control</li>
+              <li><i class="fas fa-check-circle text-warning"></i> Rodent control</li>
+              <li><i class="fas fa-check-circle text-warning"></i> Priority scheduling</li>
+              <li><i class="fas fa-check-circle text-warning"></i> 1 year contract</li>
+              <li><i class="fas fa-check-circle text-warning"></i> Quarterly maintenance</li>
+            </ul>
+            <button class="btn btn-secondary-custom mt-3">Book Now</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 mobile-order-2" data-aos="fade-left">
+          <div class="pricing-card-custom standard-card-custom h-100 text-center">
+            <h4 class="plan-title-custom">Standard Plan</h4>
+            <h2 class="plan-price-custom">199 AED</h2>
+            <ul class="plan-features-custom list-unstyled">
+              <li><i class="fas fa-check-circle text-success"></i> Inspection</li>
+              <li><i class="fas fa-check-circle text-success"></i> Ants & cockroach treatment</li>
+              <li><i class="fas fa-check-circle text-success"></i> 6 month warranty</li>
+              <li><i class="fas fa-check-circle text-success"></i> Eco-friendly treatments</li>
+              <li><i class="fas fa-check-circle text-success"></i> Company follow-up</li>
+            </ul>
+            <button class="btn btn-primary-custom mt-3">Book Now</button>
+          </div>
+        </div>
+
+        
+      </div>
+
+      <div class="d-flex justify-content-center mt-5 mobile-order-4" data-aos="fade-up">
+        <div class="combo-card-custom text-center p-4">
+          <h3 class="fw-bold">Combo Plan</h3>
+          <h2 class="combo-price-custom">449 AED</h2>
+          <p class="mb-3 fs-5">Deep Cleaning + Pest Control</p>
+          <button class="btn btn-secondary-custom">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+ <!-- ========================================= added booking integration ======================================== -->
+
+ <section class="pricing-section-custom py-5">
+        <div class="container">
+            <!-- Title -->
+            <div class="text-center mb-5" data-aos="fade-down">
+                <h2 class="fw-bold section-title-custom">Our Pest Control Plans</h2>
+                <p class="text-muted fs-5">Choose the plan that best suits your needs</p>
+            </div>
+
+            <!-- Pricing Row -->
+            <div class="row justify-content-center align-items-end g-4">
+                <!-- Basic -->
+                <div class="col-md-3 mobile-order-1" data-aos="fade-right">
+                    <div class="pricing-card-custom basic-card-custom h-100 text-center">
+                        <h4 class="plan-title-custom">Basic Plan</h4>
+                        <h2 class="plan-price-custom">149 AED</h2>
+                        <ul class="plan-features-custom list-unstyled">
+                            <li><i class="fas fa-check-circle text-success"></i> General inspection</li>
+                            <li><i class="fas fa-check-circle text-success"></i> Cockroaches treatment</li>
+                            <li><i class="fas fa-check-circle text-success"></i> Ants treatment</li>
+                            <li><i class="fas fa-check-circle text-success"></i> Eco-friendly treatments</li>
+                            <li><i class="fas fa-check-circle text-success"></i> Single visit / one-time</li>
+                        </ul>
+                        <button class="btn btn-primary-custom mt-3" data-plan="basic">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Premium -->
+                <div class="col-md-4 mobile-order-3" data-aos="zoom-in">
+                    <div class="pricing-card-custom premium-card-custom h-100 text-center">
+                        <h4 class="plan-title-custom">Premium Plan</h4>
+                        <h2 class="plan-price-custom">399 AED</h2>
+                        <ul class="plan-features-custom list-unstyled">
+                            <li><i class="fas fa-check-circle text-warning"></i> Full property inspection</li>
+                            <li><i class="fas fa-check-circle text-warning"></i> Bed bugs control</li>
+                            <li><i class="fas fa-check-circle text-warning"></i> Cockroach control</li>
+                            <li><i class="fas fa-check-circle text-warning"></i> Rodent control</li>
+                            <li><i class="fas fa-check-circle text-warning"></i> Priority scheduling</li>
+                            <li><i class="fas fa-check-circle text-warning"></i> 1 year contract</li>
+                            <li><i class="fas fa-check-circle text-warning"></i> Quarterly maintenance</li>
+                        </ul>
+                        <button class="btn btn-secondary-custom mt-3" data-plan="premium">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Standard -->
+                <div class="col-md-3 mobile-order-2" data-aos="fade-left">
+                    <div class="pricing-card-custom standard-card-custom h-100 text-center">
+                        <h4 class="plan-title-custom">Standard Plan</h4>
+                        <h2 class="plan-price-custom">199 AED</h2>
+                        <ul class="plan-features-custom list-unstyled">
+                            <li><i class="fas fa-check-circle text-success"></i> Inspection</li>
+                            <li><i class="fas fa-check-circle text-success"></i> Ants & cockroach treatment</li>
+                            <li><i class="fas fa-check-circle text-success"></i> 6 month warranty</li>
+                            <li><i class="fas fa-check-circle text-success"></i> Eco-friendly treatments</li>
+                            <li><i class="fas fa-check-circle text-success"></i> Company follow-up</li>
+                        </ul>
+                        <button class="btn btn-primary-custom mt-3" data-plan="standard">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Combo Plan -->
+            <div class="d-flex justify-content-center mt-5 mobile-order-4" data-aos="fade-up">
+                <div class="combo-card-custom text-center p-4">
+                    <h3 class="fw-bold">Combo Plan</h3>
+                    <h2 class="combo-price-custom">449 AED</h2>
+                    <p class="mb-3 fs-5">Deep Cleaning + Pest Control</p>
+                    <button class="btn btn-secondary-custom" data-plan="combo">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- ===== SECTION: Contact (Footer anchor target) ===== -->
     <section id="contact" class="contact-section">
@@ -994,9 +1209,9 @@
         </div>
     </footer>
 
-  <!-- new form controls of booking here  -->
-   <!-- Booking Modal -->
-<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <!-- ==============================================new form controls of booking here============================  -->
+   <!-- free inspection Booking Modal -->
+<!-- <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -1006,7 +1221,6 @@
       <div class="modal-body">
         <form id="bookingForm">
           <div class="row g-3">
-            <!-- Select Boxes -->
             <div class="col-md-6">
               <label for="serviceType" class="form-label">Type</label>
               <select class="form-select" id="serviceType" required>
@@ -1022,26 +1236,22 @@
               </select>
             </div>
 
-            <!-- Name -->
             <div class="col-12">
               <label for="customerName" class="form-label">Name / Company</label>
               <input type="text" class="form-control" id="customerName" placeholder="Enter your name or company" required>
             </div>
 
-            <!-- Mobile -->
             <div class="col-12">
               <label for="mobileNumber" class="form-label">Mobile Number</label>
               <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
               <div class="form-text">Enter 10-digit mobile number</div>
             </div>
 
-            <!-- Address -->
             <div class="col-12">
               <label for="address" class="form-label">Address</label>
               <textarea class="form-control" id="address" rows="2" required></textarea>
             </div>
 
-            <!-- Map Selector Placeholder -->
             <div class="col-12">
               <label class="form-label">Select Location on Map</label>
               <div class="border rounded p-3 bg-light text-center" style="height: 200px;">
@@ -1050,7 +1260,6 @@
             </div>
           </div>
 
-          <!-- Buttons -->
           <div class="mt-4 text-end">
             <button type="button" class="btn btn-secondary" id="cancelBooking">Cancel</button>
             <button type="submit" class="btn btn-success">Book Now</button>
@@ -1059,7 +1268,244 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<div class="modal fade" id="freeInspectionModal" tabindex="-1" aria-labelledby="freeInspectionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content inspection-modal-content">
+                <div class="modal-header inspection-modal-header">
+                    <h5 class="modal-title inspection-modal-title" id="freeInspectionModalLabel">
+                        Book Your Free Inspection <span class="inspection-free-badge">FREE</span>
+                    </h5>
+                    <button type="button" class="btn-close inspection-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body inspection-modal-body">
+                    <form id="freeInspectionForm">
+                        <div class="row g-3">
+                            <!-- Service Type -->
+                            <div class="col-md-6">
+                                <label for="serviceType" class="form-label inspection-form-label">Inspection Type</label>
+                                <select class="form-select inspection-form-select" id="serviceType" required>
+                                    <option selected>Residential</option>
+                                    <option>Business</option>
+                                    <option>Both</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Service Selection (Checkboxes) -->
+                            <div class="col-md-6">
+                                <label class="form-label inspection-form-label">Services Needed</label>
+                                <div class="inspection-service-checkbox-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input inspection-form-check-input" type="checkbox" id="pestControl" checked>
+                                        <label class="form-check-label inspection-form-check-label" for="pestControl">
+                                            Pest Control
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input inspection-form-check-input" type="checkbox" id="buildingCleaning">
+                                        <label class="form-check-label inspection-form-check-label" for="buildingCleaning">
+                                            Building Cleaning
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Specify Your Need -->
+                            <div class="col-12">
+                                <label for="specifyNeed" class="form-label inspection-form-label">Specify Your Need</label>
+                                <input type="text" class="form-control inspection-form-control" id="specifyNeed" placeholder="Tell us more about your requirements...">
+                            </div>
+
+                            <!-- Name -->
+                            <div class="col-12">
+                                <label for="customerName" class="form-label inspection-form-label">Name / Company</label>
+                                <input type="text" class="form-control inspection-form-control" id="customerName" placeholder="Enter your name or company" required>
+                            </div>
+
+                            <!-- Mobile -->
+                            <div class="col-12">
+                                <label for="mobileNumber" class="form-label inspection-form-label">Mobile Number</label>
+                                <input type="tel" class="form-control inspection-form-control" id="mobileNumber" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+                                <div class="form-text">Enter 10-digit mobile number</div>
+                                
+                                <!-- Alternative Number Toggle -->
+                                <div class="inspection-alternative-number-toggle" id="toggleAlternativeNumber">
+                                    <i class="bi bi-plus-circle"></i> Add Alternative Number
+                                </div>
+                                
+                                <!-- Alternative Number (Hidden by default) -->
+                                <div class="mt-2" id="alternativeNumberContainer" style="display: none;">
+                                    <label for="alternativeNumber" class="form-label inspection-form-label">Alternative Number</label>
+                                    <input type="tel" class="form-control inspection-form-control" id="alternativeNumber" placeholder="Enter alternative number" pattern="[0-9]{10}">
+                                    <div class="form-text">Optional: Enter 10-digit alternative number</div>
+                                </div>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="col-12">
+                                <label for="address" class="form-label inspection-form-label">Address</label>
+                                <textarea class="form-control inspection-form-control" id="address" rows="2" required></textarea>
+                                
+                                <!-- Use Current Location Checkbox -->
+                                <div class="inspection-current-location-check form-check mt-2">
+                                    <input class="form-check-input inspection-form-check-input" type="checkbox" id="useCurrentLocation">
+                                    <label class="form-check-label inspection-form-check-label" for="useCurrentLocation">
+                                        Use my current location
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Map Selector Placeholder -->
+                            <div class="col-12">
+                                <label class="form-label inspection-form-label">Select Location on Map</label>
+                                <div class="inspection-map-placeholder" style="height: 200px;">
+                                    <em>[ Map Integration Placeholder – connect Google Maps here later ]</em>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-4 d-flex justify-content-between">
+                            <button type="button" class="btn btn-outline-secondary inspection-btn-outline-secondary" id="cancelInspection">Cancel</button>
+                            <button type="submit" class="btn btn-success inspection-btn-success">Book Free Inspection</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ========= service booking modal ============================== -->
+
+    <!-- Service Booking Modal -->
+    <div class="modal fade" id="serviceBookingModal" tabindex="-1" aria-labelledby="serviceBookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content service-modal-content">
+                <div class="modal-header service-modal-header">
+                    <h5 class="modal-title service-modal-title" id="serviceBookingModalLabel">
+                        Book Your Service
+                    </h5>
+                    <button type="button" class="btn-close service-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body service-modal-body">
+                    <form id="serviceBookingForm">
+                        <div class="row g-3">
+                            <!-- Service Type -->
+                            <div class="col-md-6">
+                                <label for="serviceType" class="form-label service-form-label">Service Type</label>
+                                <select class="form-select service-form-select" id="serviceType" required>
+                                    <option selected>Residential</option>
+                                    <option>Business</option>
+                                    <option>Both</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Service Selection (Checkboxes) -->
+                            <div class="col-md-6">
+                                <label class="form-label service-form-label">Services Needed</label>
+                                <div class="service-service-checkbox-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input service-form-check-input" type="checkbox" id="pestControlService" checked>
+                                        <label class="form-check-label service-form-check-label" for="pestControlService">
+                                            Pest Control
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input service-form-check-input" type="checkbox" id="buildingCleaningService">
+                                        <label class="form-check-label service-form-check-label" for="buildingCleaningService">
+                                            Building Cleaning
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Specify Your Need -->
+                            <div class="col-12">
+                                <label for="specifyNeed" class="form-label service-form-label">Specify Your Need</label>
+                                <input type="text" class="form-control service-form-control" id="specifyNeed" placeholder="Tell us more about your requirements...">
+                            </div>
+
+                            <!-- Name -->
+                            <div class="col-12">
+                                <label for="customerName" class="form-label service-form-label">Name / Company</label>
+                                <input type="text" class="form-control service-form-control" id="customerName" placeholder="Enter your name or company" required>
+                            </div>
+
+                            <!-- Mobile -->
+                            <div class="col-12">
+                                <label for="mobileNumber" class="form-label service-form-label">Mobile Number</label>
+                                <input type="tel" class="form-control service-form-control" id="mobileNumber" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+                                <div class="form-text">Enter 10-digit mobile number</div>
+                                
+                                <!-- Alternative Number Toggle -->
+                                <div class="service-alternative-number-toggle" id="toggleAlternativeNumberService">
+                                    <i class="bi bi-plus-circle"></i> Add Alternative Number
+                                </div>
+                                
+                                <!-- Alternative Number (Hidden by default) -->
+                                <div class="mt-2" id="alternativeNumberContainerService" style="display: none;">
+                                    <label for="alternativeNumber" class="form-label service-form-label">Alternative Number</label>
+                                    <input type="tel" class="form-control service-form-control" id="alternativeNumber" placeholder="Enter alternative number" pattern="[0-9]{10}">
+                                    <div class="form-text">Optional: Enter 10-digit alternative number</div>
+                                </div>
+                            </div>
+
+                            <!-- Plan Selection Cards -->
+                            <div class="col-12">
+                                <label class="form-label service-form-label">Select Your Plan</label>
+                                <div class="service-plan-cards" id="planSelection">
+                                    <div class="service-plan-card" data-plan="basic">
+                                        <div class="service-plan-name">Basic Plan</div>
+                                        <div class="service-plan-price">149 AED</div>
+                                    </div>
+                                    <div class="service-plan-card" data-plan="standard">
+                                        <div class="service-plan-name">Standard Plan</div>
+                                        <div class="service-plan-price">199 AED</div>
+                                    </div>
+                                    <div class="service-plan-card" data-plan="premium">
+                                        <div class="service-plan-name">Premium Plan</div>
+                                        <div class="service-plan-price">399 AED</div>
+                                    </div>
+                                    <div class="service-plan-card" data-plan="combo">
+                                        <div class="service-plan-name">Combo Plan</div>
+                                        <div class="service-plan-price">449 AED</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="col-12">
+                                <label for="address" class="form-label service-form-label">Address</label>
+                                <textarea class="form-control service-form-control" id="address" rows="2" required></textarea>
+                                
+                                <!-- Use Current Location Checkbox -->
+                                <div class="service-current-location-check form-check mt-2">
+                                    <input class="form-check-input service-form-check-input" type="checkbox" id="useCurrentLocationService">
+                                    <label class="form-check-label service-form-check-label" for="useCurrentLocationService">
+                                        Use my current location
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Map Selector Placeholder -->
+                            <div class="col-12">
+                                <label class="form-label service-form-label">Select Location on Map</label>
+                                <div class="service-map-placeholder" style="height: 200px;">
+                                    <em>[ Map Integration Placeholder – connect Google Maps here later ]</em>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-4 d-flex justify-content-between">
+                            <button type="button" class="btn btn-outline-secondary service-btn-outline-secondary" id="cancelServiceBooking">Cancel</button>
+                            <button type="submit" class="btn btn-success service-btn-success">Book Service</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <!-- Success Popup -->
 <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
@@ -1097,7 +1543,7 @@
         <a href="#" class="scroll-button back-to-top">
             <i class="bi bi-arrow-up"></i>
         </a>
-        <a data-bs-toggle="modal" data-bs-target="#bookingModal" class="scroll-button book-now">
+        <a href="#booknow" data-bs-toggle="modal" data-bs-target="#serviceBookingModal" class="scroll-button book-now">
             <i class="bi bi-calendar-check"></i> Book Now
         </a>
     </div>
@@ -1108,5 +1554,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
   <!-- Custom JS (deferred for performance) -->
   <script src="js/script.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>

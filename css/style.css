@@ -2714,6 +2714,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
             color: var(--white);
             text-decoration: none;
+            /* cursor: pointer; */
         }
         
         .scroll-button.book-now {
@@ -3296,7 +3297,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
 
 .building-cleaning-hero {
             /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('images\building-hero.jpg') center/cover no-repeat; */
-           background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/images/building-hero.jpg') top/cover no-repeat;
+           /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)) !important; */
             color: var(--white);
             padding: 120px 0;
             position: relative;
@@ -3555,3 +3556,691 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
                 font-size: 1.5rem;
             }
         }
+
+/* -------------------------------- Free inspection style ---------------------------------------- */
+.inspection-modal-header {
+            background-color: var(--primary-green-new);
+            color: white;
+        }
+        
+        .inspection-modal-title {
+            font-weight: 600;
+        }
+        
+        .inspection-btn-close {
+            filter: invert(1);
+        }
+        
+        .inspection-form-label {
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        
+        .inspection-form-control, .inspection-form-select {
+            border-radius: 6px;
+            padding: 10px 12px;
+            border: 1px solid #ced4da;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .inspection-form-control:focus, .inspection-form-select:focus {
+            border-color: var(--primary-green-new);
+            box-shadow: 0 0 0 0.25rem rgba(26, 107, 59, 0.25);
+        }
+        
+        .inspection-btn-success {
+            background-color: var(--primary-green-new);
+            border-color: var(--primary-green-new);
+            padding: 10px 24px;
+            font-weight: 500;
+            border-radius: 6px;
+        }
+        
+        .inspection-btn-success:hover {
+            background-color: var(--dark-green-new);
+            border-color: var(--dark-green-new);
+        }
+        
+        .inspection-btn-outline-secondary {
+            padding: 10px 24px;
+            border-radius: 6px;
+        }
+        
+        .inspection-map-placeholder {
+            background-color: var(--light-color);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        .inspection-service-checkbox-group {
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 12px;
+            background-color: var(--light-color);
+        }
+        
+        .inspection-form-check-input:checked {
+            background-color: var(--primary-green-new);
+            border-color: var(--primary-green-new);
+        }
+        
+        .inspection-form-check-label {
+            font-weight: 500;
+        }
+        
+        .inspection-alternative-number-toggle {
+            color: var(--primary-green-new);
+            cursor: pointer;
+            font-size: 0.875rem;
+            margin-top: 5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .inspection-alternative-number-toggle:hover {
+            color: var(--dark-green-new);
+            text-decoration: underline;
+        }
+        
+        .inspection-current-location-check {
+            margin-top: 10px;
+        }
+        
+        .inspection-current-location-check .inspection-form-check-label {
+            font-weight: normal;
+        }
+        
+        .inspection-modal-content {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .inspection-modal-body {
+            padding: 24px;
+        }
+        
+        .inspection-free-badge {
+            background-color: var(--accent);
+            color: var(--dark);
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+
+ /* =============================pricing  tags style ==============================  */
+ 
+
+/* General Section */
+    .pricing-section-custom {
+      background: linear-gradient(135deg, #f5f9f6 0%, #e8f5e9 100%);
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Base Card */
+    .pricing-card-custom {
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .pricing-card-custom:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    /* Basic Card */
+    .basic-card-custom {
+      background: linear-gradient(135deg, #f8fffa 0%, #e8f5e9 100%);
+      color: var(--primary-green-new);
+      border: 2px solid rgba(26, 107, 59, 0.2);
+    }
+
+    /* Premium Card */
+    .premium-card-custom {
+      color: var(--secondary);
+      transform: scale(1.05);
+      border: 3px solid var(--dark-green-new);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(-45deg, #14572e, #1a6b3b, #198754, #27ae60);
+      background-size: 400% 400%;
+      animation: gradientShift 6s ease infinite;
+    }
+    
+    .premium-card-custom::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        /* url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='30' viewBox='0 0 60 30'%3E%3Cpath fill='%23ffc107' opacity='0.5' d='M20,10 C15,5 10,10 15,15 C20,20 25,15 20,10 Z M40,20 C35,15 30,20 35,25 C40,30 45,25 40,20 Z'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'%3E%3Cpath fill='%23ffc107' opacity='0.5' d='M10,5 C5,0 0,5 5,10 C10,15 15,10 10,5 Z M30,15 C25,10 20,15 25,20 C30,25 35,20 30,15 Z'/%3E%3C/svg%3E"); */
+      url('/images/svg/spraying-svgrepo-com\ \(1\).svg'),
+        url('/images/svg/rat-extermination-svgrepo-com.svg');
+         background-size: 55px 55px, 40px 40px;
+         opacity: 0.8; 
+        background-repeat: no-repeat;
+      background-position: 10% 10%, 90% 80%;
+      animation: pestMove 5s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    /* Standard Card */
+    .standard-card-custom {
+      background: var(--white);
+      color: var(--primary-green-new);
+      border: 2px solid rgba(26, 107, 59, 0.2);
+    }
+
+    /* Titles & Prices */
+    .plan-title-custom {
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+    }
+    
+    .plan-price-custom {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .plan-price-custom::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: currentColor;
+      border-radius: 2px;
+      opacity: 0.3;
+    }
+
+    /* Features */
+    .plan-features-custom li {
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .plan-features-custom i {
+      margin-right: 10px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* Buttons */
+    .btn-primary-custom {
+      background: var(--brand-green);
+      color: var(--white);
+      border-radius: 30px;
+      padding: 12px 30px;
+      font-weight: 600;
+      border: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(25, 135, 84, 0.3);
+    }
+    
+    .btn-primary-custom:hover {
+      background: var(--dark-green-new);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(25, 135, 84, 0.4);
+    }
+    
+    .btn-secondary-custom {
+      background: var(--secondary);
+      color: var(--dark-color);
+      border-radius: 30px;
+      padding: 12px 30px;
+      font-weight: 700;
+      border: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+    }
+    
+    .btn-secondary-custom:hover {
+      background: #e0a800;
+      color: var(--dark-color);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(255, 193, 7, 0.4);
+    }
+
+    /* Combo Plan */
+    .combo-card-custom {
+      color: var(--primary-green-new);
+      border-radius: 25px;
+      width: 50%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      background: linear-gradient(-45deg, #fac012, #ffca2b, #ffea00, #fffb00);
+      background-size: 400% 400%;
+      animation: gradientShift 6s ease infinite;
+    }
+    
+    .combo-card-custom::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        /* url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%231a6b3b' opacity='0.5' d='M20,5 C25,0 30,5 25,10 C20,15 15,10 20,5 Z M30,30 C25,25 20,30 25,35 C30,40 35,35 30,30 Z'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath fill='%231a6b3b' opacity='0.5' d='M15,5 C10,0 5,5 10,10 C15,15 20,10 15,5 Z M25,25 C20,20 15,25 20,30 C25,35 30,30 25,25 Z'/%3E%3C/svg%3E"); */
+        url('/images/svg/cleaning-service-svgrepo-com.svg'),
+                url('/images//svg/warranty-term-grey.svg');
+
+         background-size: 50px 50px, 40px 40px;
+         /* opacity: 0.5;  */
+      background-repeat: no-repeat;
+      background-position: 5% 15%, 95% 85%;
+      animation: pestMove 5s ease-in-out infinite;
+      z-index: -1;
+    }
+    
+    .combo-price-custom {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+    
+    .combo-card-custom .btn-secondary-custom {
+      background: var(--primary-green-new);
+      color: var(--secondary);
+      box-shadow: 0px 0px 10px 2px var(--primary-green-new);
+    }
+    
+    .combo-card-custom .btn-secondary-custom:hover {
+      background: var(--dark-green-new);
+      color: var(--secondary);
+    }
+
+    /* Animations */
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+    @keyframes pestMove {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .premium-card-custom {
+        transform: scale(1);
+      }
+      .combo-card-custom {
+        width: 100%;
+      }
+      .plan-price-custom {
+        font-size: 2rem;
+      }
+      
+      /* Reorder for mobile */
+      .mobile-order-1 {
+        order: 1;
+      }
+      .mobile-order-2 {
+        order: 2;
+      }
+      .mobile-order-3 {
+        order: 3;
+      }
+      .mobile-order-4 {
+        order: 4;
+      }
+    }
+
+    /* Section Title Enhancement */
+    .section-title-custom {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    
+    .section-title-custom::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--brand-green);
+      border-radius: 2px;
+    }
+    
+    .premium-card-custom .section-title-custom::after {
+      background: var(--secondary);
+    }
+
+
+/* ========================================= service booking styles ==========================================================     */
+
+.service-modal-header {
+            background-color: var(--primary-green-new);
+            color: white;
+        }
+        
+        .service-modal-title {
+            font-weight: 600;
+        }
+        
+        .service-btn-close {
+            filter: invert(1);
+        }
+        
+        .service-form-label {
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        
+        .service-form-control, .service-form-select {
+            border-radius: 6px;
+            padding: 10px 12px;
+            border: 1px solid #ced4da;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .service-form-control:focus, .service-form-select:focus {
+            border-color: var(--primary-green-new);
+            box-shadow: 0 0 0 0.25rem rgba(26, 107, 59, 0.25);
+        }
+        
+        .service-btn-success {
+            background-color: var(--primary-green-new);
+            border-color: var(--primary-green-new);
+            padding: 10px 24px;
+            font-weight: 500;
+            border-radius: 6px;
+        }
+        
+        .service-btn-success:hover {
+            background-color: var(--dark-green-new);
+            border-color: var(--dark-green-new);
+        }
+        
+        .service-btn-outline-secondary {
+            padding: 10px 24px;
+            border-radius: 6px;
+        }
+        
+        .service-map-placeholder {
+            background-color: var(--light-color);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        .service-service-checkbox-group {
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 12px;
+            background-color: var(--light-color);
+        }
+        
+        .service-form-check-input:checked {
+            background-color: var(--primary-green-new);
+            border-color: var(--primary-green-new);
+        }
+        
+        .service-form-check-label {
+            font-weight: 500;
+        }
+        
+        .service-alternative-number-toggle {
+            color: var(--primary-green-new);
+            cursor: pointer;
+            font-size: 0.875rem;
+            margin-top: 5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .service-alternative-number-toggle:hover {
+            color: var(--dark-green-new);
+            text-decoration: underline;
+        }
+        
+        .service-current-location-check {
+            margin-top: 10px;
+        }
+        
+        .service-current-location-check .service-form-check-label {
+            font-weight: normal;
+        }
+        
+        .service-modal-content {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-modal-body {
+            padding: 24px;
+        }
+        
+        /* Plan Cards Styles */
+        .service-plan-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .service-plan-card {
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+        
+        .service-plan-card:hover {
+            border-color: var(--primary-green-new);
+        }
+        
+        .service-plan-card.selected {
+            border-color: var(--primary-green-new);
+            background-color: var(--light-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-plan-card.muted {
+            opacity: 0.6;
+        }
+        
+        .service-plan-name {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+        
+        .service-plan-price {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-green-new);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .service-plan-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .service-plan-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Pricing Section Styles */
+        .basic-card-custom {
+            border-top: 5px solid var(--primary-green);
+        }
+        
+        .standard-card-custom {
+            border-top: 5px solid var(--secondary-color);
+        }
+        /* .pricing-section-custom {
+            background-color: var(--light-color);
+        }
+        
+        .section-title-custom {
+            color: var(--primary-green-new);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pricing-card-custom {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .pricing-card-custom:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-green-new);
+        }
+        
+        
+        
+        .premium-card-custom {
+            border-top: 5px solid var(--accent);
+            transform: scale(1.05);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .premium-card-custom:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+        
+        .plan-title-custom {
+            color: var(--dark-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .plan-price-custom {
+            color: var(--primary-green-new);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .plan-features-custom li {
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-green-new);
+            border-color: var(--primary-green-new);
+            color: white;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--dark-green-new);
+            border-color: var(--dark-green-new);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary-custom {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: var(--dark);
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary-custom:hover {
+            background-color: #e0a800;
+            border-color: #e0a800;
+            transform: translateY(-2px);
+        }
+        
+        .combo-card-custom {
+            background: linear-gradient(135deg, var(--primary-green-new) 0%, var(--dark-green-new) 100%);
+            color: white;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .combo-price-custom {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-order-1 { order: 1; }
+            .mobile-order-2 { order: 2; }
+            .mobile-order-3 { order: 3; }
+            .mobile-order-4 { order: 4; }
+            
+            .premium-card-custom {
+                transform: scale(1);
+            }
+            
+            .premium-card-custom:hover {
+                transform: translateY(-5px);
+            }
+        } */

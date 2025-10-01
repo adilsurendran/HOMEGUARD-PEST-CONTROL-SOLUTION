@@ -426,6 +426,232 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
 
+            // free inspection script form with current location 
+
+            const toggleAlternativeNumber = document.getElementById('toggleAlternativeNumber');
+            const alternativeNumberContainer = document.getElementById('alternativeNumberContainer');
+            
+            toggleAlternativeNumber.addEventListener('click', function() {
+                if (alternativeNumberContainer.style.display === 'none') {
+                    alternativeNumberContainer.style.display = 'block';
+                    this.innerHTML = '<i class="bi bi-dash-circle"></i> Remove Alternative Number';
+                } else {
+                    alternativeNumberContainer.style.display = 'none';
+                    this.innerHTML = '<i class="bi bi-plus-circle"></i> Add Alternative Number';
+                }
+            });
+            
+            // Use current location checkbox
+            const useCurrentLocation = document.getElementById('useCurrentLocation');
+            const addressTextarea = document.getElementById('address');
+            
+            useCurrentLocation.addEventListener('change', function() {
+                if (this.checked) {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                            const latitude = position.coords.latitude;
+                            const longitude = position.coords.longitude;
+                            addressTextarea.value = `Current Location: ${latitude}, ${longitude}`;
+                        }, function(error) {
+                            console.error("Error getting location: ", error);
+                            addressTextarea.value = "Unable to retrieve current location";
+                        });
+                    } else {
+                        addressTextarea.value = "Geolocation is not supported by this browser";
+                    }
+                } else {
+                    addressTextarea.value = "";
+                }
+            });
+            
+            // Form submission
+            document.getElementById('freeInspectionForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validate service selection
+                const pestControl = document.getElementById('pestControl').checked;
+                const buildingCleaning = document.getElementById('buildingCleaning').checked;
+                
+                if (!pestControl && !buildingCleaning) {
+                    alert('Please select at least one service');
+                    return;
+                }
+                
+                // If we get here, form is valid
+                alert('Thank you! Your free inspection request has been submitted.');
+                // In a real application, you would submit the form data to a server here
+                
+                // Close the modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('freeInspectionModal'));
+                modal.hide();
+            });
+            
+            // Cancel button
+            document.getElementById('cancelInspection').addEventListener('click', function() {
+                const modal = bootstrap.Modal.getInstance(document.getElementById('freeInspectionModal'));
+                modal.hide();
+            });
+
+// =========================================== service booking with pricing plan integrated =========================================            
+             // Plan selection functionality
+        const planCards = document.querySelectorAll('.service-plan-card');
+        let selectedPlan = null;
+        
+        // planCards.forEach(card => {
+        //     card.addEventListener('click', function() {
+        //         // Remove selected class from all cards
+        //         planCards.forEach(c => {
+        //             c.classList.remove('selected');
+        //             c.classList.add('muted');
+        //         });
+                
+        //         // Add selected class to clicked card
+        //         this.classList.add('selected');
+        //         this.classList.remove('muted');
+                
+        //         // Store selected plan
+        //         selectedPlan = this.getAttribute('data-plan');
+        //     });
+        // });
+
+        planCards.forEach(card => {
+    card.addEventListener('click', function() {
+        const isCurrentlySelected = this.classList.contains('selected');
+        
+        // Remove selected class from all cards and remove muted class
+        planCards.forEach(c => {
+            c.classList.remove('selected');
+            c.classList.remove('muted');
+        });
+        
+        // If the clicked card wasn't already selected, select it
+        if (!isCurrentlySelected) {
+            this.classList.add('selected');
+            // Add muted class to other cards
+            planCards.forEach(c => {
+                if (c !== this) {
+                    c.classList.add('muted');
+                }
+            });
+            // Store selected plan
+            selectedPlan = this.getAttribute('data-plan');
+        } else {
+            // If it was already selected and clicked again, deselect it
+            selectedPlan = null;
+        }
+    });
+});
+
+        // Alternative number toggle for service modal
+        const toggleAlternativeNumberService = document.getElementById('toggleAlternativeNumberService');
+        const alternativeNumberContainerService = document.getElementById('alternativeNumberContainerService');
+        
+        toggleAlternativeNumberService.addEventListener('click', function() {
+            if (alternativeNumberContainerService.style.display === 'none') {
+                alternativeNumberContainerService.style.display = 'block';
+                this.innerHTML = '<i class="bi bi-dash-circle"></i> Remove Alternative Number';
+            } else {
+                alternativeNumberContainerService.style.display = 'none';
+                this.innerHTML = '<i class="bi bi-plus-circle"></i> Add Alternative Number';
+            }
+        });
+        
+        // Use current location checkbox for service modal
+        const useCurrentLocationService = document.getElementById('useCurrentLocationService');
+        const addressTextareaService = document.getElementById('address');
+        
+        useCurrentLocationService.addEventListener('change', function() {
+            if (this.checked) {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+                        addressTextareaService.value = `Current Location: ${latitude}, ${longitude}`;
+                    }, function(error) {
+                        console.error("Error getting location: ", error);
+                        addressTextareaService.value = "Unable to retrieve current location";
+                    });
+                } else {
+                    addressTextareaService.value = "Geolocation is not supported by this browser";
+                }
+            } else {
+                addressTextareaService.value = "";
+            }
+        });
+        
+        // Form submission for service booking
+        document.getElementById('serviceBookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate service selection
+            const pestControl = document.getElementById('pestControlService').checked;
+            const buildingCleaning = document.getElementById('buildingCleaningService').checked;
+            
+            if (!pestControl && !buildingCleaning) {
+                alert('Please select at least one service');
+                return;
+            }
+            
+            // Validate plan selection
+            // if (!selectedPlan) {
+            //     alert('Please select a plan');
+            //     return;
+            // }
+            
+            // If we get here, form is valid
+            alert(`Thank you! Your ${selectedPlan || ""} plan booking has been submitted.`);
+            // In a real application, you would submit the form data to a server here
+            
+            // Close the modal
+            const modal = bootstrap.Modal.getInstance(document.getElementById('serviceBookingModal'));
+            modal.hide();
+            
+            // Reset form
+            this.reset();
+            planCards.forEach(card => {
+                card.classList.remove('selected', 'muted');
+            });
+            selectedPlan = null;
+        });
+        
+        // Cancel button for service modal
+        document.getElementById('cancelServiceBooking').addEventListener('click', function() {
+            const modal = bootstrap.Modal.getInstance(document.getElementById('serviceBookingModal'));
+            modal.hide();
+            
+            // Reset form
+            document.getElementById('serviceBookingForm').reset();
+            planCards.forEach(card => {
+                card.classList.remove('selected', 'muted');
+            });
+            selectedPlan = null;
+        });
+
+        // Pricing card integration
+        document.querySelectorAll('.pricing-card-custom button, .combo-card-custom button').forEach(button => {
+            button.addEventListener('click', function() {
+                const plan = this.getAttribute('data-plan');
+                
+                // Show the service booking modal
+                const modal = new bootstrap.Modal(document.getElementById('serviceBookingModal'));
+                modal.show();
+                
+                // Select the corresponding plan in the modal
+                setTimeout(() => {
+                    const planCard = document.querySelector(`.service-plan-card[data-plan="${plan}"]`);
+                    if (planCard) {
+                        planCards.forEach(c => {
+                            c.classList.remove('selected');
+                            c.classList.add('muted');
+                        });
+                        
+                        planCard.classList.add('selected');
+                        planCard.classList.remove('muted');
+                        selectedPlan = plan;
+                    }
+                }, 500);
+            });
+        });
         });
 
         function initAnimations() {
@@ -478,3 +704,4 @@ document.addEventListener('DOMContentLoaded', function () {
                 behavior: 'smooth'
             });
         });
+        
