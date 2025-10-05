@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function () {
           // -------------------------
           if (typeof AOS !== "undefined") {
             AOS.init({
-              duration: 1500,
+              duration: 1300,
               once: true
             });
           }

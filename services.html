@@ -10,41 +10,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-
+    <link rel="preload" as="image" href="/images/building-hero.jpg" fetchpriority="high">
 </head>
 <body>
 
-  <!-- Reuse same navbar (keeps consistency across pages) -->
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <img src="/images/HOMEGUARD-LOGO-ORG.png" alt="Home Guard Logo" width="35"  class="d-inline-block align-text-top logoround rounded-circle">
-        <div>
-          <div class="fw-bold text-success fs-6">HOME GUARD</div>
-          <small class="text-muted fs-6">PEST CONTROL</small>
-        </div>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav2" aria-controls="mainNav2" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNav2">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDropdown2">
-              <li><a class="dropdown-item" href="index.html#pest-services">Pest Control Service</a></li>
-              <li><a class="dropdown-item" href="services.html">Building Cleaning Service</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
-
+  <!-- Reused navbar -->
    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <!-- Logo + Title -->
@@ -92,28 +62,31 @@
         </div>
     </nav>
 
-    <!-- <header class="hero-section text-white text-center" style="background-image:url('images/building-hero.jpg'); background-position: center; background-size: 100% 100%;">
-    <div class="overlay"></div>
-    <div class="container position-relative py-6">
-      <h1 class="display-5 fw-bold">Building Cleaning Services</h1>
-      <p class="lead mb-4">Comprehensive cleaning solutions for residential and commercial buildings across GCC. <strong>2010</strong>.</p>
-      <a class="btn btn-success btn-lg" href="#" data-bs-toggle="modal" data-bs-target="#bookingModal"> Book your service now</a>
-    </div>
-  </header> -->
+    <!-- preload forcefully  -->
+    <img src="/images/building-hero.jpg" alt="bg preload" style="display:none;" fetchpriority="high">
 
-  <header class="building-cleaning-hero text-center position-relative" style="background-image:url('/images/building-hero.jpg'); background-size: cover; background-position: top;">
-      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.65);"></div>
-        <!-- <div class="building-cleaning-animation"></div> -->
-        <div class="container building-cleaning-hero-content">
+ <!-- Hero section  -->
+    <header class="building-cleaning-hero text-center position-relative" 
+  style="background-image:url('/images/building-hero.jpg'); background-size: cover; background-position: top;">
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.65);"></div>
+  <div class="container building-cleaning-hero-content">
             <div class="building-cleaning-year" data-aos="fade-down">Since 2012</div>
             <h1 class="building-cleaning-title" data-aos="fade-down">Building Cleaning Services</h1>
             <p class="building-cleaning-subtitle" data-aos="zoom-in">
                 Comprehensive cleaning solutions for residential and commercial buildings across UAE. 
                 Professional, reliable, and tailored to your specific needs.
             </p>
-            <a class="btn building-cleaning-cta" href="#" data-bs-toggle="modal" data-bs-target="#bookingModal" data-aos="zoom-out">
-                <i class="fas fa-calendar-check me-2"></i> Book Your Service Now
-            </a>
+            <!-- <a class="btn building-cleaning-cta" href="#" data-bs-toggle="modal" data-bs-target="#bookingModal" data-aos="zoom-out">
+                <i class="fas fa-calendar-check me-2"></i> Book Service Now
+            </a> -->
+            <div data-aos="zoom-in">
+                            <a class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">
+                                <i class="fas fa-calendar-check me-2"></i> Register your Free Inspection
+                            </a>
+                            <a class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#serviceBookingModal">
+                                <i class="fas fa-calendar-check me-2"></i> Book Service Now
+                            </a>
+                        </div>
             
             <div class="building-cleaning-features" data-aos="fade-up">
                 <div class="building-cleaning-feature">
@@ -130,160 +103,252 @@
                 </div>
             </div>
         </div>
+  
+  
     </header>
 
-  <main>
-<!-- ------------------------------------------------deepseek response try ----------------------------------------------- -->
-<!-- <section class="service-areas py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5">
-                <h2 class="service-header">Our Premium Cleaning Services</h2>
-                <p class="service-subtitle">Professional cleaning solutions tailored to your specific needs</p>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="service-card-building-services">
-                    <div class="card-image-container">
-                        <img src="images/professional-house-cleaning-services.jpg" class="card-img-top lazy-img" alt="Residential cleaning">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-content">
-                            <div class="service-icon">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <h5 class="card-title">Residential Cleaning</h5>
-                            <p class="card-text">Transform your living space with our thorough apartment & villa cleaning services. We offer flexible scheduling to fit your busy lifestyle.</p>
-                            <a href="#" class="btn btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="service-card-building-services">
-                    <div class="card-image-container">
-                        <img src="images/Commercial-Cleaning-Service.jpg" class="card-img-top lazy-img" alt="Commercial cleaning">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-content">
-                            <div class="service-icon">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <h5 class="card-title">Commercial Cleaning</h5>
-                            <p class="card-text">Professional office, retail and warehouse cleaning solutions designed to enhance your workspace and impress your clients.</p>
-                            <a href="#" class="btn btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="service-card-building-services">
-                    <div class="card-image-container">
-                        <img src="images/Post-Construction-Clean-up.webp" class="card-img-top lazy-img" alt="Post construction cleaning">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-content">
-                            <div class="service-icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <h5 class="card-title">Post-construction</h5>
-                            <p class="card-text">Thorough cleanup after construction with fast turnaround times. We remove debris, dust, and ensure your space is move-in ready.</p>
-                            <a href="#" class="btn btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- Service Types -->
-            <div class="service-types pt-5">
-                <div class="service-type-card">
-                    <div class="service-type-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h4 class="service-type-title">Residential Cleaning</h4>
-                    <p>Complete home cleaning solutions for apartments and villas</p>
-                </div>
-                
-                <div class="service-type-card">
-                    <div class="service-type-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h4 class="service-type-title">Commercial Cleaning</h4>
-                    <p>Professional cleaning for offices and business establishments</p>
-                </div>
-                
-                <div class="service-type-card">
-                    <div class="service-type-icon">
-                        <i class="fas fa-hard-hat"></i>
-                    </div>
-                    <h4 class="service-type-title">Post-Construction</h4>
-                    <p>Thorough cleanup after construction or renovation projects</p>
-                </div>
-            </div>
-
-    
-    <!-- Detailed Cleaning Services -->
-
-
-<section class="cleaning-services-blog">
+    <main>
+    <!-- cards showing services groups  -->
+    <section class="service-cards-section">
         <div class="container">
-            <!-- Office Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up">
+            <div class="section-header">
+                <p class="section-subtitle">Our Premium Services</p>
+                <h2 class="section-title-cleaning">Professional Cleaning Solutions</h2>
+                <p class="lead">Experience the difference with our comprehensive cleaning services tailored to your needs</p>
+            </div>
+            
+            <div class="row">
+                <!-- Residential Cleaning Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card-premium">
+                        <div class="service-badge">Most Popular</div>
+                        <div class="card-image-container">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Residential cleaning">
+                            <div class="image-overlay"></div>
+                        </div>
+                        
+                        <div class="card-body-premium">
+                            <h5 class="card-title-premium">Residential Cleaning</h5>
+                            <p class="card-text-premium">Transform your living space with our thorough apartment & villa cleaning services. We offer flexible scheduling to fit your busy lifestyle.</p>
+                            
+                            <ul class="service-features list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> Customized cleaning plans</li>
+                                <li><i class="fas fa-check-circle"></i> Eco-friendly products</li>
+                                <li><i class="fas fa-check-circle"></i> Flexible scheduling</li>
+                            </ul>
+                            
+                            <a href="#residential-cleaning" class="btn btn-premium">Explore Services <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Commercial Cleaning Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card-premium">
+                        <div class="service-badge">Business</div>
+                        <div class="card-image-container">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Commercial cleaning">
+                            <div class="image-overlay"></div>
+                        </div>
+                        
+                        <div class="card-body-premium">
+                            <h5 class="card-title-premium">Commercial Cleaning</h5>
+                            <p class="card-text-premium">Professional office, retail and warehouse cleaning solutions designed to enhance your workspace and impress your clients.</p>
+                            
+                            <ul class="service-features list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> After-hours service</li>
+                                <li><i class="fas fa-check-circle"></i> Specialized equipment</li>
+                                <li><i class="fas fa-check-circle"></i> Customized packages</li>
+                            </ul>
+                            
+                            <a href="#commercial-cleaning" class="btn btn-premium">Explore Services <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Post-Construction Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card-premium">
+                        <div class="service-badge">Specialized</div>
+                        <div class="card-image-container">
+                            <img src="images\new-postcontruction.png" alt="Post construction cleaning" class="zoomlittle">
+                            <div class="image-overlay"></div>
+                        </div>
+                        
+                        <div class="card-body-premium">
+                            <h5 class="card-title-premium">Post-Construction</h5>
+                            <p class="card-text-premium">Thorough cleanup after construction with fast turnaround times. We remove debris, dust, and ensure your space is move-in ready.</p>
+                            
+                            <ul class="service-features list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> Debris removal</li>
+                                <li><i class="fas fa-check-circle"></i> Deep dust elimination</li>
+                                <li><i class="fas fa-check-circle"></i> Final touch polishing</li>
+                            </ul>
+                            
+                            <a href="#postconstruction-cleaning" class="btn btn-premium">Explore Services <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Detailed Cleaning Services(Blog) -->
+    <section class="cleaning-services-blog">
+        <div class="container">
+            <div class="blogs-flying-title" data-aos="zoom-in" id="residential-cleaning" style="scroll-margin-top: 16vh">
+                <h3>Residential Cleaning</h3>
+                <p class="lead">Keep your home spotless, fresh, and hygienic with our tailored cleaning solutions for every corner.</p>
+                <div class="divider"></div>
+            </div>
+            <!-- Villa Cleaning -->
+            <div class="cleaning-service-item" data-aos="fade-up" id="villa-cleaning">
                 <div class="row g-0 align-items-stretch">
                     <div class="col-md-6">
                         <div class="image-container">
-                            <img src="images/Office-cleaning-services.jpg" alt="Office Cleaning" class="cleaning-service-image">
+                            <img src="images/villa cleaning.jpg" alt="Villa Cleaning" class="cleaning-service-image">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="cleaning-service-content">
-                            <h3 class="cleaning-service-title">Office Cleaning</h3>
+                            <h3 class="cleaning-service-title">Villa Cleaning</h3>
                             <p class="cleaning-service-text">
-                                A clean and well-maintained office is essential for smooth business activities. 
-                                We deliver <strong>professional office cleaning services in Dubai</strong> tailored to your needs. 
-                                Our focus is on creating a spotless and hygienic environment that improves productivity 
-                                and leaves a lasting impression on your clients. No matter the size or type of business, 
-                                our services are designed to meet your expectations fairly and efficiently.
+                                Villas demand a thorough and sensitive cleaning approach because of their size, multiple living areas and outdoor spaces. 
+                                Our <strong>villa cleaning services in Dubai</strong> focus on restoring every corner of your home — from spacious living rooms 
+                                and kitchens to patios, terraces and garden furniture. We combine expert manpower with specialised equipment to deliver 
+                                a deep clean that respects delicate finishes and preserves interiors while making the space feel refreshed and inviting.
                             </p>
                             <p class="cleaning-service-text">
-                                Our trained cleaners have hands-on experience in handling diverse workplaces. 
-                                With punctual service and consistent quality, we are recognized as one of the most 
-                                trusted office cleaning providers in Dubai and Sharjah. From floors and walls 
-                                to desks, chairs, and air vents, we take care of every corner to ensure a fresh 
-                                and sanitized office space.
+                                We provide customised packages to suit weekly, fortnightly or one-time deep cleans, including balcony and poolside tidying. 
+                                Using eco-friendly solutions, gentle fabric care and professional polishing techniques, we ensure your villa not only looks pristine 
+                                but also remains safe for children and pets. Our teams are trained to work discreetly and efficiently so your household routine is undisturbed.
                             </p>
                             <div class="cleaning-highlight-points row mt-4">
                                 <div class="col-6 col-md-6 mb-3">
                                     <div class="cleaning-point-card" data-aos="flip-up">
-                                        <i class="fas fa-user-tie"></i>
-                                        <h6>Professional Staff</h6>
+                                        <i class="fas fa-home"></i>
+                                        <h6>Full Interior & Exterior</h6>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-6 mb-3">
                                     <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
-                                        <i class="fas fa-cogs"></i>
-                                        <h6>High-end Technology</h6>
+                                        <i class="fas fa-seedling"></i>
+                                        <h6>Eco-Friendly Care</h6>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-6 mb-3">
                                     <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
-                                        <i class="fas fa-leaf"></i>
-                                        <h6>Eco-Friendly Products</h6>
+                                        <i class="fas fa-users"></i>
+                                        <h6>Discreet Professional Crews</h6>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-6 mb-3">
                                     <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
-                                        <i class="fas fa-star"></i>
-                                        <h6>High Quality</h6>
+                                        <i class="fas fa-sync-alt"></i>
+                                        <h6>Tailored Maintenance Plans</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flat Cleaning -->
+            <div class="cleaning-service-item" data-aos="fade-down" id="flat-cleaning">
+                <div class="row g-0 align-items-stretch flex-md-row-reverse">
+                    <div class="col-md-6">
+                        <div class="image-container">
+                            <img src="images/flat cleaning.jpg" alt="Flat Cleaning" class="cleaning-service-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cleaning-service-content">
+                            <h3 class="cleaning-service-title">Flat Cleaning</h3>
+                            <p class="cleaning-service-text">
+                                Apartments and flats need smart, time-efficient cleaning that fits modern urban lifestyles. Our <strong>flat cleaning services</strong> 
+                                are built around punctuality and convenience — we arrive equipped to handle everything from kitchen degreasing and bathroom sanitization 
+                                to balcony sweeping and wardrobe dusting. Whether you require a recurring tidy-up or a thorough spring clean, we adapt to your schedule.
+                            </p>
+                            <p class="cleaning-service-text">
+                                We offer move-in/move-out cleaning, rapid end-of-lease deep cleans and regular upkeep packages for tenants and building managers. 
+                                Emphasis is placed on surface hygiene and fast-drying methods to minimise disruption. Our teams are polite, uniformed and trained to leave living spaces 
+                                spotless and guest-ready with minimal fuss.
+                            </p>
+                            <div class="cleaning-highlight-points row mt-4">
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up">
+                                        <i class="fas fa-clock"></i>
+                                        <h6>Flexible Schedules</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
+                                        <i class="fas fa-home"></i>
+                                        <h6>Move-in / Move-out</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
+                                        <i class="fas fa-bolt"></i>
+                                        <h6>Fast & Efficient</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <h6>Reliable Teams</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floor Cleaning -->
+            <div class="cleaning-service-item" data-aos="fade-up" id="floor-cleaning">
+                <div class="row g-0 align-items-stretch">
+                    <div class="col-md-6">
+                        <div class="image-container">
+                            <img src="images/floor cleaning.jpg" alt="Floor Cleaning" class="cleaning-service-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cleaning-service-content">
+                            <h3 class="cleaning-service-title">Floor Cleaning</h3>
+                            <p class="cleaning-service-text">
+                                Floors set the tone for any space — a worn or dull floor undermines even the neatest interiors. Our floor specialists handle marble, tile, ceramic, 
+                                vinyl and hardwood using the correct scrubbers, polishers and non-abrasive chemicals to restore shine without damaging surfaces. For natural stone and wood, 
+                                we apply industry-approved sealing and buffing to protect against stains and foot traffic.
+                            </p>
+                            <p class="cleaning-service-text">
+                                Services include deep scrubbing, stain extraction, grout cleaning, polishing and re-sealing as required. For commercial sites we provide scheduled floor maintenance 
+                                that improves safety and durability while keeping slip-resistance in mind. Expect a consistent, long-lasting finish that enhances both aesthetics and lifespan.
+                            </p>
+                            <div class="cleaning-highlight-points row mt-4">
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up">
+                                        <i class="fas fa-th-large"></i>
+                                        <h6>Tile & Stone Care</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
+                                        <i class="fas fa-tree"></i>
+                                        <h6>Wood-safe Methods</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
+                                        <i class="fas fa-water"></i>
+                                        <h6>Grout & Stain Removal</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <h6>Polish & Seal Finish</h6>
                                     </div>
                                 </div>
                             </div>
@@ -293,7 +358,7 @@
             </div>
 
             <!-- Sofa Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up">
+            <div class="cleaning-service-item" data-aos="fade-down" id="sofa-cleaning">
                 <div class="row g-0 align-items-stretch flex-md-row-reverse">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -349,105 +414,50 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
 
-            <!-- Villa Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up">
-                <div class="row g-0 align-items-stretch">
-                    <div class="col-md-6">
-                        <div class="image-container">
-                            <img src="images/villa cleaning.jpg" alt="Villa Cleaning" class="cleaning-service-image">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="cleaning-service-content">
-                            <h3 class="cleaning-service-title">Villa Cleaning</h3>
-                            <p class="cleaning-service-text">
-                                Villas demand a thorough and sensitive cleaning approach because of their size, multiple living areas and outdoor spaces. 
-                                Our <strong>villa cleaning services in Dubai</strong> focus on restoring every corner of your home — from spacious living rooms 
-                                and kitchens to patios, terraces and garden furniture. We combine expert manpower with specialised equipment to deliver 
-                                a deep clean that respects delicate finishes and preserves interiors while making the space feel refreshed and inviting.
-                            </p>
-                            <p class="cleaning-service-text">
-                                We provide customised packages to suit weekly, fortnightly or one-time deep cleans, including balcony and poolside tidying. 
-                                Using eco-friendly solutions, gentle fabric care and professional polishing techniques, we ensure your villa not only looks pristine 
-                                but also remains safe for children and pets. Our teams are trained to work discreetly and efficiently so your household routine is undisturbed.
-                            </p>
-                            <div class="cleaning-highlight-points row mt-4">
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up">
-                                        <i class="fas fa-home"></i>
-                                        <h6>Full Interior & Exterior</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
-                                        <i class="fas fa-seedling"></i>
-                                        <h6>Eco-Friendly Care</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
-                                        <i class="fas fa-users"></i>
-                                        <h6>Discreet Professional Crews</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
-                                        <i class="fas fa-sync-alt"></i>
-                                        <h6>Tailored Maintenance Plans</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Flat Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up">
+             <!-- water tank cleaning -->
+            <div class="cleaning-service-item" data-aos="fade-up" id="watertank-cleaning">
                 <div class="row g-0 align-items-stretch flex-md-row-reverse">
                     <div class="col-md-6">
                         <div class="image-container">
-                            <img src="images/flat cleaning.jpg" alt="Flat Cleaning" class="cleaning-service-image">
+                            <img src="images/Water-Tank-Cleaning-Service.webp" alt="Floor Cleaning" class="cleaning-service-image">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="cleaning-service-content">
-                            <h3 class="cleaning-service-title">Flat Cleaning</h3>
+                            <h3 class="cleaning-service-title">Water Tank Cleaning</h3>
                             <p class="cleaning-service-text">
-                                Apartments and flats need smart, time-efficient cleaning that fits modern urban lifestyles. Our <strong>flat cleaning services</strong> 
-                                are built around punctuality and convenience — we arrive equipped to handle everything from kitchen degreasing and bathroom sanitization 
-                                to balcony sweeping and wardrobe dusting. Whether you require a recurring tidy-up or a thorough spring clean, we adapt to your schedule.
+                                Clean water storage is crucial to health. Our water tank cleaning service targets rooftop and underground tanks using a systematic process of draining, desludging, 
+      scrubbing and disinfecting. We remove sediment, biofilm and scale that accumulate over time, then apply safe, approved disinfectants to ensure potable-quality water.
                             </p>
                             <p class="cleaning-service-text">
-                                We offer move-in/move-out cleaning, rapid end-of-lease deep cleans and regular upkeep packages for tenants and building managers. 
-                                Emphasis is placed on surface hygiene and fast-drying methods to minimise disruption. Our teams are polite, uniformed and trained to leave living spaces 
-                                spotless and guest-ready with minimal fuss.
+                                After cleaning, we provide clear documentation of the process and recommendations for frequency depending on usage and environmental exposure. Our technicians follow strict safety 
+      protocols and use equipment designed to reach corners and baffles for a thorough clean. Regular maintenance prevents contamination and keeps your supply safe for domestic or commercial use.
                             </p>
                             <div class="cleaning-highlight-points row mt-4">
                                 <div class="col-6 col-md-6 mb-3">
                                     <div class="cleaning-point-card" data-aos="flip-up">
-                                        <i class="fas fa-clock"></i>
-                                        <h6>Flexible Schedules</h6>
+                                        <i class="fas fa-tint"></i>
+                                        <h6>Certified Sanitization</h6>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-6 mb-3">
                                     <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
-                                        <i class="fas fa-home"></i>
-                                        <h6>Move-in / Move-out</h6>
+                                        <i class="fas fa-broom"></i>
+          <h6>Sediment Removal</h6>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-6 mb-3">
                                     <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
-                                        <i class="fas fa-bolt"></i>
-                                        <h6>Fast & Efficient</h6>
+                                        <i class="fas fa-shield-virus"></i>
+          <h6>Safe Disinfectants</h6>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-6 mb-3">
                                     <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
-                                        <i class="fas fa-thumbs-up"></i>
-                                        <h6>Reliable Teams</h6>
+                                        <i class="fas fa-file-alt"></i>
+          <h6>After-Service Report</h6>
                                     </div>
                                 </div>
                             </div>
@@ -456,11 +466,420 @@
                 </div>
             </div>
 
-            <!-- Continue with the rest of the services following the same pattern -->
-            <!-- Due to length, I'll show the structure for one more service -->
+            <!-- Carpet Shampooing -->
+            <div class="cleaning-service-item" data-aos="fade-down" id="carpet-shampooing">
+                <div class="row g-0 align-items-stretch flex-md-row-reverse">
+                    <div class="col-md-6">
+                        <div class="image-container">
+                            <img src="images/carpet cleaning.jpg" alt="Floor Cleaning" class="cleaning-service-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cleaning-service-content">
+                            <h3 class="cleaning-service-title">Carpet Shampooing</h3>
+                            <p class="cleaning-service-text">
+                               Carpets trap dust, allergens and stubborn stains if not professionally maintained. Our <strong>carpet shampooing</strong> uses hot-water extraction and pre-treatment solutions 
+      to lift embedded dirt and refresh fibres safely. We assess pile type and stain nature before choosing the right cleaning chemistry and steam pressure to protect colours and texture.
+                            </p>
+                            <p class="cleaning-service-text">
+                                 In addition to deep cleaning, we provide spot treatment for coffee, oil or pet stains and offer deodorizing finishes for a cleaner-smelling room. Our approach reduces allergens and extends carpet life — ideal for homes, offices and hotels that require a fresh, professional finish.
+                            </p>
+                            <div class="cleaning-highlight-points row mt-4">
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up">
+                                        <i class="fas fa-water"></i>
+          <h6>Hot Water Extraction</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
+                                        <i class="fas fa-pump-soap"></i>
+          <h6>Stain Treatment</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
+                                        <i class="fas fa-allergies"></i>
+          <h6>Allergen Reduction</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
+                                        <i class="fas fa-bolt"></i>
+          <h6>Quick Dry Options</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curtain Shampooing -->
+            <div class="cleaning-service-item" data-aos="fade-up" id="curtain-shampooing">
+                <div class="row g-0 align-items-stretch">
+                    <div class="col-md-6">
+                        <div class="image-container">
+                            <img src="images/How-to-Clean-Curtains-Without-Taking-Them-Down.jpg" alt="Floor Cleaning" class="cleaning-service-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cleaning-service-content">
+                            <h3 class="cleaning-service-title">Curtain Shampooing</h3>
+                            <p class="cleaning-service-text">
+                                 Curtains and drapes require specialist handling because fabrics vary widely in weight and finish. Our curtain shampooing service assesses materials and offers a choice of steam cleaning or gentle dry-cleaning methods. 
+      We remove dust, smoke residues and allergens to restore softness and brightness without causing shrinkage or colour loss.
+                            </p>
+                            <p class="cleaning-service-text">
+                                For heavier drapes we provide in-situ steam cleaning and careful rehang finishing; for delicate designer fabrics we recommend off-site gentle cleaning. We also treat curtain linings and tracks to remove trapped dust and ensure smooth operation post-clean. This preserves your window treatments and improves indoor air quality.
+                            </p>
+                            <div class="cleaning-highlight-points row mt-4">
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up">
+                                        <i class="fas fa-clone"></i>
+          <h6>Fabric-Safe Methods</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
+                                        <i class="fas fa-thermometer-half"></i>
+          <h6>Steam & Dry Options</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
+                                        <i class="fas fa-wind"></i>
+          <h6>Odour Elimination</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
+                                        <i class="fas fa-redo"></i>
+          <h6>Rehang & Finish</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Windows & Glass Cleaning -->
+            <div class="cleaning-service-item" data-aos="fade-down" id="windows-cleaning">
+                <div class="row g-0 align-items-stretch">
+                    <div class="col-md-6">
+                        <div class="image-container">
+                            <img src="images/glass cleaning.jpeg" alt="Floor Cleaning" class="cleaning-service-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cleaning-service-content">
+                            <h3 class="cleaning-service-title">Windows & Glass Cleaning</h3>
+                            <p class="cleaning-service-text">
+                               Clean windows make a powerful first impression. Our glass cleaning service covers interior and exterior panes, mirrors, partitions and glass doors using streak-free techniques and water-fed pole systems for reach. 
+      For high-rise properties we employ rope-access or certified high-reach teams to deliver safe, flawless results.
+                            </p>
+                            <p class="cleaning-service-text">
+                                We also clean frames, sills and tracks to remove trapped grime that affects operation. After service you get a crystal-clear finish and improved natural light. Ideal for offices, retail storefronts and residential towers seeking spotless visibility and professional presentation.
+                            </p>
+                            <div class="cleaning-highlight-points row mt-4">
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up">
+                                        <i class="fas fa-eye"></i>
+          <h6>Streak-Free Finish</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
+                                        <i class="fas fa-building"></i>
+          <h6>High-Rise Access</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
+                                        <i class="fas fa-window-restore"></i>
+          <h6>Frame & Track Clean</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
+                                        <i class="fas fa-shield-alt"></i>
+          <h6>Safety Compliant</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- After Party or Event Cleaning -->
+            <div class="cleaning-service-item" data-aos="fade-up" id="afterparty-cleaning">
+                <div class="row g-0 align-items-stretch flex-md-row-reverse">
+                    <div class="col-md-6">
+                        <div class="image-container">
+                            <img src="images/After-Party-Cleaning-Service-Restoring-Your-Space.png" alt="Floor Cleaning" class="cleaning-service-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cleaning-service-content">
+                            <h3 class="cleaning-service-title">After Party or Event Cleaning</h3>
+                            <p class="cleaning-service-text">
+                               Parties and events create heavy waste and require rapid, thorough cleanup. Our after-event cleaning teams specialise in fast turnaround — clearing trash, removing decorations, spot-treating carpets and sanitising food areas so venues are restored quickly. 
+      We bring sufficient crews and equipment to handle small gatherings up to large corporate events.
+                            </p>
+                            <p class="cleaning-service-text">
+                               Services include waste segregation for recycling, surface disinfection, furniture reset and stain interventions. We coordinate closely with event managers to meet tight deadlines and provide optional post-event maintenance plans for recurring event spaces. Count on a reliable, discreet team that returns the venue to pristine condition.
+                            </p>
+                            <div class="cleaning-highlight-points row mt-4">
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up">
+                                        <i class="fas fa-stopwatch"></i>
+          <h6>Fast Turnaround</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
+                                        <i class="fas fa-trash"></i>
+          <h6>Debris Removal</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
+                                       <i class="fas fa-broom"></i>
+          <h6>Surface Sanitation</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
+                                        <i class="fas fa-recycle"></i>
+          <h6>Recycle & Sort</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Residential cleaning end here  -->
+
+
+            <div class="blogs-flying-title" data-aos="zoom-in" id="commercial-cleaning" style="scroll-margin-top: 16vh">
+                <h3>Commercial Cleaning</h3>
+                <p class="lead">Professional cleaning services designed to maintain a clean, safe, and productive workplace.</p>
+                <div class="divider"></div>
+            </div>
+
+
+
+            <!-- Office Cleaning -->
+            <div class="cleaning-service-item" data-aos="fade-up" id="office-cleaning">
+                
+                <div class="row g-0 align-items-stretch">
+                    <div class="col-md-6">
+                        <div class="image-container">
+                            <img src="images/Office-cleaning-services.jpg" alt="Office Cleaning" class="cleaning-service-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cleaning-service-content">
+                            <h3 class="cleaning-service-title">Office Cleaning</h3>
+                            <p class="cleaning-service-text">
+                                A clean and well-maintained office is essential for smooth business activities. 
+                                We deliver <strong>professional office cleaning services in Dubai</strong> tailored to your needs. 
+                                Our focus is on creating a spotless and hygienic environment that improves productivity 
+                                and leaves a lasting impression on your clients. No matter the size or type of business, 
+                                our services are designed to meet your expectations fairly and efficiently.
+                            </p>
+                            <p class="cleaning-service-text">
+                                Our trained cleaners have hands-on experience in handling diverse workplaces. 
+                                With punctual service and consistent quality, we are recognized as one of the most 
+                                trusted office cleaning providers in Dubai and Sharjah. From floors and walls 
+                                to desks, chairs, and air vents, we take care of every corner to ensure a fresh 
+                                and sanitized office space.
+                            </p>
+                            <div class="cleaning-highlight-points row mt-4">
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up">
+                                        <i class="fas fa-user-tie"></i>
+                                        <h6>Professional Staff</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
+                                        <i class="fas fa-cogs"></i>
+                                        <h6>High-end Technology</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
+                                        <i class="fas fa-leaf"></i>
+                                        <h6>Eco-Friendly Products</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
+                                        <i class="fas fa-star"></i>
+                                        <h6>High Quality</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warehouse Cleaning -->
+            <div class="cleaning-service-item" data-aos="fade-up" id="warehouse-cleaning">
+                <div class="row g-0 align-items-stretch">
+                    <div class="col-md-6">
+                        <div class="image-container">
+                            <img src="images/Vacuuming-in-Warehouse.jpg" alt="Floor Cleaning" class="cleaning-service-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cleaning-service-content">
+                            <h3 class="cleaning-service-title">Warehouse Cleaning</h3>
+                            <p class="cleaning-service-text">
+                                Large industrial spaces need heavy-duty cleaning that keeps operations safe and efficient. Our <strong>warehouse cleaning</strong> covers floor scrubbing, high-reach dusting, 
+      pallet and racking cleaning, debris removal and degreasing of loading bays. We work around your shift patterns to avoid downtime and use industrial machines for fast, consistent results.
+                            </p>
+                            <p class="cleaning-service-text">
+                                We also pay attention to safety-critical areas like emergency exits, signage and spill zones, ensuring compliance with hygiene and workplace safety requirements. Whether it's a single unit or a multi-warehouse complex, 
+      our trained crews bring the right tools and PPE to perform effective, scheduled cleaning that supports smooth logistics and a safer work environment.
+                            </p>
+                            <div class="cleaning-highlight-points row mt-4">
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up">
+                                        <i class="fas fa-industry"></i>
+          <h6>Industrial Equipment</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
+                                       <i class="fas fa-arrow-up"></i>
+          <h6>High-Reach Cleaning</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
+                                        <i class="fas fa-tractor"></i>
+          <h6>Floor Scrubbing</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
+                                        <i class="fas fa-shield-alt"></i>
+          <h6>Compliance & Safety</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
+            <!-- Kitchen Duct Cleaning -->
+            <div class="cleaning-service-item" data-aos="fade-up" id="kitchen-cleaning">
+                <div class="row g-0 align-items-stretch flex-md-row-reverse">
+                    <div class="col-md-6">
+                        <div class="image-container">
+                            <img src="images/DUCT-CLEANER.jpg" alt="Floor Cleaning" class="cleaning-service-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cleaning-service-content">
+                            <h3 class="cleaning-service-title">Kitchen Duct Cleaning</h3>
+                            <p class="cleaning-service-text">
+                                Grease build-up in kitchen hoods and ducts creates fire risk and reduces ventilation efficiency. Our kitchen duct cleaning service removes accumulated grease, soot and residue from hoods, filters, fans and duct runs. 
+      Using mechanical brushing and safe degreasers, we restore free airflow and reduce odour and smoke carry-over into dining areas.
+                            </p>
+                            <p class="cleaning-service-text">
+                                Available for restaurants, hotels and residential kitchens, our service includes inspection, filter replacement where required, and a final performance check of exhaust fans. Regular cleaning improves kitchen safety, reduces maintenance costs and maintains compliance with local fire and health regulations.
+                            </p>
+                            <div class="cleaning-highlight-points row mt-4">
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up">
+                                        <i class="fas fa-fire-extinguisher"></i>
+          <h6>Grease Removal</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
+                                        <i class="fas fa-bolt"></i>
+          <h6>Fire Risk Reduction</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
+                                        <i class="fas fa-wind"></i>
+          <h6>Improved Airflow</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
+                                        <i class="fas fa-user-shield"></i>
+          <h6>Certified Technicians</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advertising Signboard Cleaning -->
+            <div class="cleaning-service-item" data-aos="fade-up" id="adboard-cleaning">
+                <div class="row g-0 align-items-stretch">
+                    <div class="col-md-6">
+                        <div class="image-container">
+                            <img src="images/sign-boardcleaning.jpg" alt="Floor Cleaning" class="cleaning-service-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cleaning-service-content">
+                            <h3 class="cleaning-service-title">Advertising Signboard Cleaning</h3>
+                            <p class="cleaning-service-text">
+                               Outdoor signboards need regular maintenance to remain bright and legible. Our signboard cleaning service removes dust, grime, bird droppings and pollution film that dim displays and reduce visibility. 
+      We clean vinyl, acrylic, LED and metal surfaces using gentle, non-abrasive cleaners and soft tools to preserve finishes and avoid damage to graphics or lighting elements.
+                            </p>
+                            <p class="cleaning-service-text">
+                                For illuminated signs we follow electrical safety best practices and coordinate with site managers for safe access. A clean sign increases footfall and brand perception — our teams regularly service retail fronts, billboards and corporate signage to keep messaging crisp and vibrant.
+                            </p>
+                            <div class="cleaning-highlight-points row mt-4">
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up">
+                                        <i class="fas fa-bullhorn"></i>
+          <h6>Brand Visibility Boost</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
+                                        <i class="fas fa-hands-helping"></i>
+          <h6>Sign-Safe Techniques</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
+                                        <i class="fas fa-arrows-alt"></i>
+          <h6>Access & Lift Support</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6 mb-3">
+                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
+                                        <i class="fas fa-shield-alt"></i>
+          <h6>Protective Coating Option</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Floor Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up">
+            <div class="cleaning-service-item" data-aos="fade-up" id="floor-cleaning">
                 <div class="row g-0 align-items-stretch">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -510,249 +929,8 @@
                 </div>
             </div>
 
-            <div class="cleaning-service-item" data-aos="fade-up">
-                <div class="row g-0 align-items-stretch flex-md-row-reverse">
-                    <div class="col-md-6">
-                        <div class="image-container">
-                            <img src="images/Water-Tank-Cleaning-Service.webp" alt="Floor Cleaning" class="cleaning-service-image">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="cleaning-service-content">
-                            <h3 class="cleaning-service-title">Water Tank Cleaning</h3>
-                            <p class="cleaning-service-text">
-                                Clean water storage is crucial to health. Our water tank cleaning service targets rooftop and underground tanks using a systematic process of draining, desludging, 
-      scrubbing and disinfecting. We remove sediment, biofilm and scale that accumulate over time, then apply safe, approved disinfectants to ensure potable-quality water.
-                            </p>
-                            <p class="cleaning-service-text">
-                                After cleaning, we provide clear documentation of the process and recommendations for frequency depending on usage and environmental exposure. Our technicians follow strict safety 
-      protocols and use equipment designed to reach corners and baffles for a thorough clean. Regular maintenance prevents contamination and keeps your supply safe for domestic or commercial use.
-                            </p>
-                            <div class="cleaning-highlight-points row mt-4">
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up">
-                                        <i class="fas fa-tint"></i>
-                                        <h6>Certified Sanitization</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
-                                        <i class="fas fa-broom"></i>
-          <h6>Sediment Removal</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
-                                        <i class="fas fa-shield-virus"></i>
-          <h6>Safe Disinfectants</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
-                                        <i class="fas fa-file-alt"></i>
-          <h6>After-Service Report</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cleaning-service-item" data-aos="fade-up">
-                <div class="row g-0 align-items-stretch">
-                    <div class="col-md-6">
-                        <div class="image-container">
-                            <img src="images/Vacuuming-in-Warehouse.jpg" alt="Floor Cleaning" class="cleaning-service-image">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="cleaning-service-content">
-                            <h3 class="cleaning-service-title">Warehouse Cleaning</h3>
-                            <p class="cleaning-service-text">
-                                Large industrial spaces need heavy-duty cleaning that keeps operations safe and efficient. Our <strong>warehouse cleaning</strong> covers floor scrubbing, high-reach dusting, 
-      pallet and racking cleaning, debris removal and degreasing of loading bays. We work around your shift patterns to avoid downtime and use industrial machines for fast, consistent results.
-                            </p>
-                            <p class="cleaning-service-text">
-                                We also pay attention to safety-critical areas like emergency exits, signage and spill zones, ensuring compliance with hygiene and workplace safety requirements. Whether it's a single unit or a multi-warehouse complex, 
-      our trained crews bring the right tools and PPE to perform effective, scheduled cleaning that supports smooth logistics and a safer work environment.
-                            </p>
-                            <div class="cleaning-highlight-points row mt-4">
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up">
-                                        <i class="fas fa-industry"></i>
-          <h6>Industrial Equipment</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
-                                       <i class="fas fa-arrow-up"></i>
-          <h6>High-Reach Cleaning</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
-                                        <i class="fas fa-tractor"></i>
-          <h6>Floor Scrubbing</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
-                                        <i class="fas fa-shield-alt"></i>
-          <h6>Compliance & Safety</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cleaning-service-item" data-aos="fade-up">
-                <div class="row g-0 align-items-stretch flex-md-row-reverse">
-                    <div class="col-md-6">
-                        <div class="image-container">
-                            <img src="images/carpet cleaning.jpg" alt="Floor Cleaning" class="cleaning-service-image">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="cleaning-service-content">
-                            <h3 class="cleaning-service-title">Carpet Shampooing</h3>
-                            <p class="cleaning-service-text">
-                               Carpets trap dust, allergens and stubborn stains if not professionally maintained. Our <strong>carpet shampooing</strong> uses hot-water extraction and pre-treatment solutions 
-      to lift embedded dirt and refresh fibres safely. We assess pile type and stain nature before choosing the right cleaning chemistry and steam pressure to protect colours and texture.
-                            </p>
-                            <p class="cleaning-service-text">
-                                 In addition to deep cleaning, we provide spot treatment for coffee, oil or pet stains and offer deodorizing finishes for a cleaner-smelling room. Our approach reduces allergens and extends carpet life — ideal for homes, offices and hotels that require a fresh, professional finish.
-                            </p>
-                            <div class="cleaning-highlight-points row mt-4">
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up">
-                                        <i class="fas fa-water"></i>
-          <h6>Hot Water Extraction</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
-                                        <i class="fas fa-pump-soap"></i>
-          <h6>Stain Treatment</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
-                                        <i class="fas fa-allergies"></i>
-          <h6>Allergen Reduction</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
-                                        <i class="fas fa-bolt"></i>
-          <h6>Quick Dry Options</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cleaning-service-item" data-aos="fade-up">
-                <div class="row g-0 align-items-stretch">
-                    <div class="col-md-6">
-                        <div class="image-container">
-                            <img src="images/How-to-Clean-Curtains-Without-Taking-Them-Down.jpg" alt="Floor Cleaning" class="cleaning-service-image">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="cleaning-service-content">
-                            <h3 class="cleaning-service-title">Curtain Shampooing</h3>
-                            <p class="cleaning-service-text">
-                                 Curtains and drapes require specialist handling because fabrics vary widely in weight and finish. Our curtain shampooing service assesses materials and offers a choice of steam cleaning or gentle dry-cleaning methods. 
-      We remove dust, smoke residues and allergens to restore softness and brightness without causing shrinkage or colour loss.
-                            </p>
-                            <p class="cleaning-service-text">
-                                For heavier drapes we provide in-situ steam cleaning and careful rehang finishing; for delicate designer fabrics we recommend off-site gentle cleaning. We also treat curtain linings and tracks to remove trapped dust and ensure smooth operation post-clean. This preserves your window treatments and improves indoor air quality.
-                            </p>
-                            <div class="cleaning-highlight-points row mt-4">
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up">
-                                        <i class="fas fa-clone"></i>
-          <h6>Fabric-Safe Methods</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
-                                        <i class="fas fa-thermometer-half"></i>
-          <h6>Steam & Dry Options</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
-                                        <i class="fas fa-wind"></i>
-          <h6>Odour Elimination</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
-                                        <i class="fas fa-redo"></i>
-          <h6>Rehang & Finish</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cleaning-service-item" data-aos="fade-up">
-                <div class="row g-0 align-items-stretch flex-md-row-reverse">
-                    <div class="col-md-6">
-                        <div class="image-container">
-                            <img src="images/DUCT-CLEANER.jpg" alt="Floor Cleaning" class="cleaning-service-image">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="cleaning-service-content">
-                            <h3 class="cleaning-service-title">Kitchen Duct Cleaning</h3>
-                            <p class="cleaning-service-text">
-                                Grease build-up in kitchen hoods and ducts creates fire risk and reduces ventilation efficiency. Our kitchen duct cleaning service removes accumulated grease, soot and residue from hoods, filters, fans and duct runs. 
-      Using mechanical brushing and safe degreasers, we restore free airflow and reduce odour and smoke carry-over into dining areas.
-                            </p>
-                            <p class="cleaning-service-text">
-                                Available for restaurants, hotels and residential kitchens, our service includes inspection, filter replacement where required, and a final performance check of exhaust fans. Regular cleaning improves kitchen safety, reduces maintenance costs and maintains compliance with local fire and health regulations.
-                            </p>
-                            <div class="cleaning-highlight-points row mt-4">
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up">
-                                        <i class="fas fa-fire-extinguisher"></i>
-          <h6>Grease Removal</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
-                                        <i class="fas fa-bolt"></i>
-          <h6>Fire Risk Reduction</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
-                                        <i class="fas fa-wind"></i>
-          <h6>Improved Airflow</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
-                                        <i class="fas fa-user-shield"></i>
-          <h6>Certified Technicians</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cleaning-service-item" data-aos="fade-up">
+             <!-- Windows & Glass Cleaning -->
+            <div class="cleaning-service-item" data-aos="fade-up" id="windows-cleaning">
                 <div class="row g-0 align-items-stretch">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -799,138 +977,72 @@
                     </div>
                 </div>
             </div>
-
-            <div class="cleaning-service-item" data-aos="fade-up">
-                <div class="row g-0 align-items-stretch flex-md-row-reverse">
-                    <div class="col-md-6">
-                        <div class="image-container">
-                            <img src="images/After-Party-Cleaning-Service-Restoring-Your-Space.png" alt="Floor Cleaning" class="cleaning-service-image">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="cleaning-service-content">
-                            <h3 class="cleaning-service-title">After Party or Event Cleaning</h3>
-                            <p class="cleaning-service-text">
-                               Parties and events create heavy waste and require rapid, thorough cleanup. Our after-event cleaning teams specialise in fast turnaround — clearing trash, removing decorations, spot-treating carpets and sanitising food areas so venues are restored quickly. 
-      We bring sufficient crews and equipment to handle small gatherings up to large corporate events.
-                            </p>
-                            <p class="cleaning-service-text">
-                               Services include waste segregation for recycling, surface disinfection, furniture reset and stain interventions. We coordinate closely with event managers to meet tight deadlines and provide optional post-event maintenance plans for recurring event spaces. Count on a reliable, discreet team that returns the venue to pristine condition.
-                            </p>
-                            <div class="cleaning-highlight-points row mt-4">
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up">
-                                        <i class="fas fa-stopwatch"></i>
-          <h6>Fast Turnaround</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
-                                        <i class="fas fa-trash"></i>
-          <h6>Debris Removal</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
-                                       <i class="fas fa-broom"></i>
-          <h6>Surface Sanitation</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
-                                        <i class="fas fa-recycle"></i>
-          <h6>Recycle & Sort</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cleaning-service-item" data-aos="fade-up">
-                <div class="row g-0 align-items-stretch">
-                    <div class="col-md-6">
-                        <div class="image-container">
-                            <img src="images/sign-boardcleaning.jpg" alt="Floor Cleaning" class="cleaning-service-image">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="cleaning-service-content">
-                            <h3 class="cleaning-service-title">Advertising Signboard Cleaning</h3>
-                            <p class="cleaning-service-text">
-                               Outdoor signboards need regular maintenance to remain bright and legible. Our signboard cleaning service removes dust, grime, bird droppings and pollution film that dim displays and reduce visibility. 
-      We clean vinyl, acrylic, LED and metal surfaces using gentle, non-abrasive cleaners and soft tools to preserve finishes and avoid damage to graphics or lighting elements.
-                            </p>
-                            <p class="cleaning-service-text">
-                                For illuminated signs we follow electrical safety best practices and coordinate with site managers for safe access. A clean sign increases footfall and brand perception — our teams regularly service retail fronts, billboards and corporate signage to keep messaging crisp and vibrant.
-                            </p>
-                            <div class="cleaning-highlight-points row mt-4">
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up">
-                                        <i class="fas fa-bullhorn"></i>
-          <h6>Brand Visibility Boost</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
-                                        <i class="fas fa-hands-helping"></i>
-          <h6>Sign-Safe Techniques</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
-                                        <i class="fas fa-arrows-alt"></i>
-          <h6>Access & Lift Support</h6>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-6 mb-3">
-                                    <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
-                                        <i class="fas fa-shield-alt"></i>
-          <h6>Protective Coating Option</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- The remaining services would follow the same pattern -->
-            <!-- Water Tank Cleaning, Warehouse Cleaning, Carpet Shampooing, Curtain Shampooing, Kitchen Duct Cleaning, Windows & Glass Cleaning, After Party Cleaning, Advertising Signboard Cleaning -->
             
+            <!-- Commercial-Cleaning-Service end here  -->
+
+            <div class="blogs-flying-title" data-aos="zoom-in" style="scroll-margin-top: 16vh" id="postconstruction-cleaning">
+                <h3>Post-Construction Cleaning</h3>
+                <p class="lead">Thorough cleaning that removes dust, debris, and residues, leaving your new space move-in ready.</p>
+                <div class="divider"></div>
+            </div>
+
+
+            <!-- Post-Construction Cleaning -->
+<div class="cleaning-service-item" data-aos="fade-up" id="post-construction-cleaning">
+    <div class="row g-0 align-items-stretch">
+        <div class="col-md-6">
+            <div class="image-container">
+                <img src="images/new-postcontruction.png" alt="Post-Construction Cleaning" class="cleaning-service-image">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="cleaning-service-content">
+                <h3 class="cleaning-service-title">Post-Construction Cleaning</h3>
+                <p class="cleaning-service-text">
+                    After renovation or building projects, spaces are often left dusty, cluttered, and unsafe. 
+                    Our post-construction cleaning ensures every surface is spotless, polished, and ready to use. 
+                    We handle debris removal, fine dust cleaning, and sanitization for a fresh, move-in ready finish.
+                </p>
+                <p class="cleaning-service-text">
+                    From scrubbing walls, floors, and tiles to cleaning vents, windows, and fixtures, 
+                    our trained team uses industrial-grade equipment and eco-friendly products to deliver a 
+                    safe and pristine environment. Ideal for homes, offices, and commercial properties transitioning from construction to occupation.
+                </p>
+                <div class="cleaning-highlight-points row mt-4">
+                    <div class="col-6 col-md-6 mb-3">
+                        <div class="cleaning-point-card" data-aos="flip-up">
+                            <i class="fas fa-broom"></i>
+                            <h6>Dust & Debris Removal</h6>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 mb-3">
+                        <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="100">
+                            <i class="fas fa-paint-roller"></i>
+                            <h6>Stain & Spot Cleaning</h6>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 mb-3">
+                        <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="200">
+                            <i class="fas fa-warehouse"></i>
+                            <h6>Floor & Surface Care</h6>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 mb-3">
+                        <div class="cleaning-point-card" data-aos="flip-up" data-aos-delay="300">
+                            <i class="fas fa-check-circle"></i>
+                            <h6>Move-In Ready Finish</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
         </div>
     </section>
 
-    <!-- <section id="contact" class="bg-light py-5">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <h4>Contact Us</h4>
-            <p class="text-muted mb-1">Phone: <a href="tel:0557758634">0557758634</a></p>
-            <p class="text-muted mb-1">Email: <a href="mailto:homeguardpestcontroluae@gmail.com">homeguardpestcontroluae@gmail.com</a></p>
-            <p class="text-muted">Address: HOMEGUARD PEST CONTROL SOLUTION <br>Office no.204 <br>Uae , dubai</p>
-          </div>
-          <div class="col-md-6">
-            <h4>Send a message</h4>
-            <form class="row g-2" onsubmit="alert('This is a front-end demo. Connect a backend to process form data.'); return false;">
-              <div class="col-12 col-md-6">
-                <input class="form-control" placeholder="Your name" required>
-              </div>
-              <div class="col-12 col-md-6">
-                <input class="form-control" type="email" placeholder="Email" required>
-              </div>
-              <div class="col-12">
-                <textarea class="form-control" rows="3" placeholder="Message" required></textarea>
-              </div>
-              <div class="col-12 text-end">
-                <button class="btn btn-success">Send</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
+ <!-- Reused contcat session(Get in touch)  -->
     <section id="contact" class="contact-section">
         <div class="floating-shape shape-1"></div>
         <div class="floating-shape shape-2"></div>
@@ -1001,31 +1113,11 @@
             </div>
         </div>
     </section>
-
-
     
+    </main>
 
-  </main>
-
-  <!-- Reuse footer -->
-  <!-- <footer class="bg-white border-top py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <p class="mb-1"><strong>Home Guard Pest Control</strong></p>
-          <p class="text-muted small mb-0">Providing eco-friendly pest control & building cleaning services across GCC since 2010.</p>
-        </div>
-        <div class="col-md-6 text-md-end">
-          <p class="mb-1 small">Follow us:</p>
-          <a href="#" class="me-2">Facebook</a>
-          <a href="#" class="me-2">Instagram</a>
-          <a href="#">LinkedIn</a>
-        </div>
-      </div>
-    </div>
-  </footer> -->
-
-  <footer class="footer">
+  <!-- Reused footer -->
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <!-- Company Info -->
@@ -1150,74 +1242,245 @@
         </div>
     </footer>
 
-     <!-- Booking Modal -->
-<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="bookingModalLabel">Book Your Service</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form id="bookingForm">
-          <div class="row g-3">
-            <!-- Select Boxes -->
-            <div class="col-md-6">
-              <label for="serviceType" class="form-label">Type</label>
-              <select class="form-select" id="serviceType" required>
-                <option selected>Residential</option>
-                <option>Business</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="serviceCategory" class="form-label">Service</label>
-              <select class="form-select" id="serviceCategory" required>
-                <option selected>Pest Control</option>
-                <option>Building Cleaning</option>
-              </select>
-            </div>
+    <!-- free inspection Booking Modal -->
+    <div class="modal fade" id="freeInspectionModal" tabindex="-1" aria-labelledby="freeInspectionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content inspection-modal-content">
+                <div class="modal-header inspection-modal-header">
+                    <h5 class="modal-title inspection-modal-title" id="freeInspectionModalLabel">
+                        Book Your Free Inspection <span class="inspection-free-badge">FREE</span>
+                    </h5>
+                    <button type="button" class="btn-close inspection-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body inspection-modal-body">
+                    <form id="freeInspectionForm">
+                        <div class="row g-3">
+                            <!-- Service Type -->
+                            <div class="col-md-6">
+                                <label for="serviceType" class="form-label inspection-form-label">Inspection Type</label>
+                                <select class="form-select inspection-form-select" id="serviceType" required>
+                                    <option selected>Residential</option>
+                                    <option>Business</option>
+                                    <option>Both</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Service Selection (Checkboxes) -->
+                            <div class="col-md-6">
+                                <label class="form-label inspection-form-label">Services Needed</label>
+                                <div class="inspection-service-checkbox-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input inspection-form-check-input" type="checkbox" id="pestControl" checked>
+                                        <label class="form-check-label inspection-form-check-label" for="pestControl">
+                                            Pest Control
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input inspection-form-check-input" type="checkbox" id="buildingCleaning">
+                                        <label class="form-check-label inspection-form-check-label" for="buildingCleaning">
+                                            Building Cleaning
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
 
-            <!-- Name -->
-            <div class="col-12">
-              <label for="customerName" class="form-label">Name / Company</label>
-              <input type="text" class="form-control" id="customerName" placeholder="Enter your name or company" required>
-            </div>
+                            <!-- Specify Your Need -->
+                            <div class="col-12">
+                                <label for="specifyNeed" class="form-label inspection-form-label">Specify Your Need</label>
+                                <input type="text" class="form-control inspection-form-control" id="specifyNeed" placeholder="Tell us more about your requirements...">
+                            </div>
 
-            <!-- Mobile -->
-            <div class="col-12">
-              <label for="mobileNumber" class="form-label">Mobile Number</label>
-              <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
-              <div class="form-text">Enter 10-digit mobile number</div>
-            </div>
+                            <!-- Name -->
+                            <div class="col-12">
+                                <label for="customerName" class="form-label inspection-form-label">Name / Company</label>
+                                <input type="text" class="form-control inspection-form-control" id="customerName" placeholder="Enter your name or company" required>
+                            </div>
 
-            <!-- Address -->
-            <div class="col-12">
-              <label for="address" class="form-label">Address</label>
-              <textarea class="form-control" id="address" rows="2" required></textarea>
-            </div>
+                            <!-- Mobile -->
+                            <div class="col-12">
+                                <label for="mobileNumber" class="form-label inspection-form-label">Mobile Number</label>
+                                <input type="tel" class="form-control inspection-form-control" id="mobileNumber" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+                                <div class="form-text">Enter 10-digit mobile number</div>
+                                
+                                <!-- Alternative Number Toggle -->
+                                <div class="inspection-alternative-number-toggle" id="toggleAlternativeNumber">
+                                    <i class="bi bi-plus-circle"></i> Add Alternative Number
+                                </div>
+                                
+                                <!-- Alternative Number (Hidden by default) -->
+                                <div class="mt-2" id="alternativeNumberContainer" style="display: none;">
+                                    <label for="alternativeNumber" class="form-label inspection-form-label">Alternative Number</label>
+                                    <input type="tel" class="form-control inspection-form-control" id="alternativeNumber" placeholder="Enter alternative number" pattern="[0-9]{10}">
+                                    <div class="form-text">Optional: Enter 10-digit alternative number</div>
+                                </div>
+                            </div>
 
-            <!-- Map Selector Placeholder -->
-            <div class="col-12">
-              <label class="form-label">Select Location on Map</label>
-              <div class="border rounded p-3 bg-light text-center" style="height: 200px;">
-                <em>[ Map Integration Placeholder – connect Google Maps here later ]</em>
-              </div>
-            </div>
-          </div>
+                            <!-- Address -->
+                            <div class="col-12">
+                                <label for="address" class="form-label inspection-form-label">Address</label>
+                                <textarea class="form-control inspection-form-control" id="address" rows="2" required></textarea>
+                                
+                                <!-- Use Current Location Checkbox -->
+                                <div class="inspection-current-location-check form-check mt-2">
+                                    <input class="form-check-input inspection-form-check-input" type="checkbox" id="useCurrentLocation">
+                                    <label class="form-check-label inspection-form-check-label" for="useCurrentLocation">
+                                        Use my current location
+                                    </label>
+                                </div>
+                            </div>
 
-          <!-- Buttons -->
-          <div class="mt-4 text-end">
-            <button type="button" class="btn btn-secondary" id="cancelBooking">Cancel</button>
-            <button type="submit" class="btn btn-success">Book Now</button>
-          </div>
-        </form>
-      </div>
+                            <!-- Map Selector Placeholder -->
+                            <div class="col-12">
+                                <label class="form-label inspection-form-label">Select Location on Map</label>
+                                <div class="inspection-map-placeholder" style="height: 200px;">
+                                    <em>[ Map Integration Placeholder – connect Google Maps here later ]</em>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-4 d-flex justify-content-between">
+                            <button type="button" class="btn btn-outline-secondary inspection-btn-outline-secondary" id="cancelInspection">Cancel</button>
+                            <button type="submit" class="btn btn-success inspection-btn-success">Book Free Inspection</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+
+    <!-- Service Booking Modal -->
+    <div class="modal fade" id="serviceBookingModal" tabindex="-1" aria-labelledby="serviceBookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content service-modal-content">
+                <div class="modal-header service-modal-header">
+                    <h5 class="modal-title service-modal-title" id="serviceBookingModalLabel">
+                        Book Your Service
+                    </h5>
+                    <button type="button" class="btn-close service-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body service-modal-body">
+                    <form id="serviceBookingForm">
+                        <div class="row g-3">
+                            <!-- Service Type -->
+                            <div class="col-md-6">
+                                <label for="serviceType" class="form-label service-form-label">Service Type</label>
+                                <select class="form-select service-form-select" id="serviceType" required>
+                                    <option selected>Residential</option>
+                                    <option>Business</option>
+                                    <option>Both</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Service Selection (Checkboxes) -->
+                            <div class="col-md-6">
+                                <label class="form-label service-form-label">Services Needed</label>
+                                <div class="service-service-checkbox-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input service-form-check-input" type="checkbox" id="pestControlService" checked>
+                                        <label class="form-check-label service-form-check-label" for="pestControlService">
+                                            Pest Control
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input service-form-check-input" type="checkbox" id="buildingCleaningService">
+                                        <label class="form-check-label service-form-check-label" for="buildingCleaningService">
+                                            Building Cleaning
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Specify Your Need -->
+                            <div class="col-12">
+                                <label for="specifyNeed" class="form-label service-form-label">Specify Your Need</label>
+                                <input type="text" class="form-control service-form-control" id="specifyNeed" placeholder="Tell us more about your requirements...">
+                            </div>
+
+                            <!-- Name -->
+                            <div class="col-12">
+                                <label for="customerName" class="form-label service-form-label">Name / Company</label>
+                                <input type="text" class="form-control service-form-control" id="customerName" placeholder="Enter your name or company" required>
+                            </div>
+
+                            <!-- Mobile -->
+                            <div class="col-12">
+                                <label for="mobileNumber" class="form-label service-form-label">Mobile Number</label>
+                                <input type="tel" class="form-control service-form-control" id="mobileNumber" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+                                <div class="form-text">Enter 10-digit mobile number</div>
+                                
+                                <!-- Alternative Number Toggle -->
+                                <div class="service-alternative-number-toggle" id="toggleAlternativeNumberService">
+                                    <i class="bi bi-plus-circle"></i> Add Alternative Number
+                                </div>
+                                
+                                <!-- Alternative Number (Hidden by default) -->
+                                <div class="mt-2" id="alternativeNumberContainerService" style="display: none;">
+                                    <label for="alternativeNumber" class="form-label service-form-label">Alternative Number</label>
+                                    <input type="tel" class="form-control service-form-control" id="alternativeNumber" placeholder="Enter alternative number" pattern="[0-9]{10}">
+                                    <div class="form-text">Optional: Enter 10-digit alternative number</div>
+                                </div>
+                            </div>
+
+                            <!-- Plan Selection Cards -->
+                            <div class="col-12">
+                                <label class="form-label service-form-label">Select Your Plan</label>
+                                <div class="service-plan-cards" id="planSelection">
+                                    <div class="service-plan-card" data-plan="basic">
+                                        <div class="service-plan-name">Basic Plan</div>
+                                        <div class="service-plan-price">149 AED</div>
+                                    </div>
+                                    <div class="service-plan-card" data-plan="standard">
+                                        <div class="service-plan-name">Standard Plan</div>
+                                        <div class="service-plan-price">199 AED</div>
+                                    </div>
+                                    <div class="service-plan-card" data-plan="premium">
+                                        <div class="service-plan-name">Premium Plan</div>
+                                        <div class="service-plan-price">399 AED</div>
+                                    </div>
+                                    <div class="service-plan-card" data-plan="combo">
+                                        <div class="service-plan-name">Combo Plan</div>
+                                        <div class="service-plan-price">449 AED</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="col-12">
+                                <label for="address" class="form-label service-form-label">Address</label>
+                                <textarea class="form-control service-form-control" id="address" rows="2" required></textarea>
+                                
+                                <!-- Use Current Location Checkbox -->
+                                <div class="service-current-location-check form-check mt-2">
+                                    <input class="form-check-input service-form-check-input" type="checkbox" id="useCurrentLocationService">
+                                    <label class="form-check-label service-form-check-label" for="useCurrentLocationService">
+                                        Use my current location
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Map Selector Placeholder -->
+                            <div class="col-12">
+                                <label class="form-label service-form-label">Select Location on Map</label>
+                                <div class="service-map-placeholder" style="height: 200px;">
+                                    <em>[ Map Integration Placeholder – connect Google Maps here later ]</em>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-4 d-flex justify-content-between">
+                            <button type="button" class="btn btn-outline-secondary service-btn-outline-secondary" id="cancelServiceBooking">Cancel</button>
+                            <button type="submit" class="btn btn-success service-btn-success">Book Service</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <!-- Success Popup -->
-<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content text-center p-4">
       <div class="text-success fs-1">✔</div>
@@ -1225,10 +1488,10 @@
       <p>We will connect you soon. Thank you.</p>
     </div>
   </div>
-</div>
+    </div>
 
     <!-- Fixed Contact Buttons -->
-<div class="fixed-contact-buttons">
+    <div class="fixed-contact-buttons">
     <!-- WhatsApp Icon Only -->
     <a href="https://wa.me/971557758634" target="_blank" class="fixed-btn whatsapp-btn icon-only">
         <i class="bi bi-whatsapp"></i>
@@ -1239,15 +1502,15 @@
         <i class="bi bi-telephone-fill"></i>
         <span class="btn-text">Call Now</span>
     </a>
-</div>
+    </div>
 
 
         <!-- Scroll-activated buttons -->
-        <div class="scroll-buttons">
+    <div class="scroll-buttons">
         <a href="#" class="scroll-button back-to-top">
             <i class="bi bi-arrow-up"></i>
         </a>
-        <a href="#booknow" data-bs-toggle="modal" data-bs-target="#bookingModal" class="scroll-button book-now">
+        <a href="#booknow" data-bs-toggle="modal" data-bs-target="#serviceBookingModal" class="scroll-button book-now">
             <i class="bi bi-calendar-check"></i> Book Now
         </a>
     </div>

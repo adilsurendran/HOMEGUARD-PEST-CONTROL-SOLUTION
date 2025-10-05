@@ -13,24 +13,7 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-success" href="index.html">Home Guard</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="pest-control.html">Pest Control</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Cleaning</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
-
+  <!-- Reused Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <!-- Logo + Title -->
@@ -77,17 +60,9 @@
             </div>
         </div>
     </nav>
-  <!-- Hero -->
-  <!-- <header class="text-white text-center d-flex align-items-center justify-content-center" 
-          style="background:url('images/cntrl-1.png') top/cover no-repeat; min-height:600px; margin-top:60px;">
-    <div class="container">
-      <h1 class="fw-bold" data-aos="fade-down">Pest Control Services</h1>
-      <p class="lead" data-aos="fade-up">Detailed guide on crawling insects, flying insects, rodents, and more.</p>
-    </div>
-  </header> -->
 
-  <section class="hero-section position-relative py-5" style="background-image:url('images/Hero-banner-new logo.png'); background-size: cover; background-position: top;">
-  <!-- Overlay for better text readability -->
+ <!-- Hero section  -->
+    <section class="hero-section position-relative py-5" style="background-image:url('images/Hero-banner-new logo.png'); background-size: cover; background-position: top;">
   <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.65);"></div>
   
   <div class="container position-relative text-white">
@@ -131,25 +106,16 @@
             </div>
           </div>
         </div>
-        
-        <!-- CTA buttons -->
-        <!-- <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-aos="fade-up" data-aos-delay="200">
-          <a href="#" class="btn btn-light btn-lg px-4 py-2 fw-bold">
-            <i class="fas fa-calendar-check me-2"></i> Book Service Now
-          </a>
-          <a href="#" class="btn btn-outline-light btn-lg px-4 py-2 fw-bold">
-            <i class="fas fa-phone me-2"></i> Get Free Consultation
-          </a>
-        </div> -->
-        <div class="cta-buttons">
-                            <a href="#" class="btn btn-outline-custom">
+              
+        <div data-aos="zoom-in">
+                            <a class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">
                                 <i class="fas fa-calendar-check me-2"></i> Register your Free Inspection
                             </a>
-                            <a class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                            <a class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#serviceBookingModal">
                                 <i class="fas fa-calendar-check me-2"></i> Book Service Now
                             </a>
                         </div>
-        
+
         <!-- Trust indicators -->
         <div class="mt-5 pt-4  border-light" data-aos="fade-up" data-aos-delay="300">
           <div class="row g-3">
@@ -176,7 +142,7 @@
       </div>
     </div>
   </div>
-</section>
+    </section>
 
     <!-- Approach & Treatments Section -->
     <section class="approach-section" id="approach">
@@ -365,8 +331,9 @@
         </div>
     </section>
 
+<!-- Blogs starts here  -->
   <!-- ================= CRAWLING INSECTS ================= -->
-<section class="blogs-crawling-section" id="blogs-crawling">
+    <section class="blogs-crawling-section" id="blogs-crawling">
         <div class="container">
             <div class="blogs-crawling-title" data-aos="fade-up">
                 <h2>Blogs</h2>
@@ -376,7 +343,7 @@
             </div>
             
             <!-- Ants -->
-            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="100" id="ants" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-crawling-image-container rounded-3">
@@ -388,7 +355,7 @@
                             <div class="blogs-crawling-icon">
                                 <img src="images\svg\ant-icon.svg" alt="wasps" style="width: 30px;">
                             </div>
-                            <h3 class="blogs-crawling-pest-title" id="ants">Ants</h3>
+                            <h3 class="blogs-crawling-pest-title" >Ants</h3>
                             <p>
                                 Ants belong to the <strong>Formicidae family</strong> and are among the most hardworking insects in the world. 
                                 Living in large colonies, they are considered <em>eusocial insects</em>, with a highly organized structure. 
@@ -426,7 +393,7 @@
             </div>
             
             <!-- Termites -->
-            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="200" id="Termites" style="scroll-margin-top: 28vh">
                 <div class="row g-0 flex-md-row-reverse align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-crawling-image-container rounded-3">
@@ -438,7 +405,7 @@
                             <div class="blogs-crawling-icon">
                                 <img src="images\svg\termite-icon.svg" alt="wasps" style="width: 30px;">
                             </div>
-                            <h3 class="blogs-crawling-pest-title" id="Termites">Termites</h3>
+                            <h3 class="blogs-crawling-pest-title" >Termites</h3>
                             <p>
                                 Termites, often called <strong>"silent destroyers"</strong>, feed primarily on cellulose found in wood, paper, and plants. 
                                 They live in highly organized colonies with a caste system that includes <strong>workers</strong>, <strong>soldiers</strong>, 
@@ -472,7 +439,7 @@
             </div>
             
             <!-- Bed Bugs -->
-            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="300" id="bedbugs" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-crawling-image-container rounded-3">
@@ -484,7 +451,7 @@
                             <div class="blogs-crawling-icon">
                                 <i class="fas fa-bed"></i>
                             </div>
-                            <h3 class="blogs-crawling-pest-title" id="bedbugs">Bed Bugs</h3>
+                            <h3 class="blogs-crawling-pest-title" >Bed Bugs</h3>
                             <p>
                                 Bed bugs are <strong>small, reddish-brown, wingless insects</strong> that feed exclusively on the blood of humans and animals. 
                                 They are nocturnal and hide in cracks, mattresses, bed frames, and furniture during the day, making them very difficult to detect. 
@@ -518,7 +485,7 @@
             </div>
             
             <!-- Cockroaches -->
-            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="400" id="cockroaches" style="scroll-margin-top: 28vh">
                 <div class="row g-0 flex-md-row-reverse align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-crawling-image-container rounded-3">
@@ -530,7 +497,7 @@
                             <div class="blogs-crawling-icon">
                                 <img src="images\svg\cockroach-icon.svg" alt="wasps" style="width: 30px;">
                             </div>
-                            <h3 class="blogs-crawling-pest-title" id="cockroaches">Cockroaches</h3>
+                            <h3 class="blogs-crawling-pest-title" >Cockroaches</h3>
                             <p>
                                 Cockroaches are among the most resilient pests on earth, known for their 
                                 <strong>fast reproduction, adaptability, and ability to thrive in unsanitary conditions</strong>. 
@@ -565,7 +532,7 @@
             </div>
             
             <!-- Fleas -->
-            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="500" id="fleas" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-crawling-image-container rounded-3">
@@ -577,7 +544,7 @@
                             <div class="blogs-crawling-icon">
                                 <img src="images\svg\fleas-icon.svg" alt="wasps" style="width: 30px;">
                             </div>
-                            <h3 class="blogs-crawling-pest-title" id="fleas">Fleas</h3>
+                            <h3 class="blogs-crawling-pest-title" >Fleas</h3>
                             <p>
                                 Fleas are <strong>tiny, wingless, blood-sucking parasites</strong> that primarily infest pets 
                                 like cats and dogs but can also bite humans. Their powerful hind legs allow them to jump long 
@@ -611,7 +578,7 @@
             </div>
             
             <!-- Spiders -->
-            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="600" id="spider" style="scroll-margin-top: 28vh">
                 <div class="row g-0 flex-md-row-reverse align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-crawling-image-container rounded-3">
@@ -623,7 +590,7 @@
                             <div class="blogs-crawling-icon">
                                 <i class="fas fa-spider"></i>
                             </div>
-                            <h3 class="blogs-crawling-pest-title" id="spider">Spiders</h3>
+                            <h3 class="blogs-crawling-pest-title">Spiders</h3>
                             <p>
                                 Spiders are <strong>arachnids, not insects</strong>, and are known for their eight legs and ability 
                                 to produce silk. While most spiders are harmless and help by preying on pests like flies and mosquitoes, 
@@ -656,7 +623,7 @@
             </div>
             
             <!-- Silverfish -->
-            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="700">
+            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="700"id="silverfish" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-crawling-image-container rounded-3">
@@ -668,7 +635,7 @@
                             <div class="blogs-crawling-icon">
                                <img src="images\svg\silverfish-icon.svg" alt="wasps" style="width: 30px;">
                             </div>
-                            <h3 class="blogs-crawling-pest-title" id="silverfish">Silverfish</h3>
+                            <h3 class="blogs-crawling-pest-title" >Silverfish</h3>
                             <p>
                                 Silverfish are small, wingless insects with a shiny, silver-gray body that moves in a fish-like manner. 
                                 They are nocturnal and thrive in dark, damp environments such as basements, bathrooms, and kitchens.
@@ -693,7 +660,7 @@
             </div>
             
             <!-- Woodworm -->
-            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="800">
+            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="800" id="woodworm" style="scroll-margin-top: 28vh">
                 <div class="row g-0 flex-md-row-reverse align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-crawling-image-container rounded-3">
@@ -705,7 +672,7 @@
                             <div class="blogs-crawling-icon">
                                 <img src="images\svg\woodworm-icon.svg" alt="wasps" style="width: 30px;">
                             </div>
-                            <h3 class="blogs-crawling-pest-title" id="woodworm">Woodworm</h3>
+                            <h3 class="blogs-crawling-pest-title" >Woodworm</h3>
                             <p>
                                 Woodworm is not a single pest, but a term for the larvae of various wood-boring beetles. 
                                 These larvae tunnel through timber, leaving behind holes and a powdery residue known as frass.
@@ -730,7 +697,7 @@
             </div>
             
             <!-- Textile Pests -->
-            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="900">
+            <div class="blogs-crawling-card" data-aos="fade-up" data-aos-delay="900" id="textilepests" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-crawling-image-container rounded-3">
@@ -742,7 +709,7 @@
                             <div class="blogs-crawling-icon">
                                 <i class="fas fa-tshirt"></i>
                             </div>
-                            <h3 class="blogs-crawling-pest-title" id="textilepests">Textile Pests</h3>
+                            <h3 class="blogs-crawling-pest-title">Textile Pests</h3>
                             <p>
                                 Textile pests include insects such as clothes moths and carpet beetles that feed on natural fibers like wool, silk, and cotton. 
                                 They thrive in wardrobes, carpets, and upholstered furniture.
@@ -770,7 +737,7 @@
 
 
 <!-- ================= FLYING INSECTS ================= -->
-<section class="blogs-flying-section" id="blogs-flying">
+    <section class="blogs-flying-section" id="blogs-flying">
         <div class="container">
             <div class="blogs-flying-title" data-aos="fade-up">
                 <h3>FLYING INSECTS</h3>
@@ -779,7 +746,7 @@
             </div>
             
             <!-- Flies -->
-            <div class="blogs-flying-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="blogs-flying-card" data-aos="fade-up" data-aos-delay="100" id="files" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-flying-image-container rounded-3">
@@ -791,7 +758,7 @@
                             <div class="blogs-flying-icon">
                                 <img src="images\svg\fly-icon.svg" alt="wasps" style="width: 30px;">
                             </div>
-                            <h3 class="blogs-flying-pest-title" id="files">Flies</h3>
+                            <h3 class="blogs-flying-pest-title" >Flies</h3>
                             <p>
                                 Flies are one of the most common and bothersome flying pests found worldwide. 
                                 They breed quickly in warm, moist, and unhygienic environments such as garbage, animal waste, and stagnant water. 
@@ -812,7 +779,7 @@
             </div>
             
             <!-- Moths -->
-            <div class="blogs-flying-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="blogs-flying-card" data-aos="fade-up" data-aos-delay="200" id="moths" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center flex-md-row-reverse">
                     <div class="col-md-6">
                         <div class="blogs-flying-image-container rounded-3">
@@ -824,7 +791,7 @@
                             <div class="blogs-flying-icon">
                                 <img src="images\svg\months-icon.svg" alt="wasps" style="width: 30px;">
                             </div>
-                            <h3 class="blogs-flying-pest-title" id="moths">Moths</h3>
+                            <h3 class="blogs-flying-pest-title" >Moths</h3>
                             <p>
                                 Moths are nocturnal flying insects closely related to butterflies. 
                                 While adult moths are mostly harmless and feed on nectar, their larvae (caterpillars) can cause significant damage. 
@@ -845,7 +812,7 @@
             </div>
             
             <!-- Mosquitoes & Midges -->
-            <div class="blogs-flying-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="blogs-flying-card" data-aos="fade-up" data-aos-delay="300" id="mosquitoes" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-flying-image-container rounded-3">
@@ -857,7 +824,7 @@
                             <div class="blogs-flying-icon">
                                 <i class="fas fa-mosquito"></i>
                             </div>
-                            <h3 class="blogs-flying-pest-title" id="mosquitoes">Mosquitoes & Midges</h3>
+                            <h3 class="blogs-flying-pest-title" >Mosquitoes & Midges</h3>
                             <p>
                                 Mosquitoes and midges are small but highly irritating flying insects. 
                                 Mosquitoes breed in stagnant or slow-moving water and are active mainly at dawn and dusk. 
@@ -879,7 +846,7 @@
             </div>
             
             <!-- Wasps -->
-            <div class="blogs-flying-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="blogs-flying-card" data-aos="fade-up" data-aos-delay="400" id="wasps" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center flex-md-row-reverse">
                     <div class="col-md-6">
                         <div class="blogs-flying-image-container rounded-3">
@@ -891,7 +858,7 @@
                             <div class="blogs-flying-icon">
                                 <img src="images\svg\wasps-icon.svg" alt="wasps" style="width: 30px;">
                             </div>
-                            <h3 class="blogs-flying-pest-title" id="wasps">Wasps</h3>
+                            <h3 class="blogs-flying-pest-title" >Wasps</h3>
                             <p>
                                 Wasps are aggressive flying insects that often nest in sheltered spots like roof eaves, wall cavities, trees, and shrubs. 
                                 Unlike bees, wasps can sting multiple times without losing their stinger, making them more dangerous in swarms. 
@@ -915,7 +882,7 @@
 
 
 <!-- ================= RODENTS & OTHERS ================= -->
-<section class="blogs-rodents-section" id="blogs-rodents">
+    <section class="blogs-rodents-section" id="blogs-rodents">
         <div class="container">
             <div class="blogs-rodents-title" data-aos="fade-up">
                 <h3>RODENTS & OTHERS</h3>
@@ -924,7 +891,7 @@
             </div>
             
             <!-- Rodents -->
-            <div class="blogs-rodents-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="blogs-rodents-card" data-aos="fade-up" data-aos-delay="100" id="rodents" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-rodents-image-container rounded-3">
@@ -936,7 +903,7 @@
                             <div class="blogs-rodents-icon">
                                 <img src="images\svg\rat-icon.svg" alt="rat" style="width: 30px;">
                             </div>
-                            <h3 class="blogs-rodents-pest-title" id="rodents">Rodents</h3>
+                            <h3 class="blogs-rodents-pest-title" >Rodents</h3>
                             <p>
                                 Rodents such as rats and mice are among the most common and destructive pests worldwide. 
                                 They breed quickly, chew through wood, wires, and packaging, and contaminate food supplies with droppings and urine. 
@@ -956,7 +923,7 @@
             </div>
             
             <!-- Birds -->
-            <div class="blogs-rodents-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="blogs-rodents-card" data-aos="fade-up" data-aos-delay="200" id="birds" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center flex-md-row-reverse">
                     <div class="col-md-6">
                         <div class="blogs-rodents-image-container rounded-3">
@@ -968,7 +935,7 @@
                             <div class="blogs-rodents-icon">
                                 <i class="fas fa-dove"></i>
                             </div>
-                            <h3 class="blogs-rodents-pest-title" id="birds">Birds</h3>
+                            <h3 class="blogs-rodents-pest-title" >Birds</h3>
                             <p>
                                 While birds may not always be seen as pests, certain species such as pigeons, crows, and seagulls 
                                 can create significant problems in urban and industrial areas. Their droppings are acidic, 
@@ -988,7 +955,7 @@
             </div>
             
             <!-- Stored Product Insects -->
-            <div class="blogs-rodents-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="blogs-rodents-card" data-aos="fade-up" data-aos-delay="300" id="stored-product-pests" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-6">
                         <div class="blogs-rodents-image-container rounded-3">
@@ -1000,7 +967,7 @@
                             <div class="blogs-rodents-icon">
                                 <i class="fas fa-bug"></i>
                             </div>
-                            <h3 class="blogs-rodents-pest-title" id="stored-product-pests">Stored Product Insects</h3>
+                            <h3 class="blogs-rodents-pest-title">Stored Product Insects</h3>
                             <p>
                                 Stored product insects include beetles, weevils, and moths that infest dry goods such as grains, cereals, flour, and nuts. 
                                 These pests thrive in warehouses, grocery stores, and homes, often spreading unnoticed until food products are heavily contaminated.
@@ -1019,7 +986,7 @@
             </div>
             
             <!-- Snakes -->
-            <div class="blogs-rodents-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="blogs-rodents-card" data-aos="fade-up" data-aos-delay="400" id="snakes" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-center flex-md-row-reverse">
                     <div class="col-md-6">
                         <div class="blogs-rodents-image-container rounded-3">
@@ -1031,7 +998,7 @@
                             <div class="blogs-rodents-icon">
                                 <i class="fas fa-staff-snake"></i>
                             </div>
-                            <h3 class="blogs-rodents-pest-title" id="snakes">Snakes</h3>
+                            <h3 class="blogs-rodents-pest-title" >Snakes</h3>
                             <p>
                                 Snakes are not insects but are often considered pests when they invade human habitats. 
                                 While many snake species are non-venomous and help control rodent populations, 
@@ -1052,17 +1019,8 @@
         </div>
     </section>
 
-
-  <!-- CTA -->
-  <!-- <section class="text-center py-5 bg-success text-white">
-    <div class="container" data-aos="zoom-in">
-      <h3 class="fw-bold mb-3">Worried About Pests?</h3>
-      <p class="mb-4">Book a professional pest control service today and secure your home & business.</p>
-      <a href="#" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Your Service Now</a>
-    </div>
-  </section> -->
-
-      <section id="contact" class="contact-section">
+    <!-- Reused contact  -->
+    <section id="contact" class="contact-section">
         <div class="floating-shape shape-1"></div>
         <div class="floating-shape shape-2"></div>
         
@@ -1133,7 +1091,7 @@
         </div>
     </section>
 
-
+    <!-- FAQ Session  -->
     <section class="faq-section">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
@@ -1279,7 +1237,8 @@
         </div>
     </section>
 
-  <footer class="footer">
+    <!-- Reused footer  -->
+     <footer class="footer">
         <div class="container">
             <div class="row">
                 <!-- Company Info -->
@@ -1404,74 +1363,245 @@
         </div>
     </footer>
 
-         <!-- Booking Modal -->
-<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="bookingModalLabel">Book Your Service</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form id="bookingForm">
-          <div class="row g-3">
-            <!-- Select Boxes -->
-            <div class="col-md-6">
-              <label for="serviceType" class="form-label">Type</label>
-              <select class="form-select" id="serviceType" required>
-                <option selected>Residential</option>
-                <option>Business</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="serviceCategory" class="form-label">Service</label>
-              <select class="form-select" id="serviceCategory" required>
-                <option selected>Pest Control</option>
-                <option>Building Cleaning</option>
-              </select>
-            </div>
+    <!-- free inspection Booking Modal -->
+    <div class="modal fade" id="freeInspectionModal" tabindex="-1" aria-labelledby="freeInspectionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content inspection-modal-content">
+                <div class="modal-header inspection-modal-header">
+                    <h5 class="modal-title inspection-modal-title" id="freeInspectionModalLabel">
+                        Book Your Free Inspection <span class="inspection-free-badge">FREE</span>
+                    </h5>
+                    <button type="button" class="btn-close inspection-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body inspection-modal-body">
+                    <form id="freeInspectionForm">
+                        <div class="row g-3">
+                            <!-- Service Type -->
+                            <div class="col-md-6">
+                                <label for="serviceType" class="form-label inspection-form-label">Inspection Type</label>
+                                <select class="form-select inspection-form-select" id="serviceType" required>
+                                    <option selected>Residential</option>
+                                    <option>Business</option>
+                                    <option>Both</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Service Selection (Checkboxes) -->
+                            <div class="col-md-6">
+                                <label class="form-label inspection-form-label">Services Needed</label>
+                                <div class="inspection-service-checkbox-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input inspection-form-check-input" type="checkbox" id="pestControl" checked>
+                                        <label class="form-check-label inspection-form-check-label" for="pestControl">
+                                            Pest Control
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input inspection-form-check-input" type="checkbox" id="buildingCleaning">
+                                        <label class="form-check-label inspection-form-check-label" for="buildingCleaning">
+                                            Building Cleaning
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
 
-            <!-- Name -->
-            <div class="col-12">
-              <label for="customerName" class="form-label">Name / Company</label>
-              <input type="text" class="form-control" id="customerName" placeholder="Enter your name or company" required>
-            </div>
+                            <!-- Specify Your Need -->
+                            <div class="col-12">
+                                <label for="specifyNeed" class="form-label inspection-form-label">Specify Your Need</label>
+                                <input type="text" class="form-control inspection-form-control" id="specifyNeed" placeholder="Tell us more about your requirements...">
+                            </div>
 
-            <!-- Mobile -->
-            <div class="col-12">
-              <label for="mobileNumber" class="form-label">Mobile Number</label>
-              <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
-              <div class="form-text">Enter 10-digit mobile number</div>
-            </div>
+                            <!-- Name -->
+                            <div class="col-12">
+                                <label for="customerName" class="form-label inspection-form-label">Name / Company</label>
+                                <input type="text" class="form-control inspection-form-control" id="customerName" placeholder="Enter your name or company" required>
+                            </div>
 
-            <!-- Address -->
-            <div class="col-12">
-              <label for="address" class="form-label">Address</label>
-              <textarea class="form-control" id="address" rows="2" required></textarea>
-            </div>
+                            <!-- Mobile -->
+                            <div class="col-12">
+                                <label for="mobileNumber" class="form-label inspection-form-label">Mobile Number</label>
+                                <input type="tel" class="form-control inspection-form-control" id="mobileNumber" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+                                <div class="form-text">Enter 10-digit mobile number</div>
+                                
+                                <!-- Alternative Number Toggle -->
+                                <div class="inspection-alternative-number-toggle" id="toggleAlternativeNumber">
+                                    <i class="bi bi-plus-circle"></i> Add Alternative Number
+                                </div>
+                                
+                                <!-- Alternative Number (Hidden by default) -->
+                                <div class="mt-2" id="alternativeNumberContainer" style="display: none;">
+                                    <label for="alternativeNumber" class="form-label inspection-form-label">Alternative Number</label>
+                                    <input type="tel" class="form-control inspection-form-control" id="alternativeNumber" placeholder="Enter alternative number" pattern="[0-9]{10}">
+                                    <div class="form-text">Optional: Enter 10-digit alternative number</div>
+                                </div>
+                            </div>
 
-            <!-- Map Selector Placeholder -->
-            <div class="col-12">
-              <label class="form-label">Select Location on Map</label>
-              <div class="border rounded p-3 bg-light text-center" style="height: 200px;">
-                <em>[ Map Integration Placeholder – connect Google Maps here later ]</em>
-              </div>
-            </div>
-          </div>
+                            <!-- Address -->
+                            <div class="col-12">
+                                <label for="address" class="form-label inspection-form-label">Address</label>
+                                <textarea class="form-control inspection-form-control" id="address" rows="2" required></textarea>
+                                
+                                <!-- Use Current Location Checkbox -->
+                                <div class="inspection-current-location-check form-check mt-2">
+                                    <input class="form-check-input inspection-form-check-input" type="checkbox" id="useCurrentLocation">
+                                    <label class="form-check-label inspection-form-check-label" for="useCurrentLocation">
+                                        Use my current location
+                                    </label>
+                                </div>
+                            </div>
 
-          <!-- Buttons -->
-          <div class="mt-4 text-end">
-            <button type="button" class="btn btn-secondary" id="cancelBooking">Cancel</button>
-            <button type="submit" class="btn btn-success">Book Now</button>
-          </div>
-        </form>
-      </div>
+                            <!-- Map Selector Placeholder -->
+                            <div class="col-12">
+                                <label class="form-label inspection-form-label">Select Location on Map</label>
+                                <div class="inspection-map-placeholder" style="height: 200px;">
+                                    <em>[ Map Integration Placeholder – connect Google Maps here later ]</em>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-4 d-flex justify-content-between">
+                            <button type="button" class="btn btn-outline-secondary inspection-btn-outline-secondary" id="cancelInspection">Cancel</button>
+                            <button type="submit" class="btn btn-success inspection-btn-success">Book Free Inspection</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+
+    <!-- Service Booking Modal -->
+    <div class="modal fade" id="serviceBookingModal" tabindex="-1" aria-labelledby="serviceBookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content service-modal-content">
+                <div class="modal-header service-modal-header">
+                    <h5 class="modal-title service-modal-title" id="serviceBookingModalLabel">
+                        Book Your Service
+                    </h5>
+                    <button type="button" class="btn-close service-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body service-modal-body">
+                    <form id="serviceBookingForm">
+                        <div class="row g-3">
+                            <!-- Service Type -->
+                            <div class="col-md-6">
+                                <label for="serviceType" class="form-label service-form-label">Service Type</label>
+                                <select class="form-select service-form-select" id="serviceType" required>
+                                    <option selected>Residential</option>
+                                    <option>Business</option>
+                                    <option>Both</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Service Selection (Checkboxes) -->
+                            <div class="col-md-6">
+                                <label class="form-label service-form-label">Services Needed</label>
+                                <div class="service-service-checkbox-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input service-form-check-input" type="checkbox" id="pestControlService" checked>
+                                        <label class="form-check-label service-form-check-label" for="pestControlService">
+                                            Pest Control
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input service-form-check-input" type="checkbox" id="buildingCleaningService">
+                                        <label class="form-check-label service-form-check-label" for="buildingCleaningService">
+                                            Building Cleaning
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Specify Your Need -->
+                            <div class="col-12">
+                                <label for="specifyNeed" class="form-label service-form-label">Specify Your Need</label>
+                                <input type="text" class="form-control service-form-control" id="specifyNeed" placeholder="Tell us more about your requirements...">
+                            </div>
+
+                            <!-- Name -->
+                            <div class="col-12">
+                                <label for="customerName" class="form-label service-form-label">Name / Company</label>
+                                <input type="text" class="form-control service-form-control" id="customerName" placeholder="Enter your name or company" required>
+                            </div>
+
+                            <!-- Mobile -->
+                            <div class="col-12">
+                                <label for="mobileNumber" class="form-label service-form-label">Mobile Number</label>
+                                <input type="tel" class="form-control service-form-control" id="mobileNumber" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+                                <div class="form-text">Enter 10-digit mobile number</div>
+                                
+                                <!-- Alternative Number Toggle -->
+                                <div class="service-alternative-number-toggle" id="toggleAlternativeNumberService">
+                                    <i class="bi bi-plus-circle"></i> Add Alternative Number
+                                </div>
+                                
+                                <!-- Alternative Number (Hidden by default) -->
+                                <div class="mt-2" id="alternativeNumberContainerService" style="display: none;">
+                                    <label for="alternativeNumber" class="form-label service-form-label">Alternative Number</label>
+                                    <input type="tel" class="form-control service-form-control" id="alternativeNumber" placeholder="Enter alternative number" pattern="[0-9]{10}">
+                                    <div class="form-text">Optional: Enter 10-digit alternative number</div>
+                                </div>
+                            </div>
+
+                            <!-- Plan Selection Cards -->
+                            <div class="col-12">
+                                <label class="form-label service-form-label">Select Your Plan</label>
+                                <div class="service-plan-cards" id="planSelection">
+                                    <div class="service-plan-card" data-plan="basic">
+                                        <div class="service-plan-name">Basic Plan</div>
+                                        <div class="service-plan-price">149 AED</div>
+                                    </div>
+                                    <div class="service-plan-card" data-plan="standard">
+                                        <div class="service-plan-name">Standard Plan</div>
+                                        <div class="service-plan-price">199 AED</div>
+                                    </div>
+                                    <div class="service-plan-card" data-plan="premium">
+                                        <div class="service-plan-name">Premium Plan</div>
+                                        <div class="service-plan-price">399 AED</div>
+                                    </div>
+                                    <div class="service-plan-card" data-plan="combo">
+                                        <div class="service-plan-name">Combo Plan</div>
+                                        <div class="service-plan-price">449 AED</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="col-12">
+                                <label for="address" class="form-label service-form-label">Address</label>
+                                <textarea class="form-control service-form-control" id="address" rows="2" required></textarea>
+                                
+                                <!-- Use Current Location Checkbox -->
+                                <div class="service-current-location-check form-check mt-2">
+                                    <input class="form-check-input service-form-check-input" type="checkbox" id="useCurrentLocationService">
+                                    <label class="form-check-label service-form-check-label" for="useCurrentLocationService">
+                                        Use my current location
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Map Selector Placeholder -->
+                            <div class="col-12">
+                                <label class="form-label service-form-label">Select Location on Map</label>
+                                <div class="service-map-placeholder" style="height: 200px;">
+                                    <em>[ Map Integration Placeholder – connect Google Maps here later ]</em>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-4 d-flex justify-content-between">
+                            <button type="button" class="btn btn-outline-secondary service-btn-outline-secondary" id="cancelServiceBooking">Cancel</button>
+                            <button type="submit" class="btn btn-success service-btn-success">Book Service</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <!-- Success Popup -->
-<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content text-center p-4">
       <div class="text-success fs-1">✔</div>
@@ -1479,10 +1609,10 @@
       <p>We will connect you soon. Thank you.</p>
     </div>
   </div>
-</div>
+    </div>
 
-        <!-- Fixed Contact Buttons -->
-<div class="fixed-contact-buttons">
+    <!-- Fixed Contact Buttons -->
+    <div class="fixed-contact-buttons">
     <!-- WhatsApp Icon Only -->
     <a href="https://wa.me/971557758634" target="_blank" class="fixed-btn whatsapp-btn icon-only">
         <i class="bi bi-whatsapp"></i>
@@ -1493,15 +1623,15 @@
         <i class="bi bi-telephone-fill"></i>
         <span class="btn-text">Call Now</span>
     </a>
-</div>
+    </div>
 
 
-        <!-- Scroll-activated buttons -->
-        <div class="scroll-buttons">
+    <!-- Scroll-activated buttons -->
+    <div class="scroll-buttons">
         <a href="#" class="scroll-button back-to-top">
             <i class="bi bi-arrow-up"></i>
         </a>
-        <a href="#booknow" data-bs-toggle="modal" data-bs-target="#bookingModal" class="scroll-button book-now">
+        <a href="#booknow" data-bs-toggle="modal" data-bs-target="#serviceBookingModal" class="scroll-button book-now">
             <i class="bi bi-calendar-check"></i> Book Now
         </a>
     </div>
@@ -1512,9 +1642,9 @@
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
+  <!-- <script>
     AOS.init({ duration: 1000, once: true });
-  </script>
+  </script> -->
   <script src="js/script.js" defer></script>
 </body>
 </html>
