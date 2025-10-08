@@ -17,8 +17,8 @@
 <body>
 
 <!-- ===== NAVBAR (Bootstrap collapse + logo + dropdown) ===== -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light container-sm-fluid">
+        <div class="container container-sm-fluid">
             <!-- Logo + Title -->
             <!-- <a class="navbar-brand" href="index.html">
                 <div class="logoround">
@@ -129,14 +129,14 @@
         </div>
         
         <!-- Animation Container -->
-        <div class="animation-container">
+        <!-- <div class="animation-container">
             <div class="technician"></div>
             <div class="pests">
                 <div class="pest"></div>
                 <div class="pest"></div>
                 <div class="pest"></div>
             </div>
-        </div>
+        </div> -->
     </section>
     <!-- ===== END HERO ===== -->
 
@@ -223,8 +223,19 @@
     <!-- ===== SECTION: Pest Control Services + Carousel (second section) ===== -->
 <!-- Pest Services Card Carousel -->
     <section id="pest-services-cards" class="pest-services" >
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
+<div class="floating-pest-index pest-1-index">
+    <i class="fas fa-spider"></i>
+</div>
+<div class="floating-pest-index pest-2-index">
+    <i class="fas fa-bug"></i>
+
+</div>
+
+<div class="floating-pest-index pest-4-index">
+     <i class="fa-regular fa-handshake"></i>
+</div>
+
+
         
         <div class="container">
             <div class="row mb-4">
@@ -238,12 +249,11 @@
             </div>
 
             <!-- Carousel Wrapper -->
-            <div class="carousel-container">
+            <!-- <div class="carousel-container">
                 <div class="carousel-track pb-2">
 
-                    <!-- Card 1 -->
                     <div class="service-card">
-                        <img src="images/black-ants.jpg" alt="Ants" class="lazy-img">
+                        <img src="images/black-ants.jpg" alt="Ants" >
                         <div class="service-card-content">
                             <h5>Ants Control</h5>
                             <p>Treatments like gel, spray and bait stations are effective against ants.</p>
@@ -251,9 +261,8 @@
                         </div>
                     </div>
 
-                    <!-- Card 2 -->
                     <div class="service-card">
-                        <img src="images/files.jpg" alt="Flies" class="lazy-img">
+                        <img src="images/files.jpg" alt="Flies" >
                         <div class="service-card-content">
                             <h5>Flies Control</h5>
                             <p>Integrated pest management includes sprays and granule treatments.</p>
@@ -261,9 +270,8 @@
                         </div>
                     </div>
 
-                    <!-- Card 3 -->
                     <div class="service-card">
-                        <img src="images/mosquitoes-2.jpg" alt="Mosquito" class="lazy-img">
+                        <img src="images/mosquitoes-2.jpg" alt="Mosquito" >
                         <div class="service-card-content">
                             <h5>Mosquito Control</h5>
                             <p>Customized treatments like thermal fogging & misting for effective control.</p>
@@ -271,9 +279,8 @@
                         </div>
                     </div>
 
-                    <!-- Card 4 -->
                     <div class="service-card">
-                        <img src="images/cockroaches.webp" alt="Cockroach" class="lazy-img">
+                        <img src="images/cockroaches.webp" alt="Cockroach" >
                         <div class="service-card-content">
                             <h5>Cockroach Control</h5>
                             <p>Gel-baiting system and odorless chemical spray to control cockroaches.</p>
@@ -281,9 +288,8 @@
                         </div>
                     </div>
 
-                    <!-- Card 5 -->
                     <div class="service-card">
-                        <img src="images/rodent.jpg" alt="Rodents" class="lazy-img">
+                        <img src="images/rodent.jpg" alt="Rodents" >
                         <div class="service-card-content">
                             <h5>Rodent Control</h5>
                             <p>Long-lasting solutions to prevent mice & rat infestations in buildings.</p>
@@ -291,9 +297,8 @@
                         </div>
                     </div>
 
-                    <!-- Card 6 -->
                     <div class="service-card">
-                        <img src="images/rock-pigeon.jpg" alt="Birds" class="lazy-img">
+                        <img src="images/rock-pigeon.jpg" alt="Birds" >
                         <div class="service-card-content">
                             <h5>Bird Control</h5>
                             <p>Humane netting, spikes, and repellents to prevent bird nuisance.</p>
@@ -301,9 +306,8 @@
                         </div>
                     </div>
 
-                    <!-- Card 7 -->
                     <div class="service-card">
-                        <img src="images/snakes.webp" alt="Snakes" class="lazy-img">
+                        <img src="images/snakes.webp" alt="Snakes" >
                         <div class="service-card-content">
                             <h5>Snake Control</h5>
                             <p>Snake-safe services provide protection around buildings & farms.</p>
@@ -311,9 +315,8 @@
                         </div>
                     </div>
 
-                    <!-- Card 8 -->
                     <div class="service-card">
-                        <img src="images/terminates-1.webp" alt="Termites" class="lazy-img">
+                        <img src="images/terminates-1.webp" alt="Termites" >
                         <div class="service-card-content">
                             <h5>Termite Control</h5>
                             <p>Inspections and advanced treatments to protect wooden structures.</p>
@@ -321,9 +324,8 @@
                         </div>
                     </div>
 
-                    <!-- Card 9 -->
                     <div class="service-card">
-                        <img src="images/spider.jpg" alt="Spiders" class="lazy-img">
+                        <img src="images/spider.jpg" alt="Spiders" >
                         <div class="service-card-content">
                             <h5>Spider Control</h5>
                             <p>Targeted sprays and preventive methods to keep spiders away indoors.</p>
@@ -331,9 +333,8 @@
                         </div>
                     </div>
 
-                    <!-- Card 10 -->
                     <div class="service-card">
-                        <img src="images/bed-bugs-in-mattress.jpg" alt="Bed Bugs" class="lazy-img">
+                        <img src="images/bed-bugs-in-mattress.jpg" alt="Bed Bugs" >
                         <div class="service-card-content">
                             <h5>Bed Bug Control</h5>
                             <p>Specialized heat and chemical treatments to eliminate bed bugs.</p>
@@ -342,12 +343,186 @@
                     </div>
 
                 </div>
-            </div>
+            </div> -->
+            <div class="carousel-container">
+            <div class="carousel-track pb-2">
 
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <img src="images/black-ants.jpg" alt="Ants" >
+                    <div class="service-card-content">
+                        <h5>Ants Control</h5>
+                        <p>Treatments like gel, spray and bait stations are effective against ants.</p>
+                        <a href="pest-control.html#ants" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <img src="images/files.jpg" alt="Flies" >
+                    <div class="service-card-content">
+                        <h5>Flies Control</h5>
+                        <p>Integrated pest management includes sprays and granule treatments.</p>
+                        <a href="pest-control.html#files" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <img src="images/mosquitoes-2.jpg" alt="Mosquito" >
+                    <div class="service-card-content">
+                        <h5>Mosquito Control</h5>
+                        <p>Customized treatments like thermal fogging & misting for effective control.</p>
+                        <a href="pest-control.html#mosquitoes" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="service-card">
+                    <img src="images/cockroaches.webp" alt="Cockroach" >
+                    <div class="service-card-content">
+                        <h5>Cockroach Control</h5>
+                        <p>Gel-baiting system and odorless chemical spray to control cockroaches.</p>
+                        <a href="pest-control.html#cockroaches" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="service-card">
+                    <img src="images/rodent.jpg" alt="Rodents" >
+                    <div class="service-card-content">
+                        <h5>Rodent Control</h5>
+                        <p>Long-lasting solutions to prevent mice & rat infestations in buildings.</p>
+                        <a href="pest-control.html#rodents" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="service-card">
+                    <img src="images/rock-pigeon.jpg" alt="Birds" >
+                    <div class="service-card-content">
+                        <h5>Bird Control</h5>
+                        <p>Humane netting, spikes, and repellents to prevent bird nuisance.</p>
+                        <a href="pest-control.html#birds" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="service-card">
+                    <img src="images/snakes.webp" alt="Snakes" >
+                    <div class="service-card-content">
+                        <h5>Snake Control</h5>
+                        <p>Snake-safe services provide protection around buildings & farms.</p>
+                        <a href="pest-control.html#snakes" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="service-card">
+                    <img src="images/terminates-1.webp" alt="Termites" >
+                    <div class="service-card-content">
+                        <h5>Termite Control</h5>
+                        <p>Inspections and advanced treatments to protect wooden structures.</p>
+                        <a href="pest-control.html#Termites" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="service-card">
+                    <img src="images/spider.jpg" alt="Spiders" >
+                    <div class="service-card-content">
+                        <h5>Spider Control</h5>
+                        <p>Targeted sprays and preventive methods to keep spiders away indoors.</p>
+                        <a href="pest-control.html#spider" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="service-card">
+                    <img src="images/bed-bugs-in-mattress.jpg" alt="Bed Bugs" >
+                    <div class="service-card-content">
+                        <h5>Bed Bug Control</h5>
+                        <p>Specialized heat and chemical treatments to eliminate bed bugs.</p>
+                        <a href="pest-control.html#bedbugs" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="service-card">
+                    <img src="images/fleas.jpg" alt="Fleas" >
+                    <div class="service-card-content">
+                        <h5>Fleas Control</h5>
+                        <p>Effective treatments to eliminate fleas from pets and your home.</p>
+                        <a href="pest-control.html#fleas" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="service-card">
+                    <img src="images/silverfish.jpg" alt="Silverfish" >
+                    <div class="service-card-content">
+                        <h5>Silverfish Control</h5>
+                        <p>Targeted solutions to remove silverfish from damp areas in your home.</p>
+                        <a href="pest-control.html#silverfish" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 13 -->
+                <div class="service-card">
+                    <img src="images/woodworm.jpg" alt="Woodworm" >
+                    <div class="service-card-content">
+                        <h5>Woodworm Control</h5>
+                        <p>Protect your wooden furniture and structures from woodworm damage.</p>
+                        <a href="pest-control.html#woodworm" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 14 -->
+                <div class="service-card">
+                    <img src="images/Textile Pests.jpg" alt="Textile Pests" >
+                    <div class="service-card-content">
+                        <h5>Textile Pests Control</h5>
+                        <p>Prevent damage to fabrics, carpets and clothing from textile pests.</p>
+                        <a href="pest-control.html#textile-pests" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 15 -->
+                <div class="service-card">
+                    <img src="images/carpet-moth.jpg" alt="Moths" >
+                    <div class="service-card-content">
+                        <h5>Moths Control</h5>
+                        <p>Comprehensive solutions to eliminate moth infestations in your home.</p>
+                        <a href="pest-control.html#moths" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 16 -->
+                <div class="service-card">
+                    <img src="images/wasps.jpeg" alt="Wasps" >
+                    <div class="service-card-content">
+                        <h5>Wasps Control</h5>
+                        <p>Safe removal of wasp nests and prevention of future infestations.</p>
+                        <a href="pest-control.html#wasps" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- Card 17 -->
+                <div class="service-card">
+                    <img src="images/stored-product-pests-2.avif" alt="Stored Product Insects" >
+                    <div class="service-card-content">
+                        <h5>Stored Product Insects Control</h5>
+                        <p>Protect your pantry and stored food from insect infestations.</p>
+                        <a href="pest-control.html#stored-product-insects" class="btn btn-success view-btn">View More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
             
             
             <!-- Expert Staff Section -->
-            <div class="expert-section">
+            <!-- <div class="expert-section">
                 <h3 class="expert-title">Our Expert Team & Guaranteed Services</h3>
                 <div class="expert-content">
                     <div class="expert-text">
@@ -365,13 +540,127 @@
                         </div>
                     </div>
                     <div class="expert-image">
-                        <img data-src="images\cntrl-1.png" alt="Home Guard Expert Team" class="lazy-img">
+                        <img data-src="images\Hero-banner-new logo.png" alt="Home Guard Expert Team" >
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="expert-section py-5 rounded">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="pe-lg-4">
+                    <span class="badge bg-primary-green-new text-white px-3 py-2 rounded-pill mb-3">Expert Team</span>
+                    <h2 class="expert-title mb-4 fw-bold">Our Expert Team & Guaranteed Services</h2>
+                    <p class="expert-text mb-4 fs-5 text-muted">
+                        Our team of highly trained and experienced technicians uses the latest technology and methods to ensure effective pest control solutions. With years of industry experience, we understand the unique challenges of pest management in the Dubai region.
+                    </p>
+                    
+                    <div class="service-features-expert row g-3">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center p-3 rounded-3 bg-light-green">
+                                <div class="feature-icon-new bg-primary-green-new text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <span class="fw-semibold text-dark">Eco-Friendly Solutions</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center p-3 rounded-3 bg-light-green">
+                                <div class="feature-icon-new bg-primary-green-new text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <span class="fw-semibold text-dark">Guaranteed Service</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 text-center text-md-start">
+                        <a href="/pest-control.html">
+                        <button class="btn btn-primary-green-new text-white px-4 py-2 rounded-1 me-3">Learn More</button></a>
                     </div>
                 </div>
             </div>
             
-            <!-- Safety Cards -->
-            <div class="safety-cards">
+            <div class="col-lg-6">
+                <div class="expert-image-wrapper position-relative">
+                    <div class="expert-image bg-primary-green-new rounded-3 overflow-hidden shadow-lg">
+                        <img src="images/Hero-banner-new logo.png" alt="Home Guard Expert Team" class="img-fluid w-100 h-100 object-fit-cover object-position-top" loading="lazy">
+                    </div>
+                    <div class="expert-card bg-white shadow-sm rounded-2 p-3 position-absolute bottom-0 start-0 m-4">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar bg-light-green text-primary-green-new rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0 fw-bold">Certified Experts</h5>
+                                <p class="mb-0 text-muted small">Licensed & Insured</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+            <div class="expert-section py-5 rounded">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Image Column -->
+      <div class="col-lg-6 mb-4 mb-lg-0 order-1 order-lg-2">
+        <img src="images/Hero-banner-new logo.png" class=" rounded" alt="Expert Team">
+      </div>
+      
+      <!-- Text Column -->
+      <div class="col-lg-6 order-2 order-lg-1">
+        <div class="pe-lg-4">
+          <span class="badge bg-primary-green-new text-white px-3 py-2 rounded-pill mb-3">About our Team</span>
+          <h2 class="expert-title mb-4 fw-bold">Our Expert Team & Guaranteed Services</h2>
+          <p class="expert-text mb-4 fs-5 text-muted">
+            Our team of highly trained and experienced technicians uses the latest technology and methods to ensure effective pest control solutions. With years of industry experience, we understand the unique challenges of pest management in the Dubai region.
+          </p>
+
+          <!-- Learn More Button (Mobile should come before features) -->
+          <div class="mt-4 text-center text-md-start order-2 order-lg-2">
+            <a href="/pest-control.html">
+              <button class="btn btn-primary-green-new text-white px-4 py-2 rounded-1 me-3">
+                Learn More
+              </button>
+            </a>
+          </div>
+
+          <!-- Features -->
+          <div class="service-features-expert row g-3 mt-4 order-3 order-lg-3">
+            <div class="col-md-6">
+              <div class="d-flex align-items-center p-3 rounded-3 bg-light-green">
+                <div class="feature-icon-new bg-primary-green-new text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                  <i class="fas fa-leaf"></i>
+                </div>
+                <span class="fw-semibold text-dark">Eco-Friendly Solutions</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex align-items-center p-3 rounded-3 bg-light-green">
+                <div class="feature-icon-new bg-primary-green-new text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <span class="fw-semibold text-dark">Guaranteed Service</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Safety Cards -->
+            <!-- <div class="safety-cards">
                 <div class="safety-card">
                     <div class="safety-icon">
                         <i class="fas fa-baby"></i>
@@ -403,15 +692,65 @@
                 </a>
             </div>
 
+        </div> -->
+   
+        <div class="container my-5">
+  <div class="row g-4 justify-content-center">
+    <!-- Card 1 -->
+    <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+      <div class="safety-card">
+        <div class="safety-icon">
+          <i class="fas fa-baby"></i>
         </div>
+        <h5 class="safety-title">Baby Safe</h5>
+        <p class="safety-text">Our treatments are completely safe for babies and children</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+      <div class="safety-card">
+        <div class="safety-icon">
+          <i class="fas fa-female"></i>
+        </div>
+        <h5 class="safety-title">Pregnancy Safe</h5>
+        <p class="safety-text">Safe for expectant mothers with no harmful chemicals</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+      <div class="safety-card">
+        <div class="safety-icon">
+          <i class="fas fa-paw"></i>
+        </div>
+        <h5 class="safety-title">Pet Friendly</h5>
+        <p class="safety-text">Our solutions are pet-friendly and won't harm your furry friends</p>
+      </div>
+    </div>
+  </div>
+</div>
+
     </section>
     <!-- ===== END Pest Control Services ===== -->
 
 
     <!-- ===== SECTION: Building cleaning Section (third section) ===== -->
     <section class="cleaning-services">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
+        <!-- <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div> -->
+
+        <!-- Floating cleaning icons -->
+<div class="floating-cleaning mop">
+    <!-- <i class="fas fa-broom"></i> -->
+     <i class="fas fa-spray-can"></i>
+</div>
+<div class="floating-cleaning mop-bucket">
+    <!-- <i class="fas fa-soap"></i>  -->
+     <i class="fas fa-hand-sparkles"></i>
+</div>
+
+
         
         <div class="container">
             <div class="row mb-4">
@@ -992,8 +1331,10 @@
             <div class="footer-divider"></div>
             
             <!-- Copyright Section -->
-            <div class="copyright">
-                <div class="container">
+            
+        </div>
+        <div class="copyright">
+                <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col text-center mb-2 mb-md-0">
                             &copy; 2025 Home Guard Pest Control. All rights reserved.
@@ -1006,7 +1347,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </footer>
 
   <!-- ==============================================new form controls of booking here============================  -->

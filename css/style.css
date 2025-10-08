@@ -126,12 +126,12 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
 
 
 
-    .carousel-container {
+    /* .carousel-container {
   overflow: hidden;              
   position: relative;
-}
+} */
 
-.carousel-track {
+/* .carousel-track {
   display: flex;
   gap: 20px;
   overflow-x: auto;              
@@ -139,11 +139,11 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
   scroll-snap-type: x mandatory; 
   -ms-overflow-style: none;      
   scrollbar-width: none;         
-}
+} */
 
-.carousel-track::-webkit-scrollbar {
+/* .carousel-track::-webkit-scrollbar {
   display: none;                 
-}
+} */
 
 
  /* -----------------------------------------------------card of pest service of home page-------------------------------------------------------------------------------- */
@@ -209,7 +209,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
 }
 
 
-/* ---------------------------------- Service Card of page Services --------------------------------------------------------- */
+/* ---------------------------------- Service Card of page index --------------------------------------------------------- */
 
 
 .service-areas {
@@ -335,7 +335,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
       right: -10px;
       width: 50px;
       height: 50px;
-      background: var(--primary-green);
+      /* background: var(--primary-green); */
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -348,8 +348,8 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
   }
 
 .service-card-building-services:hover .service-icon {
-    transform: scale(1.1) rotate(5deg);
-    background: var(--dark-green);
+    transform: scale(1.1) ;
+    /* background: var(-); */
 }
 
 .btn-service {
@@ -379,14 +379,14 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
     transform: translateX(4px);
 }
 
-.lazy-img {
+/* .lazy-img {
     filter: blur(2px);
     transition: filter 0.5s ease;
 }
 
 .lazy-img.loaded {
     filter: blur(0);
-}
+} */
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
@@ -544,12 +544,12 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             z-index: 1;
         }
         
-        .floating-shape {
+        /* .floating-shape {
             position: absolute;
             z-index: 0;
-        }
+        } */
         
-        .shape-1 {
+        /* .shape-1 {
             top: 10%;
             right: 5%;
             width: 100px;
@@ -567,13 +567,13 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             background: rgba(255, 193, 7, 0.15);
             animation: float 10s ease-in-out infinite;
-        }
+        } */
         
-        @keyframes float {
+        /* @keyframes float {
             0% { transform: translateY(0) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(10deg); }
             100% { transform: translateY(0) rotate(0deg); }
-        }
+        } */
         
         /* Animation classes */
         .fade-in-up {
@@ -664,7 +664,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
         }
         
         /* Carousel Styles */
-        .carousel-container {
+        /* .carousel-container {
             position: relative;
             overflow: hidden;
             padding: 1rem 0;
@@ -697,7 +697,6 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            /* height: 100%; Ensure all cards have same height */
             min-height: 40vh;
         }
         
@@ -735,10 +734,216 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
         .view-btn {
             align-self: center;
             margin-top: auto;
+        } */
+
+        /* Carousel Styles */
+        /* .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 1rem 0;
         }
         
+        .carousel-track {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding: 20px 10px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            margin-bottom: 0;
+        }
+        
+        .carousel-track::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .service-card {
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            width: 300px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 40vh;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .service-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card h5 {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.5;
+            flex-grow: 1;
+            margin-bottom: 1.25rem;
+        }
+        
+        .view-btn {
+            align-self: center;
+            margin-top: auto;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .view-btn {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .service-card {
+                width: 280px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .service-card {
+                width: 260px;
+            }
+            
+            .service-card-content {
+                padding: 1rem;
+            }
+        } */
+         /* ================== New responsive =======    */
+        .carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-bottom: 0;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.service-card {
+    scroll-snap-align: start;
+    flex: 0 0 calc(100% - 20px); /* default: 1 card */
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+}
+
+.service-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
+}
+
+.service-card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card h5 {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 1.25rem;
+}
+
+.view-btn {
+    align-self: center;
+    margin-top: auto;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .view-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (min-width: 576px) {
+    .service-card {
+        flex: 0 0 calc((100% - 20px) / 2); /* 2 cards */
+    }
+}
+
+@media (min-width: 768px) {
+    .service-card {
+        flex: 0 0 calc((100% - 40px) / 3); /* 3 cards, 2 gaps */
+    }
+}
+
+@media (min-width: 1200px) {
+    .service-card {
+        flex: 0 0 calc((100% - 60px) / 4); /* 4 cards, 3 gaps */
+    }
+}
+
+
         /* Expert Staff Section */
-        .expert-section {
+        /* .expert-section {
             background: white;
             border-radius: 12px;
             padding: 2.5rem;
@@ -774,6 +979,8 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
         .expert-image img {
             width: 100%;
             max-height: 250px;
+            object-fit: cover;       
+    object-position: top;
             display: block;
         }
         
@@ -793,10 +1000,70 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
         .service-feature i {
             color: var(--primary);
             font-size: 1.25rem;
-        }
+        } */
+
+        .expert-section {
+    /* background-color: var(--light, #f8f9fa); */
+}
+
+.bg-primary-green-new {
+    background-color: var(--primary-green-new, #1a6b3b) !important;
+}
+
+.btn-primary-green-new {
+    background-color: var(--primary-green-new, #1a6b3b);
+    border-color: var(--primary-green-new, #1a6b3b);
+}
+
+.btn-primary-green-new:hover {
+    background-color: var(--dark-green-new, #14572e);
+    border-color: var(--dark-green-new, #14572e);
+}
+
+.btn-outline-primary-green-new {
+    color: var(--primary-green-new, #1a6b3b);
+    border-color: var(--primary-green-new, #1a6b3b);
+}
+
+.btn-outline-primary-green-new:hover {
+    background-color: var(--primary-green-new, #1a6b3b);
+    color: white;
+}
+
+.bg-light-green {
+    background-color: var(--white) !important;
+}
+/* .object-position-top{
+    object-position: top !important;
+}
+.expert-image {
+    height: 350px;
+        object-position: top !important;
+
+} */
+
+.expert-card {
+    max-width: 250px;
+}
+
+.feature-icon-new {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .expert-image {
+        height: 300px;
+    }
+    
+    .expert-card {
+        position: relative !important;
+        margin: 1rem 0 0 0 !important;
+        max-width: 100%;
+    }
+}
         
         /* Safety Cards */
-        .safety-cards {
+        /* .safety-cards {
             display: flex;
             justify-content: center;
             gap: 2rem;
@@ -840,14 +1107,88 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             color: #666;
             font-size: 0.9rem;
         }
-        
+         */
+
+        .safety-card {
+  background: var(--dark-green-new);
+  border-radius: 50%;
+  width: 220px;         /* fixed size circle */
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* .safety-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+} */
+ .safety-card:hover .safety-icon {
+  animation: pulse-bounce 0.6s ease-in-out;
+}
+
+/* Keyframes for pulse + bounce */
+@keyframes pulse-bounce {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.2); }
+  50% { transform: scale(0.9); }
+  70% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.safety-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.6rem;
+  background: var(--secondary);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title */
+.safety-title {
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+/* Text inside circle */
+.safety-text {
+  color:var(--light-gray);
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .safety-card {
+    width: 280px !important;
+    height: 280px !important;
+    padding: 1rem;
+  }
+  .safety-text {
+    font-size: 0.90rem;
+  }
+}
+
+         
         /* Floating shapes for background */
-        .floating-shape {
+        /* .floating-shape {
             position: absolute;
             z-index: 0;
-        }
+        } */
         
-        .shape-1 {
+        /* .shape-1 {
             top: 10%;
             right: 5%;
             width: 100px;
@@ -865,13 +1206,13 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             background: rgba(255, 193, 7, 0.15);
             animation: float 10s ease-in-out infinite;
-        }
+        } */
         
-        @keyframes float {
+        /* @keyframes float {
             0% { transform: translateY(0) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(10deg); }
             100% { transform: translateY(0) rotate(0deg); }
-        }
+        } */
         
         /* Responsive adjustments */
         @media (max-width: 992px) {
@@ -1271,12 +1612,12 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
         }
         
         /* Floating shapes for background */
-        .floating-shape {
+        /* .floating-shape {
             position: absolute;
             z-index: 0;
-        }
+        } */
         
-        .shape-1 {
+        /* .shape-1 {
             top: 10%;
             right: 5%;
             width: 100px;
@@ -1294,13 +1635,13 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             background: rgba(255, 193, 7, 0.15);
             animation: float 10s ease-in-out infinite;
-        }
+        } */
         
-        @keyframes float {
+        /* @keyframes float {
             0% { transform: translateY(0) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(10deg); }
             100% { transform: translateY(0) rotate(0deg); }
-        }
+        } */
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
@@ -1455,7 +1796,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
-        /* Floating shapes for background */
+/*============================================== Floating shapes for background ==========================================================================*/
         .floating-shape {
             position: absolute;
             z-index: 1;
@@ -1486,6 +1827,99 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             50% { transform: translateY(-20px) rotate(10deg); }
             100% { transform: translateY(0) rotate(0deg); }
         }
+
+    /* .floating-shape-pestsection {
+    position: absolute;
+    z-index: 1;
+}
+
+.shape-1-pest {
+    top: 20%;
+    right: 10%;
+    width: 90px;
+    height: 50px;
+    border-radius: 40% 60% 50% 50% / 40% 40% 60% 60%;
+    background: rgba(60, 60, 60, 0.15);
+    animation: float 8s ease-in-out infinite;
+}
+
+.shape-2pest {
+    bottom: 15%;
+    left: 10%;
+    width: 70px;
+    height: 70px;
+    background: 
+        radial-gradient(circle, transparent 40%, rgba(26, 107, 59, 0.1) 40%),
+        conic-gradient(from 0deg, transparent 0deg 45deg, rgba(26, 107, 59, 0.08) 45deg 90deg, transparent 90deg 135deg, rgba(26, 107, 59, 0.08) 135deg 180deg, transparent 180deg 225deg, rgba(26, 107, 59, 0.08) 225deg 270deg, transparent 270deg 315deg, rgba(26, 107, 59, 0.08) 315deg 360deg);
+    border-radius: 50%;
+    animation: float 11s ease-in-out infinite, rotate 20s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-18px) rotate(8deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} */
+
+/* Floating pest icons */
+.floating-pest-index {
+    position: absolute;
+    opacity: 0.05;
+    font-size: 8rem;
+    z-index: 0;
+    color: var(--primary);
+    animation: float 10s ease-in-out infinite;
+}
+
+/* Different positions for each pest */
+.pest-1-index { top: 10%; left: 5%; animation-delay: 0s; }
+.pest-2-index { bottom: 10%; right: 5%; animation-delay: 2s; }
+.pest-4-index { bottom: 25%; left: 20%; animation-delay: 6s; }
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(15deg); }
+}
+
+/* Responsive: hide pests on smaller screens */
+@media (max-width: 768px) {
+    .floating-pest-index {
+        display: none;
+    }
+}
+
+.floating-cleaning {
+    position: absolute;
+    opacity: 0.05;
+    font-size: 6rem;
+    z-index: 0;
+    color: var(--primary);
+    animation: float 10s ease-in-out infinite;
+}
+
+/* Unique positions for each cleaning item */
+.mop { top: 10%; left: 5%; animation-delay: 0s; }
+.mop-bucket { bottom: 10%; right: 5%; animation-delay: 2s; }
+
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(15deg); }
+}
+
+/* Hide on smaller screens */
+@media (max-width: 768px) {
+    .floating-cleaning { display: none; }
+}
+
+
         
         /* Responsive adjustments */
         @media (max-width: 992px) {
@@ -1507,6 +1941,8 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             .contact-detail {
                 flex-direction: column;
                 text-align: center;
+                align-items: center;
+                justify-content: center;
             }
             
             .contact-icon {
@@ -1546,6 +1982,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             margin-right: 2rem;
         }
         
+        
         /* .logoround {
             border-radius: 50%;
             border: 2px solid white;
@@ -1579,15 +2016,33 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
     height: 60px;
     overflow: hidden;
     border-radius: 3px;
+    
+    
 }
+
 
 .logoround img {
     width: 100%;
     height: 100%;
     /* object-fit: contain; */
     object-fit: cover;
-    object-position: center; 
+    /* object-position: center;  */
     display: block;
+}
+@media (max-width: 575.98px) {
+    .container-sm-fluid {
+        width: 100% !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-left: 0px !important;
+        overflow: hidden !important;
+
+    }
+     .logoround{
+        margin-left: -30px !important;
+        overflow: hidden !important;
+        
+     }
 }
 
         .brand-text {
@@ -2223,7 +2678,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
     left: -200px;
     width: 180px;
     height: 145px;
-    background: url("/images/Technician-character.png") no-repeat center bottom;
+    background: url("/images/New-technician.png") no-repeat center bottom;
     opacity: 0.7;
     pointer-events: none;
     background-size: contain;
@@ -3903,6 +4358,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
       background: linear-gradient(135deg, #f5f9f6 0%, #e8f5e9 100%);
       font-family: 'Poppins', sans-serif;
       overflow-x: hidden;
+      overflow-y: hidden;
       position: relative;
     }
 
