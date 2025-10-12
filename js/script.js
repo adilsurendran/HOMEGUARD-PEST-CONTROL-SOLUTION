@@ -629,7 +629,7 @@
 //             });
 
 // // =========================================== service booking with pricing plan integrated =========================================            
-//              // Plan selection functionality
+             // Plan selection functionality
 //         const planCards = document.querySelectorAll('.service-plan-card');
 //         let selectedPlan = null;
         
@@ -763,7 +763,7 @@
 //             selectedPlan = null;
 //         });
 
-//         // Pricing card integration
+// //         // Pricing card integration
 //         document.querySelectorAll('.pricing-card-custom button, .combo-card-custom button').forEach(button => {
 //             button.addEventListener('click', function() {
 //                 const plan = this.getAttribute('data-plan');
@@ -788,7 +788,7 @@
 //                 }, 500);
 //             });
 //         });
-//         });
+        // });
 
 //         function initAnimations() {
 //                     // Pause animations initially for scroll-triggering
@@ -1155,71 +1155,289 @@ document.addEventListener('DOMContentLoaded', function () {
     // ==========================
     // 4) Forms: Free Inspection & Service Booking
     // ==========================
+    // const initForms = () => {
+    //     const handleAlternativeNumberToggle = (toggleId, containerId) => {
+    //         const toggleBtn = document.getElementById(toggleId);
+    //         const container = document.getElementById(containerId);
+    //         toggleBtn?.addEventListener('click', () => {
+    //             if (container.style.display === 'none') {
+    //                 container.style.display = 'block';
+    //                 toggleBtn.innerHTML = '<i class="bi bi-dash-circle"></i> Remove Alternative Number';
+    //             } else {
+    //                 container.style.display = 'none';
+    //                 toggleBtn.innerHTML = '<i class="bi bi-plus-circle"></i> Add Alternative Number';
+    //             }
+    //         });
+    //     };
+
+    //     handleAlternativeNumberToggle('toggleAlternativeNumber', 'alternativeNumberContainer');
+    //     handleAlternativeNumberToggle('toggleAlternativeNumberService', 'alternativeNumberContainerService');
+
+    //     const handleCurrentLocation = (checkboxId, textareaId) => {
+    //         const checkbox = document.getElementById(checkboxId);
+    //         const textarea = document.getElementById(textareaId);
+    //         checkbox?.addEventListener('change', function() {
+    //             if (this.checked) {
+    //                 if (navigator.geolocation) {
+    //                     navigator.geolocation.getCurrentPosition(pos => {
+    //                         textarea.value = `Current Location: ${pos.coords.latitude}, ${pos.coords.longitude}`;
+    //                     }, () => {
+    //                         textarea.value = "Unable to retrieve current location";
+    //                     });
+    //                 } else {
+    //                     textarea.value = "Geolocation not supported";
+    //                 }
+    //             } else textarea.value = "";
+    //         });
+    //     };
+
+    //     handleCurrentLocation('useCurrentLocation', 'address');
+    //     handleCurrentLocation('useCurrentLocationService', 'address');
+
+    //     // Form submission templates
+    //     const submitForm = (formId, modalId, alertMsg, resetFields = []) => {
+    //         const form = document.getElementById(formId);
+    //         form?.addEventListener('submit', e => {
+    //             e.preventDefault();
+    //             alert(alertMsg);
+    //             const modal = bootstrap.Modal.getInstance(document.getElementById(modalId));
+    //             modal?.hide();
+    //             form.reset();
+    //             resetFields.forEach(field => field());
+    //         });
+    //     };
+
+    //     submitForm('freeInspectionForm', 'freeInspectionModal', 'Thank you! Your free inspection request has been submitted.');
+    //     submitForm('serviceBookingForm', 'serviceBookingModal', 'Thank you! Your booking has been submitted.', [
+    //         () => document.querySelectorAll('.service-plan-card').forEach(c => c.classList.remove('selected','muted'))
+    //     ]);
+
+    //     // Cancel buttons
+    //     ['cancelInspection', 'cancelServiceBooking'].forEach(id => {
+    //         document.getElementById(id)?.addEventListener('click', () => {
+    //             const modal = bootstrap.Modal.getInstance(document.getElementById(id.replace('cancel','').toLowerCase()+'Modal'));
+    //             modal?.hide();
+    //         });
+    //     });
+    // };
+
+    // ================================
+// 🌟 ALL-IN-ONE SERVICE FORM SCRIPT
+// Handles: Plan selection, toggles, location, and form submission
+// Shows success modal instead of alert()
+// ================================
+
+    // ------------------------------
+    // 🔹 Initialize All Forms & Toggles
+    // ------------------------------
     const initForms = () => {
+
+        // =============================
+        // 1️⃣ Alternative Number Toggle
+        // =============================
         const handleAlternativeNumberToggle = (toggleId, containerId) => {
             const toggleBtn = document.getElementById(toggleId);
             const container = document.getElementById(containerId);
-            toggleBtn?.addEventListener('click', () => {
-                if (container.style.display === 'none') {
-                    container.style.display = 'block';
-                    toggleBtn.innerHTML = '<i class="bi bi-dash-circle"></i> Remove Alternative Number';
+
+            toggleBtn?.addEventListener("click", () => {
+                const isHidden = container.style.display === "none" || !container.style.display;
+                container.style.display = isHidden ? "block" : "none";
+                toggleBtn.innerHTML = isHidden
+                    ? '<i class="bi bi-dash-circle"></i> Remove Alternative Number'
+                    : '<i class="bi bi-plus-circle"></i> Add Alternative Number';
+            });
+        };
+
+        // Initialize both inspection and service modals
+        handleAlternativeNumberToggle("toggleAlternativeNumber", "alternativeNumberContainer");
+        handleAlternativeNumberToggle("toggleAlternativeNumberService", "alternativeNumberContainerService");
+
+        // =============================
+        // 2️⃣ Current Location Autofill
+        // =============================
+        const handleCurrentLocation = (checkboxId, textareaId) => {
+            const checkbox = document.getElementById(checkboxId);
+            const textarea = document.getElementById(textareaId);
+
+            checkbox?.addEventListener("change", function () {
+                if (this.checked) {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(
+                            pos => {
+                                textarea.value = `Current Location: ${pos.coords.latitude}, ${pos.coords.longitude}`;
+                            },
+                            () => {
+                                textarea.value = "Unable to retrieve current location";
+                            }
+                        );
+                    } else {
+                        textarea.value = "Geolocation not supported by this browser";
+                    }
                 } else {
-                    container.style.display = 'none';
-                    toggleBtn.innerHTML = '<i class="bi bi-plus-circle"></i> Add Alternative Number';
+                    textarea.value = "";
                 }
             });
         };
 
-        handleAlternativeNumberToggle('toggleAlternativeNumber', 'alternativeNumberContainer');
-        handleAlternativeNumberToggle('toggleAlternativeNumberService', 'alternativeNumberContainerService');
+        // Initialize location checkbox for both modals
+        handleCurrentLocation("useCurrentLocation", "address");
+        handleCurrentLocation("useCurrentLocationService", "address");
 
-        const handleCurrentLocation = (checkboxId, textareaId) => {
-            const checkbox = document.getElementById(checkboxId);
-            const textarea = document.getElementById(textareaId);
-            checkbox?.addEventListener('change', function() {
-                if (this.checked) {
-                    if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(pos => {
-                            textarea.value = `Current Location: ${pos.coords.latitude}, ${pos.coords.longitude}`;
-                        }, () => {
-                            textarea.value = "Unable to retrieve current location";
-                        });
-                    } else {
-                        textarea.value = "Geolocation not supported";
-                    }
-                } else textarea.value = "";
-            });
-        };
-
-        handleCurrentLocation('useCurrentLocation', 'address');
-        handleCurrentLocation('useCurrentLocationService', 'address');
-
-        // Form submission templates
-        const submitForm = (formId, modalId, alertMsg, resetFields = []) => {
+        // =============================
+        // 3️⃣ Generic Form Submission Handler
+        // =============================
+        const submitForm = (formId, modalId, resetExtras = []) => {
             const form = document.getElementById(formId);
-            form?.addEventListener('submit', e => {
+            form?.addEventListener("submit", e => {
                 e.preventDefault();
-                alert(alertMsg);
+
+                // Hide the current form modal
                 const modal = bootstrap.Modal.getInstance(document.getElementById(modalId));
                 modal?.hide();
+
+                // Show the success modal instead of alert
+                const successModal = new bootstrap.Modal(document.getElementById("successModal"));
+                successModal.show();
+
+                // Reset the form
                 form.reset();
-                resetFields.forEach(field => field());
+
+                // Run extra cleanup (like unselecting cards)
+                resetExtras.forEach(fn => fn());
             });
         };
 
-        submitForm('freeInspectionForm', 'freeInspectionModal', 'Thank you! Your free inspection request has been submitted.');
-        submitForm('serviceBookingForm', 'serviceBookingModal', 'Thank you! Your booking has been submitted.', [
-            () => document.querySelectorAll('.service-plan-card').forEach(c => c.classList.remove('selected','muted'))
+        // Free Inspection form
+        submitForm("freeInspectionForm", "freeInspectionModal");
+
+        // Service Booking form (custom reset for plan cards)
+        submitForm("serviceBookingForm", "serviceBookingModal", [
+            () => planCards.forEach(c => c.classList.remove("selected", "muted"))
         ]);
 
-        // Cancel buttons
-        ['cancelInspection', 'cancelServiceBooking'].forEach(id => {
-            document.getElementById(id)?.addEventListener('click', () => {
-                const modal = bootstrap.Modal.getInstance(document.getElementById(id.replace('cancel','').toLowerCase()+'Modal'));
-                modal?.hide();
-            });
-        });
+        // =============================
+        // 4️⃣ Cancel Buttons
+        // =============================
+       (() => {
+  const cancelToModal = {
+    cancelInspection: 'freeInspectionModal',
+    cancelServiceBooking: 'serviceBookingModal'
+  };
+
+  Object.keys(cancelToModal).forEach(cancelId => {
+    const btn = document.getElementById(cancelId);
+    if (!btn) return;
+
+    btn.addEventListener('click', () => {
+      const modalEl = document.getElementById(cancelToModal[cancelId]);
+      if (!modalEl) return;
+      const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+      modal.hide();
+
+      if (cancelId === 'cancelServiceBooking') {
+        document.getElementById('serviceBookingForm')?.reset();
+        document.querySelectorAll('.service-plan-card')?.forEach(c => c.classList.remove('selected','muted'));
+        selectedPlan = null;
+      }
+
+      if (cancelId === 'cancelInspection') {
+        document.getElementById('freeInspectionForm')?.reset();
+      }
+    });
+  });
+})();
+
     };
+
+    // ------------------------------
+    // 🔹 Service Plan Card Selection
+    // ------------------------------
+    const planCards = document.querySelectorAll(".service-plan-card");
+    let selectedPlan = null;
+
+    planCards.forEach(card => {
+        card.addEventListener("click", function () {
+            const isCurrentlySelected = this.classList.contains("selected");
+
+            // Clear previous selection
+            planCards.forEach(c => c.classList.remove("selected", "muted"));
+
+            // Select or deselect clicked card
+            if (!isCurrentlySelected) {
+                this.classList.add("selected");
+                planCards.forEach(c => c !== this && c.classList.add("muted"));
+                selectedPlan = this.getAttribute("data-plan");
+            } else {
+                selectedPlan = null;
+            }
+        });
+    });
+
+    // ------------------------------
+    // 🔹 Service Booking Form Logic (Validation)
+    // ------------------------------
+    const serviceBookingForm = document.getElementById("serviceBookingForm");
+    serviceBookingForm?.addEventListener("submit", e => {
+        e.preventDefault();
+
+        const pestControl = document.getElementById("pestControlService")?.checked;
+        const buildingCleaning = document.getElementById("buildingCleaningService")?.checked;
+
+        if (!pestControl && !buildingCleaning) {
+            alert("Please select at least one service");
+            return;
+        }
+
+        // Hide booking modal and show success
+        const modal = bootstrap.Modal.getInstance(document.getElementById("serviceBookingModal"));
+        modal?.hide();
+
+        const successModal = new bootstrap.Modal(document.getElementById("successModal"));
+        successModal.show();
+
+        // Reset form and UI
+        serviceBookingForm.reset();
+        planCards.forEach(c => c.classList.remove("selected", "muted"));
+        selectedPlan = null;
+    });
+
+    // ------------------------------
+    // 🔹 Cancel Button (Service Modal)
+    // ------------------------------
+    // const cancelServiceBooking = document.getElementById("cancelServiceBooking");
+    // cancelServiceBooking?.addEventListener("click", () => {
+    //     const modal = bootstrap.Modal.getInstance(document.getElementById("serviceBookingModal"));
+    //     modal?.hide();
+    //     serviceBookingForm.reset();
+    //     planCards.forEach(c => c.classList.remove("selected", "muted"));
+    //     selectedPlan = null;
+    // });
+
+    // ------------------------------
+    // 🔹 Pricing Card → Modal Integration
+    // ------------------------------
+    document.querySelectorAll(".pricing-card-custom button, .combo-card-custom button").forEach(button => {
+        button.addEventListener("click", function () {
+            const plan = this.getAttribute("data-plan");
+
+            // Show the service booking modal
+            const modal = new bootstrap.Modal(document.getElementById("serviceBookingModal"));
+            modal.show();
+
+            // Auto-select corresponding plan after modal loads
+            setTimeout(() => {
+                const planCard = document.querySelector(`.service-plan-card[data-plan="${plan}"]`);
+                if (planCard) {
+                    planCards.forEach(c => c.classList.remove("selected", "muted"));
+                    planCard.classList.add("selected");
+                    selectedPlan = plan;
+                }
+            }, 400);
+        });
+    });
+
+
+
 
     // ==========================
     // 5) FAQ Accordion

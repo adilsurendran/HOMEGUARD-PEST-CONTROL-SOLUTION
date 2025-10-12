@@ -1442,66 +1442,8 @@
     </footer>
 
   <!-- ==============================================new form controls of booking here============================  -->
-   <!-- free inspection Booking Modal -->
-<!-- <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="bookingModalLabel">Book Your Service</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form id="bookingForm">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="serviceType" class="form-label">Type</label>
-              <select class="form-select" id="serviceType" required>
-                <option selected>Residential</option>
-                <option>Business</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="serviceCategory" class="form-label">Service</label>
-              <select class="form-select" id="serviceCategory" required>
-                <option selected>Pest Control</option>
-                <option>Building Cleaning</option>
-              </select>
-            </div>
 
-            <div class="col-12">
-              <label for="customerName" class="form-label">Name / Company</label>
-              <input type="text" class="form-control" id="customerName" placeholder="Enter your name or company" required>
-            </div>
-
-            <div class="col-12">
-              <label for="mobileNumber" class="form-label">Mobile Number</label>
-              <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
-              <div class="form-text">Enter 10-digit mobile number</div>
-            </div>
-
-            <div class="col-12">
-              <label for="address" class="form-label">Address</label>
-              <textarea class="form-control" id="address" rows="2" required></textarea>
-            </div>
-
-            <div class="col-12">
-              <label class="form-label">Select Location on Map</label>
-              <div class="border rounded p-3 bg-light text-center" style="height: 200px;">
-                <em>[ Map Integration Placeholder – connect Google Maps here later ]</em>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-4 text-end">
-            <button type="button" class="btn btn-secondary" id="cancelBooking">Cancel</button>
-            <button type="submit" class="btn btn-success">Book Now</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div> -->
-
+  <!-- free inspection Booking Modal -->
 <div class="modal fade" id="freeInspectionModal" tabindex="-1" aria-labelledby="freeInspectionModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content inspection-modal-content">
@@ -1545,7 +1487,7 @@
 
                             <!-- Specify Your Need -->
                             <div class="col-12">
-                                <label for="specifyNeed" class="form-label inspection-form-label">Specify Your Need</label>
+                                <label for="specifyNeed" class="form-label inspection-form-label">Specify Your Need (Optional)</label>
                                 <input type="text" class="form-control inspection-form-control" id="specifyNeed" placeholder="Tell us more about your requirements...">
                             </div>
 
@@ -1607,8 +1549,6 @@
             </div>
         </div>
     </div>
-<!-- ========= service booking modal ============================== -->
-
     <!-- Service Booking Modal -->
     <div class="modal fade" id="serviceBookingModal" tabindex="-1" aria-labelledby="serviceBookingModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -1653,7 +1593,7 @@
 
                             <!-- Specify Your Need -->
                             <div class="col-12">
-                                <label for="specifyNeed" class="form-label service-form-label">Specify Your Need</label>
+                                <label for="specifyNeed" class="form-label service-form-label">Specify Your Need (Optional) </label>
                                 <input type="text" class="form-control service-form-control" id="specifyNeed" placeholder="Tell us more about your requirements...">
                             </div>
 
@@ -1684,7 +1624,7 @@
 
                             <!-- Plan Selection Cards -->
                             <div class="col-12">
-                                <label class="form-label service-form-label">Select Your Plan</label>
+                                <label class="form-label service-form-label">Select Your Plan (Skip if custom)</label>
                                 <div class="service-plan-cards" id="planSelection">
                                     <div class="service-plan-card" data-plan="basic">
                                         <div class="service-plan-name">Basic Plan</div>
