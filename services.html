@@ -11,6 +11,9 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
     <link rel="preload" as="image" href="/images/building-hero.jpg" fetchpriority="high">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -96,7 +99,7 @@
 
 
     <!-- preload forcefully  -->
-    <img src="/images/building-hero.jpg" alt="bg preload" style="display:none;" fetchpriority="high">
+    <!-- <img src="/images/building-hero.jpg" alt="bg preload" style="display:none;" fetchpriority="high"> -->
 
  <!-- Hero section  -->
     <header class="building-cleaning-hero text-center position-relative" 
@@ -104,7 +107,7 @@
   <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.65);"></div>
   <div class="container building-cleaning-hero-content">
             <div class="building-cleaning-year" data-aos="fade-down">Since 2012</div>
-            <h1 class="building-cleaning-title" data-aos="fade-down">Building Cleaning Services</h1>
+            <h1 class="display-5 fw-bold" data-aos="fade-down">Expert Building Cleaning Solutions for Lasting Impressions.</h1>
             <p class="building-cleaning-subtitle" data-aos="zoom-in">
                 Comprehensive cleaning solutions for residential and commercial buildings across UAE. 
                 Professional, reliable, and tailored to your specific needs.
@@ -112,14 +115,16 @@
             <!-- <a class="btn building-cleaning-cta" href="#" data-bs-toggle="modal" data-bs-target="#bookingModal" data-aos="zoom-out">
                 <i class="fas fa-calendar-check me-2"></i> Book Service Now
             </a> -->
-            <div data-aos="zoom-in">
-                            <a class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">
+            <!-- <div data-aos="zoom-in"> -->
+                            <div class="cta-buttons-new">
+                            <a href="#" class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">
                                 <i class="fas fa-calendar-check me-2"></i> Register your Free Inspection
                             </a>
                             <a class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#serviceBookingModal">
                                 <i class="fas fa-calendar-check me-2"></i> Book Service Now
                             </a>
                         </div>
+                        <!-- </div> -->
             
             <div class="building-cleaning-features" data-aos="fade-up">
                 <div class="building-cleaning-feature">
@@ -141,10 +146,80 @@
     </header>
 
     <main>
+
+
+        <section class="cleaning-approach-section" id="cleaning-approach">
+        <div class="container">
+            <div class="cleaning-section-title" data-aos="fade-up">
+                <h2>Our Cleaning Excellence</h2>
+                <p class="cleaning-lead">Professional building maintenance solutions that deliver spotless results with minimal disruption to your operations.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cleaning-feature-card">
+                        <div class="cleaning-card-highlight"></div>
+                        <div class="cleaning-card-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h4>Strategic Approach</h4>
+                        <p>Customized cleaning plans tailored to your facility's specific needs and challenges.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cleaning-feature-card">
+                        <div class="cleaning-card-highlight"></div>
+                        <div class="cleaning-card-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Expert Team</h4>
+                        <p>Highly trained, professional cleaning staff with extensive commercial experience.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cleaning-feature-card">
+                        <div class="cleaning-card-highlight"></div>
+                        <div class="cleaning-card-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Modern Equipment</h4>
+                        <p>Advanced cleaning technology that minimizes noise, dust, and environmental impact.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cleaning-feature-card">
+                        <div class="cleaning-card-highlight"></div>
+                        <div class="cleaning-card-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>Flexible Plans</h4>
+                        <p>Customizable schedules and contract options to fit your business operations.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating decorative elements -->
+            <div class="cleaning-floating-element cleaning-float-2">
+                <i class="fas fa-broom"></i>
+                 <!-- <i class="bi bi-bucket"></i> -->
+                  <!-- <i class="ri-brush-line"></i>  -->
+                   <!-- <i class="ri-bubble-chart-line"></i> -->
+                    
+            </div>
+            <div class="cleaning-floating-element cleaning-float-1">
+                <i class="fas fa-spray-can"></i>
+            </div>
+           
+            </div>
+        </div>
+    </section>
     <!-- cards showing services groups  -->
     <section class="service-cards-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="zoom-in">
                 <p class="section-subtitle">Our Premium Services</p>
                 <h2 class="section-title-cleaning">Professional Cleaning Solutions</h2>
                 <p class="lead">Experience the difference with our comprehensive cleaning services tailored to your needs</p>
@@ -153,10 +228,10 @@
             <div class="row">
                 <!-- Residential Cleaning Card -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-card-premium">
+                    <div class="service-card-premium" data-aos="fade-up">
                         <div class="service-badge">Most Popular</div>
                         <div class="card-image-container">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Residential cleaning">
+                            <img src="images/Residential Cleaning.jpg" alt="Residential cleaning">
                             <div class="image-overlay"></div>
                         </div>
                         
@@ -177,10 +252,10 @@
                 
                 <!-- Commercial Cleaning Card -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-card-premium">
+                    <div class="service-card-premium"data-aos="fade-up" data-aos-delay="200">
                         <div class="service-badge">Business</div>
                         <div class="card-image-container">
-                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Commercial cleaning">
+                            <img src="images/Commercial-Cleaning-Service-new.jpg" alt="Commercial cleaning">
                             <div class="image-overlay"></div>
                         </div>
                         
@@ -201,7 +276,7 @@
                 
                 <!-- Post-Construction Card -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-card-premium">
+                    <div class="service-card-premium" data-aos="fade-up" data-aos-delay="400">
                         <div class="service-badge">Specialized</div>
                         <div class="card-image-container">
                             <img src="images\new-postcontruction.png" alt="Post construction cleaning" class="zoomlittle">
@@ -228,14 +303,14 @@
     
     <!-- Detailed Cleaning Services(Blog) -->
     <section class="cleaning-services-blog">
-        <div class="container">
+        <div class="container overflow-hidden">
             <div class="blogs-flying-title" data-aos="zoom-in" id="residential-cleaning" style="scroll-margin-top: 16vh">
                 <h3>Residential Cleaning</h3>
                 <p class="lead">Keep your home spotless, fresh, and hygienic with our tailored cleaning solutions for every corner.</p>
                 <div class="divider"></div>
             </div>
             <!-- Villa Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up" id="villa-cleaning">
+            <div class="cleaning-service-item" data-aos="fade-right" id="villa-cleaning" style="scroll-margin-top: 15vh">
                 <div class="row g-0 align-items-stretch">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -288,7 +363,7 @@
             </div>
 
             <!-- Flat Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-down" id="flat-cleaning">
+            <div class="cleaning-service-item" data-aos="fade-left" id="flat-cleaning" style="scroll-margin-top: 15vh">
                 <div class="row g-0 align-items-stretch flex-md-row-reverse">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -340,7 +415,7 @@
             </div>
 
             <!-- Floor Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up" id="floor-cleaning">
+            <div class="cleaning-service-item" data-aos="fade-right" id="floor-cleaning" style="scroll-margin-top: 15vh">
                 <div class="row g-0 align-items-stretch">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -391,11 +466,11 @@
             </div>
 
             <!-- Sofa Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-down" id="sofa-cleaning">
+            <div class="cleaning-service-item" data-aos="fade-left" id="sofa-cleaning" style="scroll-margin-top: 15vh">
                 <div class="row g-0 align-items-stretch flex-md-row-reverse">
                     <div class="col-md-6">
                         <div class="image-container">
-                            <img src="images/sofa-cleaning-services.png" alt="Sofa Cleaning" class="cleaning-service-image">
+                            <img src="images/sofa-cleaning-services-new.png" alt="Sofa Cleaning" class="cleaning-service-image">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -450,11 +525,11 @@
             </div> 
 
              <!-- water tank cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up" id="watertank-cleaning">
+            <div class="cleaning-service-item" data-aos="fade-right" id="watertank-cleaning" style="scroll-margin-top: 15vh">
                 <div class="row g-0 align-items-stretch flex-md-row-reverse">
                     <div class="col-md-6">
                         <div class="image-container">
-                            <img src="images/Water-Tank-Cleaning-Service.webp" alt="Floor Cleaning" class="cleaning-service-image">
+                            <img src="images/Water-Tank-Cleaning-new.jpg" alt="Floor Cleaning" class="cleaning-service-image">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -500,7 +575,7 @@
             </div>
 
             <!-- Carpet Shampooing -->
-            <div class="cleaning-service-item" data-aos="fade-down" id="carpet-shampooing">
+            <div class="cleaning-service-item" data-aos="fade-left" id="carpet-shampooing" style="scroll-margin-top: 15vh">
                 <div class="row g-0 align-items-stretch flex-md-row-reverse">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -549,7 +624,7 @@
             </div>
 
             <!-- Curtain Shampooing -->
-            <div class="cleaning-service-item" data-aos="fade-up" id="curtain-shampooing">
+            <div class="cleaning-service-item" data-aos="fade-right" id="curtain-shampooing" style="scroll-margin-top: 15vh">
                 <div class="row g-0 align-items-stretch">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -598,7 +673,7 @@
             </div>
 
             <!-- Windows & Glass Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-down" id="windows-cleaning">
+            <div class="cleaning-service-item" data-aos="fade-left" id="windows-cleaning" style="scroll-margin-top: 15vh">
                 <div class="row g-0 align-items-stretch">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -647,7 +722,7 @@
             </div>
 
             <!-- After Party or Event Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up" id="afterparty-cleaning">
+            <div class="cleaning-service-item" data-aos="fade-right" id="afterparty-cleaning" style="scroll-margin-top: 15vh">
                 <div class="row g-0 align-items-stretch flex-md-row-reverse">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -697,7 +772,7 @@
 
             <!-- Residential cleaning end here  -->
 
-
+            
             <div class="blogs-flying-title" data-aos="zoom-in" id="commercial-cleaning" style="scroll-margin-top: 16vh">
                 <h3>Commercial Cleaning</h3>
                 <p class="lead">Professional cleaning services designed to maintain a clean, safe, and productive workplace.</p>
@@ -712,7 +787,7 @@
                 <div class="row g-0 align-items-stretch">
                     <div class="col-md-6">
                         <div class="image-container">
-                            <img src="images/Office-cleaning-services.jpg" alt="Office Cleaning" class="cleaning-service-image">
+                            <img src="images/office-new.jpg" alt="Office Cleaning" class="cleaning-service-image">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -764,11 +839,11 @@
             </div>
 
             <!-- Warehouse Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up" id="warehouse-cleaning">
+            <div class="cleaning-service-item" data-aos="fade-up" id="warehouse-cleaning" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-stretch">
                     <div class="col-md-6">
                         <div class="image-container">
-                            <img src="images/Vacuuming-in-Warehouse.jpg" alt="Floor Cleaning" class="cleaning-service-image">
+                            <img src="images/sweeping-the-warehouse.webp" alt="Floor Cleaning" class="cleaning-service-image">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -814,7 +889,7 @@
             </div>
             
             <!-- Kitchen Duct Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up" id="kitchen-cleaning">
+            <div class="cleaning-service-item" data-aos="fade-up" id="kitchen-cleaning" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-stretch flex-md-row-reverse">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -863,11 +938,11 @@
             </div>
             
             <!-- Advertising Signboard Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up" id="adboard-cleaning">
+            <div class="cleaning-service-item" data-aos="fade-up" id="adboard-cleaning" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-stretch">
                     <div class="col-md-6">
                         <div class="image-container">
-                            <img src="images/sign-boardcleaning.jpg" alt="Floor Cleaning" class="cleaning-service-image">
+                            <img src="images/board-cleaning-new.png" alt="Floor Cleaning" class="cleaning-service-image">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -912,7 +987,7 @@
             </div>
 
             <!-- Floor Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up" id="floor-cleaning">
+            <div class="cleaning-service-item" data-aos="fade-up" id="floor-cleaning" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-stretch">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -963,7 +1038,7 @@
             </div>
 
              <!-- Windows & Glass Cleaning -->
-            <div class="cleaning-service-item" data-aos="fade-up" id="windows-cleaning">
+            <div class="cleaning-service-item" data-aos="fade-up" id="windows-cleaning" style="scroll-margin-top: 28vh">
                 <div class="row g-0 align-items-stretch">
                     <div class="col-md-6">
                         <div class="image-container">
@@ -1021,11 +1096,11 @@
 
 
             <!-- Post-Construction Cleaning -->
-<div class="cleaning-service-item" data-aos="fade-up" id="post-construction-cleaning">
+<div class="cleaning-service-item" data-aos="zoom-in" id="post-construction-cleaning" style="scroll-margin-top: 28vh">
     <div class="row g-0 align-items-stretch">
         <div class="col-md-6">
             <div class="image-container">
-                <img src="images/new-postcontruction.png" alt="Post-Construction Cleaning" class="cleaning-service-image">
+                <img src="images/post-construction-new.png" alt="Post-Construction Cleaning" class="cleaning-service-image">
             </div>
         </div>
         <div class="col-md-6">
@@ -1157,16 +1232,16 @@
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="footer-logo">Homeguard Pest Control</div>
                     <div class="footer-tagline">Your Trusted Guard for a Pest-Free Life</div>
-                    <p>Providing eco-friendly pest control & building cleaning services across GCC since 2010. Our commitment to quality and customer satisfaction makes us the preferred choice for homes and businesses.</p>
+                    <p>Providing eco-friendly pest control & building cleaning services across UAE since 2012. Our commitment to quality and customer satisfaction makes us the preferred choice for homes and businesses.</p>
                     
                     <div class="social-icons">
-                        <a href="#" class="social-icon">
+                        <a href="https://wa.me/971557758634" class="social-icon">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="https://www.instagram.com/homeguard.uae?igsh=NXc5MHR2aTBxZmln&utm_source=qr" class="social-icon">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="https://www.tiktok.com/@homeguard.pestcon?_t=ZS-906auqYDMtc&_r=1" class="social-icon">
                             <i class="fab fa-tiktok"></i>
                         </a>
                         <!-- <a href="#" class="social-icon">
@@ -1232,23 +1307,23 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <ul class="footer-links">
-                                <li><a href="services.html"><i class="bi bi-chevron-right"></i> Office Cleaning</a></li>
-                                <li><a href="services.html"><i class="bi bi-chevron-right"></i> Sofa Cleaning</a></li>
-                                <li><a href="services.html"><i class="bi bi-chevron-right"></i> Villa Cleaning</a></li>
-                                <li><a href="services.html"><i class="bi bi-chevron-right"></i> Flat Cleaning</a></li>
-                                <li><a href="services.html"><i class="bi bi-chevron-right"></i> Floor Cleaning</a></li>
-                                <li><a href="services.html"><i class="bi bi-chevron-right"></i> Water Tank Cleaning</a></li>
+                                <li><a href="services.html#office-cleaning"><i class="bi bi-chevron-right"></i> Office Cleaning</a></li>
+                                <li><a href="services.html#sofa-cleaning"><i class="bi bi-chevron-right"></i> Sofa Cleaning</a></li>
+                                <li><a href="services.html#villa-cleaning"><i class="bi bi-chevron-right"></i> Villa Cleaning</a></li>
+                                <li><a href="services.html#flat-cleaning"><i class="bi bi-chevron-right"></i> Flat Cleaning</a></li>
+                                <li><a href="services.html#floor-cleaning"><i class="bi bi-chevron-right"></i> Floor Cleaning</a></li>
+                                <li><a href="services.html#watertank-cleaning"><i class="bi bi-chevron-right"></i> Water Tank Cleaning</a></li>
                             </ul>
                         </div>
                         
                         <div class="col-sm-6">
                             <ul class="footer-links">
-                                <li><a href="services.html"><i class="bi bi-chevron-right"></i> Warehouse Cleaning</a></li>
-                                <li><a href="services.html"><i class="bi bi-chevron-right"></i> Carpet Shampooing</a></li>
-                                <li><a href="services.html"><i class="bi bi-chevron-right"></i> Curtain Shampooing</a></li>
-                                <li><a href="services.html"><i class="bi bi-chevron-right"></i> Kitchen Duct Cleaning</a></li>
-                                <li><a href="services.html"><i class="bi bi-chevron-right"></i> Window Cleaning</a></li>
-                                <li><a href="services.html"><i class="bi bi-chevron-right"></i> After Party Cleaning</a></li>
+                                <li><a href="services.html#warehouse-cleaning"><i class="bi bi-chevron-right"></i> Warehouse Cleaning</a></li>
+                                <li><a href="services.html#carpet-shampooing"><i class="bi bi-chevron-right"></i> Carpet Shampooing</a></li>
+                                <li><a href="services.html#curtain-shampooing"><i class="bi bi-chevron-right"></i> Curtain Shampooing</a></li>
+                                <li><a href="services.html#kitchen-cleaning"><i class="bi bi-chevron-right"></i> Kitchen Duct Cleaning</a></li>
+                                <li><a href="services.html#windows-cleaning"><i class="bi bi-chevron-right"></i> Window Cleaning</a></li>
+                                <li><a href="services.html#afterparty-cleaning"><i class="bi bi-chevron-right"></i> After Party Cleaning</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1258,8 +1333,10 @@
             <div class="footer-divider"></div>
             
             <!-- Copyright Section -->
-            <div class="copyright">
-                <div class="container">
+            
+        </div>
+        <div class="copyright">
+                <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col text-center mb-2 mb-md-0">
                             &copy; 2025 Homeguard Pest Control. All rights reserved.
@@ -1272,7 +1349,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </footer>
 
     <!-- free inspection Booking Modal -->
