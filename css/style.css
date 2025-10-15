@@ -82,24 +82,7 @@ body{
 
 
 
-/* HERO: background image with dark overlay for text readability */
-/* .hero-section{
-  background-size:cover;
-  background-position:center;
-  min-height:480px;
-  height: 600px;
-  
-  position:relative;
-  display:flex;
-  align-items:center;
-}
-@media (max-width: 767px) {
-  .hero-section{
-    min-height: 350px;
-  }
-} */
 
-/* .hero-section .container{ position:relative; z-index:2; } */
 
 /* Dropdown on hover for larger screens */
 @media (min-width: 992px){
@@ -2243,16 +2226,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
     overflow: hidden;
     margin-top: 70px !important;
 }
-/* 
-.hero-section[style*="background-image"] {
-    background-image: url('images/cntrl-1.png');
-    background-position: center;
-    background-size: 100% 100%;
-    min-height: 80vh;
-    color: white;
-    padding: 60px 0;
-    margin-top: 0;
-} */
+
 .hero-content {
             position: relative;
             z-index: 10;
@@ -2281,11 +2255,11 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
     inset: 0;
     background: rgba(0, 0, 0, 0.65);
     border-radius: 0;
-    z-index: 0;   /* 👈 keep overlay BEHIND everything */
+    z-index: 0;  
 }
 .hero-section .container {
   position: relative;
-  z-index: 10; /* above overlay */
+  z-index: 10;
 }
 
 .hero-title {
@@ -2313,13 +2287,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
     font-weight: 300;
 }
 
-/* .hero-section .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.65);
-    border-radius: 0;
-    z-index: 1;
-} */
+
 
 
 .highlight-container {
@@ -2442,60 +2410,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
     transform: translateY(-3px);
 }
 
-/* .animation-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40%;
-    z-index: 5;
-}
 
-.technician {
-    position: absolute;
-    bottom: 0;
-    left: -200px;
-    width: 180px;
-    height: 145px;
-    background: url("/images/New-technician.png") no-repeat center bottom;
-    opacity: 0.7;
-    pointer-events: none;
-    background-size: contain;
-    z-index: 20;
-    animation: technicianEnter 7s forwards 2s;
-}
-
-.pests {
-    position: absolute;
-    bottom: 50px;
-    right: 32%;
-    display: flex;
-    gap: 20px;
-    z-index: 10;
-}
-
-.pest {
-    width: 50px;
-    height: 40px;
-    opacity: 1;
-    animation: pestDisappear 0.5s forwards 6.5s;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.pest:nth-child(1) {
-    background-image: url("/images/svg/cockroach-color.svg");
-}
-
-.pest:nth-child(2) {
-    background-image: url("/images/svg/mosquito-svgrepo-com.svg");
-    animation-delay: 6.7s;
-}
-
-.pest:nth-child(3) {
-    background-image: url("/images/svg/rat-svgrepo-com.svg");
-    animation-delay: 6.9s;
-} */
 
 /* Animations */
 @keyframes slideInLeft {
@@ -2519,32 +2434,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
     }
 }
 
-/* @keyframes technicianEnter {
-    0% {
-        left: -200px;
-    }
-    70% {
-        left: calc(50% - 90px);
-    }
-    90%{
-        left: calc(50% - 90px);
-    }
-    100% {
-        left: 100%; 
-        transform: translateX(0);
-    }
-}
 
-@keyframes pestDisappear {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(0);
-    }
-} */
 
 /* Responsive Design */
 @media (max-width: 992px) {
@@ -2627,7 +2517,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
 
 /* ============================= New hero combo card added =================================================================== */
 
-.hero-section-new {
+/* .hero-section-new {
             background: linear-gradient(rgba(13, 90, 44, 0.1), rgba(13, 90, 44, 0.1)), 
                         url('images/Hero-banner-new\ logo.png');
             background-size: cover;
@@ -2642,9 +2532,9 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
         
         .hero-content-new {
             padding-top: 2rem;
-        }
+        } */
         
-        .hero-title-new {
+        /* .hero-title-new {
             font-size: 3.5rem;
             font-weight: 800;
             color: var(--light);
@@ -2663,7 +2553,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 1s forwards 0.8s;
-        }
+        } */
         
         .highlight-container-new {
             margin-bottom: 2.5rem;
@@ -2715,7 +2605,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             margin: 0.5rem 0;
         }
         
-        .combo-card-custom-new .btn-secondary-custom-new {
+        /* .combo-card-custom-new .btn-secondary-custom-new {
             background: var(--primary-green-new);
             color: var(--secondary);
             border: none;
@@ -2731,7 +2621,7 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             color: var(--secondary);
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(26, 107, 59, 0.6);
-        }
+        } */
         
         .feature-highlights-new {
             display: flex;
@@ -2891,6 +2781,438 @@ a:focus, button:focus, input:focus{ outline: 3px solid rgba(25,135,84,0.25); out
             }
         }
 
+/* =======================================================new hero section with all pricing cards =================================================================================== */
+h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+        }
+
+        .indexPage-hero-section {
+            position: relative;
+            /* height: 100vh;
+            min-height: 700px; */
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--white) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 70px !important;
+            /* background-image: url('images/Hero-banner-new\ logo.png');
+            background-size: cover;
+            background-position: top; */
+        }
+
+        .indexPage-hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 2rem;
+        }
+
+        .indexPage-hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--light);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            opacity: 0;
+            transform: translateX(-100px);
+            animation: indexPage-slideInLeft 1s forwards 0.5s;
+        }
+
+        .indexPage-hero-subtitle {
+            font-size: 1.4rem;
+            color: var(--white);
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateX(100px);
+            animation: indexPage-slideInRight 1s forwards 0.8s;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 300;
+        }
+
+        .indexPage-hero-section .indexPage-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            border-radius: 0;
+            z-index: 0;
+        }
+
+        .indexPage-hero-section .container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .indexPage-pricing-container {
+            margin-bottom: 2rem;
+        }
+
+        .indexPage-pricing-card {
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            transition: transform 0.6s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            /* height: 100%; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .indexPage-pricing-card:hover {
+            transform: scale(1.05) !important;
+            /* box-shadow: 0 15px 30px var(--) !important; */
+        }
+
+        /* Basic Card */
+        .indexPage-pricing-card-basic {
+            background: var(--white);
+            color: var(--primary-green-new);
+            border: 2px solid rgba(26, 107, 59, 0.2);
+        }
+
+        /* Standard Card */
+        .indexPage-pricing-card-standard {
+            background: var(--white);
+            color: var(--primary-green-new);
+            border: 2px solid rgba(26, 107, 59, 0.2);
+        }
+
+        /* Premium Card */
+        .indexPage-pricing-card-premium {
+            color: var(--light);
+            transform: scale(1.05);
+            border: 3px solid var(--dark-green-new);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(-45deg, #14572e, #1a6b3b, #198754, #27ae60);
+            background-size: 400% 400%;
+            animation: indexPage-gradientShift 6s ease infinite;
+            margin-top: -20px;
+            margin-bottom: 10px;
+        }
+
+        /* Combo Card */
+        .indexPage-pricing-card-combo {
+            color: var(--primary-green-new);
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            background: linear-gradient(-45deg, #fac012, #ffca2b, #ffea00, #fffb00);
+            background-size: 400% 400%;
+            animation: indexPage-gradientShift 6s ease infinite;
+            margin-top: -20px;
+            margin-bottom: 10px;
+        }
+
+        .indexPage-plan-title {
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+        }
+
+        .indexPage-plan-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .indexPage-plan-price::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: currentColor;
+            border-radius: 2px;
+            opacity: 0.3;
+        }
+
+        .indexPage-plan-features {
+            margin-bottom: 1.5rem;
+        }
+
+        .indexPage-plan-features li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .indexPage-plan-features i {
+            margin-right: 10px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .indexPage-btn-primary-custom {
+            background: var(--brand-green);
+            color: var(--white);
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(25, 135, 84, 0.3);
+            width: 100%;
+        }
+
+        .indexPage-btn-primary-custom:hover {
+            background: var(--dark-green-new);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(25, 135, 84, 0.4);
+            color: var(--white);
+        }
+
+        .indexPage-btn-secondary-custom {
+            background: var(--secondary);
+            color: var(--dark-color);
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-weight: 700;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+            width: 100%;
+        }
+
+        .indexPage-btn-secondary-custom:hover {
+            background: #e0a800;
+            color: var(--dark-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(255, 193, 7, 0.4);
+        }
+
+        .indexPage-feature-highlights {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: indexPage-fadeInUp 1s forwards 1.4s;
+        }
+
+        .indexPage-feature-item {
+            display: flex;
+            align-items: center;
+            color: var(--light);
+            font-weight: 500;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+        }
+
+        .indexPage-feature-item i {
+            color: var(--accent);
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .indexPage-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: indexPage-slideUp 1s forwards 1.4s;
+        }
+
+        .indexPage-hero-btn-primary {
+            background: var(--primary);
+            color: var(--light);
+            border: none;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .indexPage-hero-btn-primary:hover {
+            color: var(--light);
+            background: var(--dark-green-new);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(26, 107, 59, 0.3);
+        }
+
+        .indexPage-hero-btn-outline {
+            color: var(--light);
+            background: var(--brand-green);
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .indexPage-hero-btn-outline:hover {
+            background: var(--dark-green-new);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Animations */
+        @keyframes indexPage-slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes indexPage-slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes indexPage-slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes indexPage-fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes indexPage-gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Card Animations */
+        .indexPage-pricing-card {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .indexPage-pricing-card-basic {
+            animation: indexPage-fadeInUp 1s forwards 1.1s;
+        }
+
+        .indexPage-pricing-card-standard {
+            animation: indexPage-fadeInUp 1s forwards 1.2s;
+        }
+
+        .indexPage-pricing-card-premium {
+            animation: indexPage-fadeInUp 1s forwards 1.3s;
+        }
+
+        .indexPage-pricing-card-combo {
+            animation: indexPage-fadeInUp 1s forwards 1.4s;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .indexPage-hero-title {
+                font-size: 3rem;
+            }
+            
+            .indexPage-hero-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .indexPage-hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .indexPage-hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .indexPage-pricing-card-premium,
+            .indexPage-pricing-card-combo {
+                transform: scale(1);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .indexPage-hero-section {
+                min-height: 600px;
+                height: auto;
+                padding: 4rem 0;
+            }
+
+            .indexPage-hero-title {
+                font-size: 2.2rem;
+            }
+
+            .indexPage-hero-subtitle {
+                font-size: 1.1rem;
+                padding: 0 15px;
+            }
+
+            .indexPage-plan-price {
+                font-size: 2rem;
+            }
+
+            .indexPage-cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .indexPage-hero-btn-outline,
+            .indexPage-hero-btn-primary {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .indexPage-feature-highlights {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+
+            .indexPage-feature-item {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .indexPage-hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .indexPage-pricing-card {
+                padding: 1.5rem;
+            }
+            
+            .indexPage-plan-price {
+                font-size: 1.8rem;
+            }
+        }
 
 
  /* FAQ section starts here ----------------------------------------------------------------------------------------------------- */

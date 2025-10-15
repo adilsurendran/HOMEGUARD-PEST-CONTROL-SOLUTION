@@ -1416,7 +1416,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // ------------------------------
     // 🔹 Pricing Card → Modal Integration
     // ------------------------------
-    document.querySelectorAll(".pricing-card-custom button, .combo-card-custom button").forEach(button => {
+    document.querySelectorAll(".pricing-card-custom button, .combo-card-custom button, .indexPage-pricing-card button").forEach(button => {
         button.addEventListener("click", function () {
             const plan = this.getAttribute("data-plan");
 
